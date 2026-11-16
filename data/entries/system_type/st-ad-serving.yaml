@@ -1,0 +1,74 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-ad-serving.yaml
+# 説明：システムの種類のカード「Web広告配信」（st-ad-serving）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-ad-serving
+type: system_type
+names:
+  ja: Web広告配信
+  en: Web Ad Serving
+aliases:
+- アドサーバー
+- 広告配信プラットフォーム
+- 運用型広告
+summary:
+  ja: Webサイトやアプリ、検索結果、SNSに広告を表示し、表示回数やクリックを記録するシステム。広告主は広告代理店や広告運用の担当者を通じて、予算と配信先を決めて使う。
+domain: D10
+level:
+  primary: L2
+  related:
+  - L0
+scope: industry
+industry:
+- media
+- cross_industry
+business_function:
+- bf.sales_marketing
+category: platform
+layer: application
+users:
+  ja: 広告主の宣伝部門、広告代理店、広告運用の担当者
+purpose:
+  ja: 広告を届けたい人に表示し、効果を測る
+axes:
+  technical: 3
+  organization: 2
+  criticality: 2
+  longevity: 2
+  regulation: 2
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-web-analytics
+scale:
+  typical:
+    project_class:
+      min: M
+      max: XL
+    usage_class:
+      min: U3
+      max: U4
+    evidence_type: editorial_estimate
+industry_roles:
+- saas_provider
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-15'
+  updated: '2026-11-15'
+  contributors:
+  - CODEAID編集部
+  unconfirmed:
+  - domain
+  - level
+  - scope
+  - axes

@@ -1,0 +1,74 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-corporate-website.yaml
+# 説明：システムの種類のカード「企業サイト（コーポレートサイト）」（st-corporate-website）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-corporate-website
+type: system_type
+names:
+  ja: 企業サイト（コーポレートサイト）
+  en: Corporate Website
+aliases:
+- コーポレートサイト
+- 企業ホームページ
+- HP
+summary:
+  ja: 会社の概要・事業・ニュース・採用・IR などの情報を社外に発信するWebサイト。広報部門などの業務部門が発注・管理することが多く、CMSで更新する。中小企業では経営者や兼任の担当者が窓口になる。
+domain: D00
+level:
+  primary: L1
+  related:
+  - L2
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.external_relations
+category: business_app
+layer: channel
+users:
+  ja: 広報・総務・Web担当者、社外の閲覧者
+purpose:
+  ja: 会社の信頼を伝え、問い合わせや採用につなげる
+axes:
+  technical: 1
+  organization: 1
+  criticality: 2
+  longevity: 2
+  regulation: 1
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: depends_on
+  target: st-cms
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: S
+    usage_class:
+      min: U1
+      max: U3
+    evidence_type: editorial_estimate
+industry_roles:
+- owner
+- operator
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-15'
+  updated: '2026-11-15'
+  contributors:
+  - CODEAID編集部
+  unconfirmed:
+  - domain
+  - level
+  - scope
+  - axes

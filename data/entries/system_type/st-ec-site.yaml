@@ -1,0 +1,98 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-ec-site.yaml
+# 説明：システムの種類のカード「ECサイト」（st-ec-site）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-ec-site
+type: system_type
+names:
+  ja: ECサイト
+  en: E-commerce Site
+aliases:
+- ネットショップ
+- 通販サイト
+summary:
+  ja: インターネットで商品を販売するWebサイトやアプリ。商品の表示、カート、決済、注文管理、配送の手配などで構成される。
+domain: D02
+level:
+  primary: L2
+scope: society
+industry:
+- commerce
+business_function:
+- bf.sales_marketing
+- bf.customer_service
+category: consumer_app
+layer: channel
+users:
+  ja: 消費者、販売事業者
+purpose:
+  ja: 店舗に来なくても商品を購入できるようにする
+functions:
+- 商品の表示・検索
+- カート
+- 決済
+- 注文の受付
+- 配送状況の案内
+events:
+- 商品の注文
+- 支払い
+- キャンセル・返品
+qualities:
+- 使いやすさ
+- 表示の速さ
+- アクセス集中への耐性
+- セキュリティ
+outage_impact:
+  ja: 注文を受けられなくなり、その間の売上がそのまま失われる。
+industry_roles:
+- owner
+- operator
+- saas_provider
+- vendor
+- partner
+- ops_provider
+axes:
+  technical: 3
+  organization: 4
+  criticality: 2
+  longevity: 2
+  regulation: 2
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 1
+  goal: ECサイトの画面の裏で、決済・受注・倉庫・配送のシステムが連携していることを説明できる
+  questions:
+  - 注文ボタンを押した後、商品が届くまでにどんなシステムが動くか
+relations:
+- type: integrates_with
+  target: st-payment-gateway
+- type: integrates_with
+  target: st-order-management
+- type: integrates_with
+  target: st-recommendation
+scale:
+  typical:
+    project_class:
+      min: S
+      max: XL
+    usage_class:
+      min: U1
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

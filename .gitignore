@@ -1,0 +1,21 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：Apache License 2.0（LICENSE を参照）
+# SPDX-License-Identifier: Apache-2.0
+# ファイル：.gitignore
+# 説明：Git の管理から外すファイル（依存パッケージ・ビルドの結果・秘密情報）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+node_modules/
+apps/web/.next/
+apps/web/out/
+apps/web/generated/
+apps/web/public/opendata/
+dist/
+*.log
+.env
+.env.*
+*.tsbuildinfo

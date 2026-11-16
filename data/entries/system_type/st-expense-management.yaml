@@ -1,0 +1,89 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-expense-management.yaml
+# 説明：システムの種類のカード「経費精算システム」（st-expense-management）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-expense-management
+type: system_type
+names:
+  ja: 経費精算システム
+  en: Expense Management System
+aliases:
+- 経費精算
+summary:
+  ja: 交通費や出張費などの立替経費を申請・承認・精算するシステム。領収書の電子保存に対応するものが多い。
+domain: D03
+level:
+  primary: L3
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.finance_accounting
+category: business_app
+layer: application
+users:
+  ja: 全社員、経理部門
+purpose:
+  ja: 経費の申請と精算を正確かつ手早く行う
+functions:
+- 経費の申請
+- 上司の承認
+- 領収書の保存
+- 会計への連携
+events:
+- 立て替え払い
+- 申請
+- 承認
+qualities:
+- 使いやすさ
+- 法令（電子帳簿保存法）への対応
+outage_impact:
+  ja: 経費の精算が遅れるが、紙の申請で代わりができる。
+industry_roles:
+- saas_provider
+- vendor
+- ops_provider
+- owner
+axes:
+  technical: 3
+  organization: 2
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 同じ経費精算でも、会社の規模によって仕組みが大きく変わることを説明できる
+  questions:
+  - 社員30人の会社と3万人の会社で、経費精算の何が違うか
+relations:
+- type: integrates_with
+  target: st-accounting
+- type: integrates_with
+  target: st-workflow
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: M
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

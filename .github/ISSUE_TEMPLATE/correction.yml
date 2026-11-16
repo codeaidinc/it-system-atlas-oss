@@ -1,0 +1,29 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：Apache License 2.0（LICENSE を参照）
+# SPDX-License-Identifier: Apache-2.0
+# ファイル：.github/ISSUE_TEMPLATE/correction.yml
+# 説明：Issue のフォーム「訂正の申請」
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+name: 訂正の申請
+description: 掲載内容の誤りや、権利者からの訂正・削除の申請
+labels: [correction]
+body:
+  - type: input
+    id: entry
+    attributes: { label: 対象カードのID または URL, placeholder: st-core-banking }
+    validations: { required: true }
+  - type: textarea
+    id: issue
+    attributes: { label: 誤っている箇所と正しい内容 }
+    validations: { required: true }
+  - type: textarea
+    id: evidence
+    attributes: { label: 根拠（出典URLなど） }
+  - type: dropdown
+    id: requester
+    attributes: { label: 申請者, options: [一般の利用者, 掲載されている企業・団体の関係者, その他] }

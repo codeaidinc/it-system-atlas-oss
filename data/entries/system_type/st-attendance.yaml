@@ -1,0 +1,88 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-attendance.yaml
+# 説明：システムの種類のカード「勤怠管理システム」（st-attendance）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-attendance
+type: system_type
+names:
+  ja: 勤怠管理システム
+  en: Time & Attendance System
+aliases:
+- 勤怠システム
+- タイムカード
+summary:
+  ja: 出勤・退勤の時刻、休暇、残業などを記録・集計するシステム。給与計算や労働時間の管理に使われる。
+domain: D03
+level:
+  primary: L3
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.hr
+category: business_app
+layer: application
+users:
+  ja: 全社員、人事部門
+purpose:
+  ja: 労働時間を正確に把握し、適正な働き方を管理する
+functions:
+- 出退勤の記録
+- 休暇の申請・承認
+- 残業時間の集計
+events:
+- 出勤・退勤の打刻
+- 休暇の申請
+- 月末の締め
+qualities:
+- 正確性
+- 使いやすさ
+- 法令への対応
+outage_impact:
+  ja: 働いた時間を正しく集計できず、給与計算が遅れる。
+industry_roles:
+- saas_provider
+- vendor
+- ops_provider
+- owner
+axes:
+  technical: 3
+  organization: 2
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 1
+  goal: 打刻の記録が給与計算の元になることを説明できる
+  questions:
+  - 勤怠データは、どのシステムに渡されるか
+relations:
+- type: integrates_with
+  target: st-payroll
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: M
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

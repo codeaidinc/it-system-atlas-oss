@@ -1,0 +1,64 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-sfa.yaml
+# 説明：システムの種類のカード「SFA（営業支援システム）」（st-sfa）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-sfa
+type: system_type
+names:
+  ja: SFA（営業支援システム）
+  en: Sales Force Automation
+aliases:
+- SFA
+- 営業支援
+summary:
+  ja: 商談の進み具合、営業活動の記録、売上見込みなどを管理し、営業チームの活動を支えるシステム。
+domain: D03
+level:
+  primary: L3
+scope: department
+industry:
+- cross_industry
+business_function:
+- bf.sales_marketing
+category: business_app
+layer: application
+users:
+  ja: 営業担当者、営業管理職
+purpose:
+  ja: 営業活動を見える化し、受注につなげる
+axes:
+  technical: 3
+  organization: 2
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-crm
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: M
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

@@ -1,0 +1,90 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-student-information.yaml
+# 説明：システムの種類のカード「学務システム（大学）」（st-student-information）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-student-information
+type: system_type
+names:
+  ja: 学務システム（大学）
+  en: Student Information System
+aliases:
+- 学務システム
+- 履修登録
+summary:
+  ja: 大学の学生の入学から卒業までの情報、履修登録、成績、学籍などを管理するシステム。
+domain: D08
+level:
+  primary: L3
+scope: enterprise
+industry:
+- education
+business_function:
+- bf.service_delivery
+category: enterprise_core
+layer: core
+users:
+  ja: 大学の学生・教員・職員
+purpose:
+  ja: 学生の学籍と学修の記録を正確に管理する
+functions:
+- 学籍の管理
+- 履修登録
+- 成績の管理
+- 卒業の判定
+events:
+- 入学
+- 履修登録
+- 成績の確定
+- 卒業
+qualities:
+- 正確性
+- 長期保存
+- 個人情報の保護
+outage_impact:
+  ja: 履修や成績の手続きができなくなり、卒業や進学の判定に影響する。
+industry_roles:
+- owner
+- prime_sier
+- vendor
+- ops_provider
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 学生の記録を入学から卒業まで管理する仕組みを説明できる
+  questions:
+  - 成績の記録を何十年も保存する必要があるのはなぜか
+relations:
+- type: integrates_with
+  target: st-lms
+scale:
+  typical:
+    project_class:
+      min: M
+      max: L
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

@@ -1,0 +1,66 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-water-scada.yaml
+# 説明：システムの種類のカード「上下水道監視制御システム」（st-water-scada）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-water-scada
+type: system_type
+names:
+  ja: 上下水道監視制御システム
+  en: Water Supply SCADA
+aliases:
+- 水道監視
+- SCADA
+summary:
+  ja: 浄水場や配水池、ポンプ場などの設備を遠隔で監視・制御し、水を安定して供給するためのシステム。
+domain: D11
+level:
+  primary: L3
+scope: enterprise
+industry:
+- utilities.water
+- government
+business_function:
+- bf.service_delivery
+- bf.assets
+category: control_system
+layer: control
+users:
+  ja: 水道事業者（自治体など）の運転管理者
+purpose:
+  ja: 安全な水を止めずに供給する
+critical_infrastructure:
+  sectors:
+  - ci.water
+axes:
+  technical: 3
+  organization: 3
+  criticality: 5
+  longevity: 5
+  regulation: 5
+  changeability: 4
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U2
+      max: U3
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

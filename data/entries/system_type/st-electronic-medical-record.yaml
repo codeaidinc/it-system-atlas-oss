@@ -1,0 +1,99 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-electronic-medical-record.yaml
+# 説明：システムの種類のカード「電子カルテシステム」（st-electronic-medical-record）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-electronic-medical-record
+type: system_type
+names:
+  ja: 電子カルテシステム
+  en: Electronic Medical Record System
+aliases:
+- 電子カルテ
+- EMR
+summary:
+  ja: 診察の記録、検査結果、処方などの患者の診療情報を電子的に記録・共有するシステム。病院の中心的な情報システムとなる。
+domain: D07
+level:
+  primary: L3
+scope: enterprise
+industry:
+- healthcare
+business_function:
+- bf.service_delivery
+category: enterprise_core
+layer: core
+users:
+  ja: 医師・看護師などの医療従事者
+purpose:
+  ja: 患者の診療情報を正確に記録し、チームで共有する
+functions:
+- 診療内容の記録
+- 検査・処方のオーダー
+- 検査結果の参照
+- 患者情報の共有
+events:
+- 受診
+- 診察
+- 検査・処方
+- 入院・退院
+qualities:
+- 正確性
+- 可用性
+- 個人情報の保護
+- 使いやすさ
+outage_impact:
+  ja: 過去の診療情報や検査結果を見られず、診療が大幅に遅れる。
+industry_roles:
+- owner
+- operator
+- prime_sier
+- partner
+- vendor
+- ops_provider
+- regulator
+critical_infrastructure:
+  sectors:
+  - ci.healthcare
+axes:
+  technical: 4
+  organization: 4
+  criticality: 5
+  longevity: 4
+  regulation: 5
+  changeability: 4
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 病院の受診の流れの中で、診療の情報がどう記録・共有されるかを説明できる
+  questions:
+  - 診察で記録した処方は、どこへ伝わるか
+relations:
+- type: integrates_with
+  target: st-medical-billing
+- type: integrates_with
+  target: st-regional-health-network
+scale:
+  typical:
+    project_class:
+      min: M
+      max: XL
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

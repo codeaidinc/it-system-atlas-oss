@@ -1,0 +1,102 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-internet-banking.yaml
+# 説明：システムの種類のカード「インターネットバンキング」（st-internet-banking）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-internet-banking
+type: system_type
+names:
+  ja: インターネットバンキング
+  en: Internet Banking
+aliases:
+- ネットバンキング
+- 銀行アプリ
+summary:
+  ja: パソコンやスマートフォンから残高照会、振込、各種手続きを行える銀行のサービス。勘定系システムと連携して取引を処理する。
+domain: D05
+level:
+  primary: L2
+scope: society
+industry:
+- finance.banking
+business_function:
+- bf.customer_service
+category: consumer_app
+layer: channel
+users:
+  ja: 個人・法人の預金者
+purpose:
+  ja: 店舗に行かずに銀行取引を行えるようにする
+functions:
+- 残高・明細の照会
+- 振込・振替
+- 本人確認（ログイン・追加認証）
+- 各種手続き
+events:
+- 利用者のログイン
+- 振込の入力と確定
+- 通知の送信
+qualities:
+- 使いやすさ
+- セキュリティ
+- 可用性
+outage_impact:
+  ja: 店舗やATMに行かないと取引できなくなり、問い合わせが急増する。
+industry_roles:
+- owner
+- operator
+- prime_sier
+- partner
+- vendor
+- ops_provider
+structure:
+  entry: スマートフォンアプリ、Webブラウザ
+  processing: 取引受付、本人確認、画面表示
+  data: ログイン情報、取引の受付記録
+  external: 勘定系、認証基盤、不正検知
+  foundation: クラウドまたは自社データセンター
+critical_infrastructure:
+  sectors:
+  - ci.finance
+axes:
+  technical: 3
+  organization: 4
+  criticality: 4
+  longevity: 2
+  regulation: 4
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 1
+  goal: アプリは銀行システムの「入口」であり、裏側に複数のシステムがあることを説明できる
+  questions:
+  - アプリの画面を作る仕事と、銀行取引全体を設計する仕事は何が違うか
+relations:
+- type: depends_on
+  target: st-core-banking
+- type: integrates_with
+  target: st-identity-management
+scale:
+  typical:
+    project_class:
+      min: M
+      max: XL
+    usage_class:
+      min: U2
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

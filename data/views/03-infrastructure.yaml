@@ -1,0 +1,18 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/views/03-infrastructure.yaml
+# 説明：地図03「社会基盤地図」の定義
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: infrastructure
+order: 3
+title: { ja: 社会基盤地図, en: Critical Infrastructure Map }
+question: { ja: 社会を止めないために、どんなシステムが動いているのか }
+layout: sectors
+group_by: critical_infrastructure
+node_types: [system_type]

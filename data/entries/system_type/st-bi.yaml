@@ -1,0 +1,64 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-bi.yaml
+# 説明：システムの種類のカード「BI（ビジネスインテリジェンス）」（st-bi）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-bi
+type: system_type
+names:
+  ja: BI（ビジネスインテリジェンス）
+  en: Business Intelligence
+aliases:
+- BIツール
+- 経営ダッシュボード
+summary:
+  ja: 社内の各システムに蓄積されたデータを集計・可視化し、経営や業務の判断に役立てるためのツール。
+domain: D03
+level:
+  primary: L3
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.strategy
+category: data_analytics
+layer: application
+users:
+  ja: 経営層、管理職、分析担当者
+purpose:
+  ja: データに基づいて状況を把握し、判断する
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: depends_on
+  target: st-data-warehouse
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: L
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

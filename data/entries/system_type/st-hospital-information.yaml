@@ -1,0 +1,98 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-hospital-information.yaml
+# 説明：システムの種類のカード「病院情報システム」（st-hospital-information）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-hospital-information
+type: system_type
+names:
+  ja: 病院情報システム
+  en: Hospital Information System
+aliases:
+- HIS
+- オーダリング
+summary:
+  ja: 電子カルテ、検査、薬剤、医事会計、予約など病院内の各部門のシステムをつなぎ、全体として管理する仕組み。
+domain: D07
+level:
+  primary: L4
+  related:
+  - L3
+scope: group
+industry:
+- healthcare
+business_function:
+- bf.service_delivery
+category: enterprise_suite
+layer: core
+users:
+  ja: 病院の医療従事者・事務職員
+purpose:
+  ja: 病院の業務全体を情報でつなぎ、医療の質と効率を高める
+functions:
+- 受付・予約
+- 電子カルテ
+- 検査・薬剤・給食などの部門システムの連携
+- 医事会計
+events:
+- 来院・受付
+- 診察
+- 会計
+qualities:
+- 可用性
+- 連携の確実さ
+- 個人情報の保護
+outage_impact:
+  ja: 受付から会計まで病院全体の業務が止まり、紙での運用に切り替える必要がある。
+industry_roles:
+- owner
+- operator
+- prime_sier
+- partner
+- vendor
+- ops_provider
+critical_infrastructure:
+  sectors:
+  - ci.healthcare
+axes:
+  technical: 5
+  organization: 4
+  criticality: 5
+  longevity: 4
+  regulation: 5
+  changeability: 5
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 病院は多くの部門システムをつないで動いていることを説明できる
+  questions:
+  - 病院の中には、どんな部門のシステムがあるか
+relations:
+- type: integrates_with
+  target: st-electronic-medical-record
+- type: integrates_with
+  target: st-medical-billing
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XL
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

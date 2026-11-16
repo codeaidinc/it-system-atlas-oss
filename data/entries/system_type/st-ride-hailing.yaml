@@ -1,0 +1,65 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-ride-hailing.yaml
+# 説明：システムの種類のカード「配車アプリ」（st-ride-hailing）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-ride-hailing
+type: system_type
+names:
+  ja: 配車アプリ
+  en: Ride-hailing App
+aliases:
+- タクシー配車アプリ
+summary:
+  ja: スマートフォンで現在地を伝えてタクシーなどを呼び、到着時刻の確認や支払いまでを行うサービス。
+domain: D06
+level:
+  primary: L2
+scope: society
+industry:
+- transport
+business_function:
+- bf.service_delivery
+category: consumer_app
+layer: channel
+users:
+  ja: 利用者、タクシー事業者・運転手
+purpose:
+  ja: 乗りたい人と車を素早く結びつける
+axes:
+  technical: 2
+  organization: 3
+  criticality: 2
+  longevity: 2
+  regulation: 2
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: depends_on
+  target: st-map-service
+- type: integrates_with
+  target: st-payment-gateway
+scale:
+  typical:
+    project_class:
+      min: M
+      max: L
+    usage_class:
+      min: U2
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

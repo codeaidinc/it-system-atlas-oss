@@ -1,0 +1,68 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-seat-reservation.yaml
+# 説明：システムの種類のカード「座席予約システム」（st-seat-reservation）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-seat-reservation
+type: system_type
+names:
+  ja: 座席予約システム
+  en: Seat Reservation System
+aliases:
+- 指定席予約
+- 乗車券発売システム
+summary:
+  ja: 鉄道や高速バスの指定席・乗車券の予約と発売を管理するシステム。窓口、券売機、Webから同じ座席在庫を扱う。
+domain: D06
+level:
+  primary: L5
+  related:
+  - L3
+scope: society
+industry:
+- transport.rail
+- transport
+business_function:
+- bf.sales_marketing
+- bf.service_delivery
+category: social_infrastructure
+layer: core
+users:
+  ja: 乗客、交通事業者
+purpose:
+  ja: 座席を重複なく販売し、乗車を確実にする
+critical_infrastructure:
+  sectors:
+  - ci.rail
+axes:
+  technical: 5
+  organization: 4
+  criticality: 5
+  longevity: 5
+  regulation: 5
+  changeability: 5
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XL
+    usage_class:
+      min: U3
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

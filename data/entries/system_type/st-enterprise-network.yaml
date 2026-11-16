@@ -1,0 +1,84 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-enterprise-network.yaml
+# 説明：システムの種類のカード「企業内ネットワーク」（st-enterprise-network）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-enterprise-network
+type: system_type
+names:
+  ja: 企業内ネットワーク
+  en: Enterprise Network
+aliases:
+- 社内LAN
+- WAN
+summary:
+  ja: 本社や支店、工場などの拠点をつなぎ、社員がシステムやインターネットを使えるようにする通信網。
+domain: D00
+level:
+  primary: L0
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.it
+category: infrastructure
+layer: infrastructure
+users:
+  ja: 企業の全社員、情報システム部門
+purpose:
+  ja: 拠点をまたいで安全に通信できるようにする
+functions:
+- 拠点間の接続
+- インターネットへの接続
+- 通信の暗号化
+- アクセスの制御
+events:
+- 社員の接続
+- 新しい拠点の開設
+qualities:
+- 可用性
+- セキュリティ
+outage_impact:
+  ja: 社内のほぼすべてのシステムが使えなくなる。
+industry_roles:
+- owner
+- vendor
+- prime_sier
+- ops_provider
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 3
+  regulation: 2
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 社内のシステムがネットワークという土台の上で動いていることを説明できる
+  questions:
+  - 社内ネットワークが止まると、何ができなくなるか
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

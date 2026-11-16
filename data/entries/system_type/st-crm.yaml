@@ -1,0 +1,93 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-crm.yaml
+# 説明：システムの種類のカード「CRM（顧客関係管理）」（st-crm）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-crm
+type: system_type
+names:
+  ja: CRM（顧客関係管理）
+  en: Customer Relationship Management
+aliases:
+- CRM
+- 顧客管理システム
+summary:
+  ja: 顧客の基本情報や購入履歴、問い合わせ、対応履歴を一元管理し、顧客との関係を深めるためのシステム。
+domain: D03
+level:
+  primary: L3
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.sales_marketing
+- bf.customer_service
+category: business_app
+layer: application
+users:
+  ja: 営業・マーケティング・サポート部門
+purpose:
+  ja: 顧客を深く理解し、適切な対応や提案を行う
+functions:
+- 顧客情報の管理
+- 対応履歴の記録
+- 問い合わせの管理
+- 顧客の分析
+events:
+- 問い合わせ
+- 購入
+- キャンペーンへの反応
+qualities:
+- 情報の一元化
+- 使いやすさ
+- 個人情報の保護
+outage_impact:
+  ja: 顧客の情報や過去の対応が分からず、適切な対応ができなくなる。
+industry_roles:
+- saas_provider
+- vendor
+- ops_provider
+- owner
+- partner
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 1
+  goal: 顧客の情報を会社全体で共有する意味を説明できる
+  questions:
+  - 営業担当が変わっても、顧客対応を続けられるのはなぜか
+relations:
+- type: integrates_with
+  target: st-sfa
+- type: integrates_with
+  target: st-contact-center
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U1
+      max: U3
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

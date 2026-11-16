@@ -1,0 +1,65 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-grc.yaml
+# 説明：システムの種類のカード「内部監査・リスク管理（GRC）システム」（st-grc）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-grc
+type: system_type
+names:
+  ja: 内部監査・リスク管理（GRC）システム
+  en: Governance, Risk & Compliance System
+aliases:
+- GRC
+- 内部統制
+- 内部監査
+summary:
+  ja: 企業のリスクの一覧、内部統制のチェック、監査の計画と結果、改善の進み具合を記録・管理するシステム。
+domain: D03
+level:
+  primary: L3
+scope: group
+industry:
+- cross_industry
+business_function:
+- bf.risk_compliance
+category: business_app
+layer: application
+users:
+  ja: 内部監査部門、リスク管理部門、経営層
+purpose:
+  ja: 不正やミスを防ぎ、ルールどおりに経営されていることを確かめる
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-erp
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U1
+      max: U1
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

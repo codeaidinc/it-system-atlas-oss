@@ -1,0 +1,92 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-production-management.yaml
+# 説明：システムの種類のカード「生産管理システム」（st-production-management）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-production-management
+type: system_type
+names:
+  ja: 生産管理システム
+  en: Production Management System
+aliases:
+- 生産計画
+- MRP
+summary:
+  ja: 受注や需要予測をもとに、何をいつどれだけ作るかを計画し、必要な部品の手配や製造の進み具合を管理するシステム。
+domain: D04
+level:
+  primary: L3
+scope: enterprise
+industry:
+- manufacturing
+business_function:
+- bf.production
+- bf.procurement
+category: business_app
+layer: core
+users:
+  ja: 製造業の生産管理・購買部門
+purpose:
+  ja: 必要な製品を必要なときに作れるよう計画し、管理する
+functions:
+- 生産計画
+- 部品の所要量計算
+- 製造指示
+- 進み具合の管理
+events:
+- 受注・需要予測
+- 製造指示
+- 製造の完了
+qualities:
+- 計画の精度
+- 現場との連携
+outage_impact:
+  ja: 何をいつ作るかが決められず、工場の稼働や納期に影響する。
+industry_roles:
+- owner
+- prime_sier
+- partner
+- vendor
+- saas_provider
+axes:
+  technical: 4
+  organization: 4
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 3
+  goal: 注文から製造までの計画がどのように立てられるかを説明できる
+  questions:
+  - 部品が1つ足りないと、生産はどうなるか
+relations:
+- type: integrates_with
+  target: st-mes
+- type: integrates_with
+  target: st-erp
+scale:
+  typical:
+    project_class:
+      min: M
+      max: XL
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

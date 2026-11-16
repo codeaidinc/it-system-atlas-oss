@@ -1,0 +1,28 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/taxonomy/levels.yaml
+# 説明：統合階層：規模の序列ではなく「責任範囲の広がり」。上ほど多くの組織・人が依存する。
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+# 統合階層：規模の序列ではなく「責任範囲の広がり」。上ほど多くの組織・人が依存する。
+version: 0.2.0
+items:
+  - { id: L5, order: 5, ja: 社会基盤システム, en: Social Infrastructure System, desc: 多数の組織・市民が依存する社会的機能を支える, examples: 銀行間決済、電力系統、行政連携 }
+  - { id: L4, order: 4, ja: エンタープライズシステム, en: Enterprise System, desc: 企業・企業グループ全体の業務と情報を統合する, examples: 全社ERP、病院情報システム }
+  - { id: L3, order: 3, ja: 業務システム, en: Business System, desc: 組織の業務プロセスを支援・実行する, examples: 販売管理、給与、勘定系 }
+  - { id: L2, order: 2, ja: ITサービス・業務サービス, en: IT Service, desc: 利用者に継続して提供されるIT機能, examples: オンラインバンキング、SNS、Web会議 }
+  - { id: L1, order: 1, ja: アプリケーション, en: Application, desc: 特定の利用目的を実現するソフトウェア, examples: 家計簿アプリ、スマートホームアプリ }
+  - { id: L0, order: 0, ja: 共通技術基盤, en: Common Foundation, desc: すべての層を下から支える技術, examples: OS、DB、ネットワーク、クラウド、認証 }
+scopes:   # 利用範囲：そのシステムが仕事やデータをまとめる範囲
+  - { id: personal, ja: 個人 }
+  - { id: team, ja: チーム }
+  - { id: department, ja: 部門 }
+  - { id: enterprise, ja: 企業 }
+  - { id: group, ja: 企業グループ }
+  - { id: industry, ja: 業界・地域 }
+  - { id: society, ja: 社会全体 }

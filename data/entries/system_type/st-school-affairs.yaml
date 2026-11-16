@@ -1,0 +1,98 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-school-affairs.yaml
+# 説明：システムの種類のカード「校務支援システム」（st-school-affairs）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-school-affairs
+type: system_type
+names:
+  ja: 校務支援システム
+  en: School Administration System
+aliases:
+- 校務システム
+- 成績処理
+summary:
+  ja: 学校の成績処理、出欠管理、通知表や指導要録の作成など、教員の事務作業を支えるシステム。
+domain: D08
+level:
+  primary: L3
+scope: enterprise
+industry:
+- education
+- government
+business_function:
+- bf.service_delivery
+category: business_app
+layer: application
+users:
+  ja: 小中高校の教員・事務職員
+purpose:
+  ja: 教員の事務負担を減らし、児童生徒の情報を正確に管理する
+functions:
+- 出欠の管理
+- 成績の入力・集計（観点別の評価）
+- 通知表の作成
+- 指導要録の作成・保管
+- 時間割・行事の管理
+events:
+- 毎日の出欠の記録
+- 学期末の成績の入力
+- 成績会議
+- 通知表の発行
+- 進級・卒業
+qualities:
+- 正確性（成績・出欠を誤らない）
+- 個人情報の保護
+- 長期間の保存
+- 成績期のアクセス集中への耐性
+outage_impact:
+  ja: 成績期に止まると、成績会議や通知表の作成が間に合わなくなる。出欠や成績の記録が失われると、進学や証明書の発行に影響する。
+industry_roles:
+- owner
+- vendor
+- saas_provider
+- ops_provider
+structure:
+  entry: 先生の校務用の端末、職員室のプリンター
+  processing: 出欠・成績の集計、通知表・指導要録の作成
+  data: 児童生徒の名簿、出欠、成績、指導要録
+  external: 学習の仕組み（LMS）、教育委員会の管理の仕組み
+  foundation: 教育委員会のデータセンターまたはクラウド、校内ネットワーク
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 通知表や指導要録が、校務支援システムで作られ、長く正確に残されていることを説明できる
+  questions:
+  - 成績期の前に校務支援システムが止まったら、どうなるか
+  - 成績の記録は、なぜ長く正確に残さなければならないのか
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U1
+      max: U3
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

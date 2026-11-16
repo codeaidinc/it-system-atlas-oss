@@ -1,0 +1,44 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：Apache License 2.0（LICENSE を参照）
+# SPDX-License-Identifier: Apache-2.0
+# ファイル：.github/dependabot.yml
+# 説明：Dependabot の設定（依存パッケージと GitHub Actions の更新の提案）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+# Dependabot：依存関係とGitHub Actionsの更新PRを毎週作成する（自動マージはしない。必ずレビューしてから取り込む）
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directories:
+      - "/"
+    schedule:
+      interval: "weekly"
+      time: "06:00"
+      timezone: "Asia/Tokyo"
+    # 公開直後のバージョンをすぐに取り込まない（乗っ取られたパッケージの悪性版は数日以内に取り下げられることが多い）。
+    # セキュリティ更新はこの待機の対象外。
+    cooldown:
+      default-days: 3
+    open-pull-requests-limit: 5
+    groups:
+      github_actions-minor-patch:
+        update-types: ["minor", "patch"]
+  - package-ecosystem: "npm"
+    directories:
+      - "/"
+    schedule:
+      interval: "weekly"
+      time: "06:00"
+      timezone: "Asia/Tokyo"
+    # 公開直後のバージョンをすぐに取り込まない（乗っ取られたパッケージの悪性版は数日以内に取り下げられることが多い）。
+    # セキュリティ更新はこの待機の対象外。
+    cooldown:
+      default-days: 3
+    open-pull-requests-limit: 5
+    groups:
+      npm-minor-patch:
+        update-types: ["minor", "patch"]

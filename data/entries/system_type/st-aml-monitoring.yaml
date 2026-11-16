@@ -1,0 +1,64 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-aml-monitoring.yaml
+# 説明：システムの種類のカード「マネー・ローンダリング対策システム」（st-aml-monitoring）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-aml-monitoring
+type: system_type
+names:
+  ja: マネー・ローンダリング対策システム
+  en: AML Monitoring System
+aliases:
+- AMLシステム
+- 取引モニタリング
+summary:
+  ja: 犯罪収益の資金洗浄やテロ資金の疑いがある取引を検出し、当局への届出を支援するシステム。金融機関には法令上の対応が求められている。
+domain: D05
+level:
+  primary: L3
+scope: enterprise
+industry:
+- finance.banking
+business_function:
+- bf.risk_compliance
+category: business_app
+layer: application
+users:
+  ja: 銀行・証券などの金融機関のコンプライアンス部門
+purpose:
+  ja: 疑わしい取引を見つけ、法令に沿った対応を行う
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 5
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-core-banking
+scale:
+  typical:
+    project_class:
+      min: M
+      max: L
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

@@ -1,0 +1,88 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-video-streaming.yaml
+# 説明：システムの種類のカード「動画配信サービス」（st-video-streaming）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-video-streaming
+type: system_type
+names:
+  ja: 動画配信サービス
+  en: Video Streaming Service
+aliases:
+- 動画配信
+- VOD
+summary:
+  ja: 映画やドラマ、ライブなどの動画をインターネットで配信するサービス。配信、課金、おすすめ表示などのシステムで構成される。
+domain: D10
+level:
+  primary: L2
+scope: society
+industry:
+- media
+business_function:
+- bf.service_delivery
+category: consumer_app
+layer: channel
+users:
+  ja: 視聴者、配信事業者
+purpose:
+  ja: いつでもどこでも動画を視聴できるようにする
+functions:
+- 作品の検索・再生
+- 会員・課金の管理
+- おすすめ
+- 配信
+events:
+- 再生
+- 月額の請求
+qualities:
+- 止まらない再生
+- アクセス集中への耐性
+outage_impact:
+  ja: 多くの視聴者が同時に見られなくなる。
+industry_roles:
+- saas_provider
+- vendor
+- ops_provider
+axes:
+  technical: 3
+  organization: 5
+  criticality: 2
+  longevity: 2
+  regulation: 2
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 動画配信が、会員・課金・配信の仕組みの組み合わせであることを説明できる
+  questions:
+  - 人気作品の公開日に、配信が止まらないようにするにはどうするか
+relations:
+- type: depends_on
+  target: st-cdn
+- type: integrates_with
+  target: st-recommendation
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XXL
+    usage_class:
+      min: U3
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

@@ -1,0 +1,115 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-core-banking.yaml
+# 説明：システムの種類のカード「銀行勘定系システム」（st-core-banking）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-core-banking
+type: system_type
+names:
+  ja: 銀行勘定系システム
+  en: Core Banking System
+aliases:
+- 勘定系
+- コアバンキング
+summary:
+  ja: 預金口座や取引記録、残高などを管理する銀行の基幹システム。ATMやインターネットバンキングなど、多くの銀行サービスの土台になっている。
+domain: D05
+level:
+  primary: L3
+  related:
+  - L4
+scope: enterprise
+industry:
+- finance.banking
+business_function:
+- bf.service_delivery
+- bf.finance_accounting
+category: enterprise_core
+layer: core
+users:
+  ja: 銀行（行員・システム部門）。間接的には預金者
+purpose:
+  ja: 預金・為替・融資などの取引を正確に記録し、残高を管理する
+functions:
+- 口座の開設・管理
+- 入金・出金
+- 振込の受付と記録
+- 利息の計算
+- 残高の管理
+events:
+- 窓口・ATMでの入出金
+- アプリからの振込依頼
+- 給与などの一括入金
+- 月末・年度末の利息計算
+qualities:
+- 正確性（1円も狂わない）
+- 整合性
+- 可用性（止まらない）
+- セキュリティ
+- 障害からの復旧能力
+outage_impact:
+  ja: 入出金や振込ができなくなり、利用者だけでなく、給与支払いや企業間の決済まで止まる。
+industry_roles:
+- owner
+- operator
+- prime_sier
+- partner
+- vendor
+- ops_provider
+- regulator
+structure:
+  entry: 窓口端末、ATM、インターネットバンキング、法人向けシステム
+  processing: 口座・取引・利息などの業務処理
+  data: 口座、取引明細、顧客、商品（預金の種類）
+  external: 銀行間決済システム、カード会社、他の銀行
+  foundation: 大型サーバー、データベース、二重化された拠点
+critical_infrastructure:
+  sectors:
+  - ci.finance
+axes:
+  technical: 5
+  organization: 5
+  criticality: 5
+  longevity: 5
+  regulation: 5
+  changeability: 5
+  evidence_type: editorial_estimate
+  basis: editor
+learning:
+  difficulty: 3
+  goal: 銀行の「お金の記録」の中心にあるシステムの役割と、止まったときの影響を説明できる
+  questions:
+  - 振込ボタンを押したとき、勘定系では何が記録されるか
+  - 勘定系が止まると、誰がどのように困るか
+relations:
+- type: integrates_with
+  target: st-interbank-payment
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XXL
+    usage_class:
+      min: U2
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]
+sources:
+- title: 『サンクス ＆ トライ MIZUHO』の開始について（新システムへの移行完了に言及）
+  publisher: みずほフィナンシャルグループ ほか
+  published: '2019-08-02'
+  url: https://www.mizuhobank.co.jp/release/pdf/20190802release_jp.pdf
+  accessed: '2026-11-03'

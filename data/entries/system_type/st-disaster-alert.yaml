@@ -1,0 +1,92 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-disaster-alert.yaml
+# 説明：システムの種類のカード「防災情報システム」（st-disaster-alert）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-disaster-alert
+type: system_type
+names:
+  ja: 防災情報システム
+  en: Disaster Information System
+aliases:
+- 防災無線
+- 緊急速報
+summary:
+  ja: 地震・津波・大雨などの災害情報を集め、住民や関係機関に素早く伝えるためのシステム。
+domain: D12
+level:
+  primary: L5
+  related:
+  - L2
+scope: society
+industry:
+- government
+business_function:
+- bf.risk_compliance
+category: public_system
+layer: channel
+users:
+  ja: 国・自治体の防災担当、住民
+purpose:
+  ja: 災害時に必要な情報を確実に届け、被害を減らす
+functions:
+- 気象・災害情報の受信
+- 避難情報の作成
+- 複数の手段での一斉配信
+events:
+- 警報の発表
+- 避難指示
+qualities:
+- 確実に届くこと
+- 速さ
+- 災害時にも動くこと
+outage_impact:
+  ja: 避難の情報が住民に届かず、被害が大きくなるおそれがある。
+industry_roles:
+- owner
+- operator
+- prime_sier
+- partner
+- vendor
+- ops_provider
+- regulator
+critical_infrastructure:
+  sectors:
+  - ci.government
+axes:
+  technical: 4
+  organization: 3
+  criticality: 5
+  longevity: 5
+  regulation: 5
+  changeability: 5
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 避難情報が、どこで決められ、どの手段で届くかを説明できる
+  questions:
+  - 災害時に情報を確実に届けるため、なぜ複数の手段を使うのか
+scale:
+  typical:
+    project_class:
+      min: M
+      max: L
+    usage_class:
+      min: U3
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

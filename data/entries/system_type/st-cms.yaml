@@ -1,0 +1,64 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-cms.yaml
+# 説明：システムの種類のカード「CMS（コンテンツ管理システム）」（st-cms）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-cms
+type: system_type
+names:
+  ja: CMS（コンテンツ管理システム）
+  en: Content Management System
+aliases:
+- CMS
+- Webサイト管理
+summary:
+  ja: Webサイトの文章や画像を、専門知識がなくても作成・更新・公開できるようにするシステム。企業サイトやニュースサイトで使われる。
+domain: D00
+level:
+  primary: L2
+  related:
+  - L0
+scope: enterprise
+industry:
+- cross_industry
+- media
+business_function:
+- bf.external_relations
+category: platform
+layer: application
+users:
+  ja: 広報・Web担当者、編集者
+purpose:
+  ja: Webサイトの情報を正確かつ素早く発信する
+axes:
+  technical: 2
+  organization: 2
+  criticality: 2
+  longevity: 2
+  regulation: 2
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: M
+    usage_class:
+      min: U1
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

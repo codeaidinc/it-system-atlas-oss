@@ -1,0 +1,61 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-container-platform.yaml
+# 説明：システムの種類のカード「コンテナ基盤」（st-container-platform）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-container-platform
+type: system_type
+names:
+  ja: コンテナ基盤
+  en: Container Platform
+aliases:
+- Kubernetes
+- コンテナ
+summary:
+  ja: アプリケーションを「コンテナ」という単位で動かし、多数のサーバー上での配置や拡張を自動で管理する基盤。
+domain: D00
+level:
+  primary: L0
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.it
+category: platform
+layer: infrastructure
+users:
+  ja: 開発者、インフラエンジニア
+purpose:
+  ja: アプリケーションを素早く安定して動かす
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 3
+  regulation: 2
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U1
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

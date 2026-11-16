@@ -1,0 +1,15 @@
+IT System Atlas OSS版
+Copyright (c) 2026 合同会社CODEAID
+
+ソースコードは Apache License 2.0（LICENSE）、文章・データは
+Creative Commons Attribution 4.0 International（CC BY 4.0、LICENSE-DATA）で提供します。
+
+このリポジトリには、次の第三者の著作物を含みます。
+
+  IBM Plex Mono（apps/web/public/fonts/ibm-plex-mono-latin-500-normal.woff2）
+  Copyright 2017 IBM Corp.
+  SIL Open Font License 1.1（apps/web/public/fonts/IBM-Plex-Mono-LICENSE.txt）
+
+データや出典に記載した企業名・製品名・サービス名は、各社の商標または登録商標です。
+記載は説明や出典の表示のためのもので、推奨・提携・評価を意味しません。
+規模の参考値に引用した資料の著作権は、各資料の発行元に帰属します（出典は各カードに記載）。

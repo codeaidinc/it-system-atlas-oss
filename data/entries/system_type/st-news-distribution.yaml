@@ -1,0 +1,66 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-news-distribution.yaml
+# 説明：システムの種類のカード「ニュース配信システム」（st-news-distribution）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-news-distribution
+type: system_type
+names:
+  ja: ニュース配信システム
+  en: News Distribution System
+aliases:
+- ニュースサイト
+- 記事配信
+summary:
+  ja: 報道機関などが記事を作成・編集し、Webサイトやアプリ、他のメディアへ配信するシステム。
+domain: D10
+level:
+  primary: L3
+scope: enterprise
+industry:
+- media
+business_function:
+- bf.service_delivery
+category: business_app
+layer: application
+users:
+  ja: 記者・編集者、読者
+purpose:
+  ja: 正確な情報を素早く多くの人に届ける
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: depends_on
+  target: st-cms
+- type: depends_on
+  target: st-cdn
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U2
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

@@ -1,0 +1,117 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-interbank-payment.yaml
+# 説明：システムの種類のカード「銀行間決済システム」（st-interbank-payment）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-interbank-payment
+type: system_type
+names:
+  ja: 銀行間決済システム
+  en: Interbank Payment System
+aliases:
+- 全銀システム
+- 為替決済
+summary:
+  ja: 異なる銀行の口座の間で振込などのお金のやり取りを処理し、銀行同士の決済を行うシステム。日本では全銀システムが中心的な役割を担う。
+domain: D05
+level:
+  primary: L5
+scope: society
+industry:
+- finance.banking
+- finance.payments
+business_function:
+- bf.service_delivery
+category: social_infrastructure
+layer: integration
+users:
+  ja: 銀行などの金融機関。間接的には振込を行うすべての人
+purpose:
+  ja: 銀行をまたぐ送金を安全・確実に処理する
+functions:
+- 銀行間の振込データの中継
+- 銀行同士の決済金額の計算
+- 決済の確定
+events:
+- 各銀行からの振込データの送信
+- 一日の決済の締め
+qualities:
+- 正確性
+- 可用性
+- 処理能力
+- セキュリティ
+outage_impact:
+  ja: 銀行をまたぐ振込が全国で止まり、給与や代金の支払いに広く影響する。
+industry_roles:
+- owner
+- operator
+- prime_sier
+- partner
+- vendor
+- ops_provider
+- regulator
+structure:
+  entry: 各銀行の勘定系からの接続
+  processing: 振込データの中継、決済額の計算
+  data: 為替の取引データ
+  external: 全国の銀行、中央銀行の決済システム
+  foundation: 専用ネットワーク、二重化されたセンター
+critical_infrastructure:
+  sectors:
+  - ci.finance
+axes:
+  technical: 5
+  organization: 5
+  criticality: 5
+  longevity: 5
+  regulation: 5
+  changeability: 5
+  evidence_type: editorial_estimate
+  basis: editor
+learning:
+  difficulty: 2
+  goal: 自分の銀行と相手の銀行の間で、お金のデータがどう届くかを説明できる
+  questions:
+  - 違う銀行に振り込めるのはなぜか
+relations:
+- type: integrates_with
+  target: st-core-banking
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XXL
+    usage_class:
+      min: U4
+      max: U4
+    evidence_type: editorial_estimate
+  references:
+  - measure: transactions
+    value: 8430000
+    approximate: true
+    unit: transactions_per_day
+    scope:
+      ja: 全銀システムの1営業日平均の取扱件数（金額は1営業日平均 約17.5兆円）
+    as_of: 2025-12
+    evidence_type: official_report
+    subject:
+      ja: 全国銀行データ通信システム（全銀システム）
+    source:
+      title: 全国銀行データ通信システム（全銀システム）
+      publisher: 一般社団法人全国銀行協会
+      url: https://www.zenginkyo.or.jp/abstract/efforts/system/zengin-system/
+      accessed: '2026-11-03'
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

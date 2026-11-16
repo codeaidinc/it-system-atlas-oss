@@ -1,0 +1,65 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-construction-management.yaml
+# 説明：システムの種類のカード「工事・施工管理システム」（st-construction-management）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-construction-management
+type: system_type
+names:
+  ja: 工事・施工管理システム
+  en: Construction Project Management System
+aliases:
+- 施工管理
+- 工事管理
+summary:
+  ja: 建設工事の工程、作業員と資材の手配、現場の写真や図面、安全の記録、予算と実績を管理するシステム。
+domain: D04
+level:
+  primary: L3
+scope: enterprise
+industry:
+- construction
+business_function:
+- bf.production
+- bf.assets
+category: business_app
+layer: application
+users:
+  ja: 建設会社の現場監督、協力会社
+purpose:
+  ja: 工事を安全に、予定どおりの工期と予算で進める
+axes:
+  technical: 3
+  organization: 2
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-bim
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: M
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

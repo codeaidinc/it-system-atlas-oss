@@ -1,0 +1,70 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-customs-clearance.yaml
+# 説明：システムの種類のカード「輸出入・港湾関連手続システム」（st-customs-clearance）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-customs-clearance
+type: system_type
+names:
+  ja: 輸出入・港湾関連手続システム
+  en: Customs & Trade Procedure System
+aliases:
+- 通関システム
+- NACCS
+summary:
+  ja: 輸出入の申告や関税の納付、港湾・空港での手続きを電子的に行う官民共同のシステム。日本ではNACCSが担っている。
+domain: D06
+level:
+  primary: L5
+  related:
+  - L3
+scope: society
+industry:
+- logistics
+- government
+business_function:
+- bf.risk_compliance
+category: public_system
+layer: core
+users:
+  ja: 税関・関係省庁、通関業者、船会社、航空会社
+purpose:
+  ja: 国際物流の手続きを迅速・正確に行う
+critical_infrastructure:
+  sectors:
+  - ci.port
+axes:
+  technical: 5
+  organization: 4
+  criticality: 5
+  longevity: 5
+  regulation: 5
+  changeability: 5
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-port-terminal
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XL
+    usage_class:
+      min: U2
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

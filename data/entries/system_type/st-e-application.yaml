@@ -1,0 +1,95 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-e-application.yaml
+# 説明：システムの種類のカード「行政手続オンライン申請システム」（st-e-application）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-e-application
+type: system_type
+names:
+  ja: 行政手続オンライン申請システム
+  en: Government Online Application System
+aliases:
+- 電子申請
+- オンライン申請
+summary:
+  ja: 住民や企業が、各種の届出や申請をインターネットから行えるようにする行政のシステム。
+domain: D09
+level:
+  primary: L2
+  related:
+  - L5
+scope: enterprise
+industry:
+- government
+business_function:
+- bf.service_delivery
+category: public_system
+layer: channel
+users:
+  ja: 住民、企業、行政職員
+purpose:
+  ja: 窓口に行かずに行政手続きを済ませられるようにする
+functions:
+- 申請の受付
+- 本人確認
+- 手数料の支払い
+- 審査の状況の通知
+events:
+- 届出・申請
+qualities:
+- 使いやすさ
+- 本人確認の確実さ
+- セキュリティ
+outage_impact:
+  ja: 窓口に行かないと手続きができなくなる。
+industry_roles:
+- owner
+- operator
+- prime_sier
+- partner
+- vendor
+- ops_provider
+- regulator
+critical_infrastructure:
+  sectors:
+  - ci.government
+axes:
+  technical: 3
+  organization: 4
+  criticality: 4
+  longevity: 2
+  regulation: 4
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 行政の手続きがオンラインでどう受け付けられるかを説明できる
+  questions:
+  - オンライン申請で、本人確認が特に大切なのはなぜか
+relations:
+- type: integrates_with
+  target: st-national-id-system
+scale:
+  typical:
+    project_class:
+      min: M
+      max: XL
+    usage_class:
+      min: U3
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

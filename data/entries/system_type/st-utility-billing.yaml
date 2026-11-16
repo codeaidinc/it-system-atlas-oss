@@ -1,0 +1,94 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-utility-billing.yaml
+# 説明：システムの種類のカード「料金・顧客管理システム（電気・ガス）」（st-utility-billing）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-utility-billing
+type: system_type
+names:
+  ja: 料金・顧客管理システム（電気・ガス）
+  en: Utility Billing & Customer System
+aliases:
+- CIS
+- 料金システム
+summary:
+  ja: 電気・ガスなどの契約、使用量に応じた料金の計算、請求、問い合わせ対応を管理するシステム。
+domain: D11
+level:
+  primary: L3
+  related:
+  - L4
+scope: enterprise
+industry:
+- energy
+business_function:
+- bf.finance_accounting
+- bf.customer_service
+category: enterprise_core
+layer: core
+users:
+  ja: 電力・ガス会社。間接的には契約者
+purpose:
+  ja: 多数の契約者の料金を正確に計算し請求する
+functions:
+- 契約の管理
+- 料金の計算
+- 請求
+- 問い合わせ対応
+events:
+- 使用量の確定
+- 月の請求
+- 契約の変更
+qualities:
+- 正確性
+- 料金プランの変更への対応
+outage_impact:
+  ja: 料金の計算や請求ができず、多数の契約者に影響する。
+industry_roles:
+- owner
+- operator
+- prime_sier
+- partner
+- vendor
+- ops_provider
+critical_infrastructure:
+  sectors:
+  - ci.electricity
+  - ci.gas
+axes:
+  technical: 4
+  organization: 4
+  criticality: 5
+  longevity: 4
+  regulation: 5
+  changeability: 4
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 使用量のデータが、契約プランに合わせて料金になることを説明できる
+  questions:
+  - 料金プランが多いと、システムにとって何が大変か
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XL
+    usage_class:
+      min: U3
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

@@ -1,0 +1,80 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-cdn.yaml
+# 説明：システムの種類のカード「CDN（コンテンツ配信ネットワーク）」（st-cdn）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-cdn
+type: system_type
+names:
+  ja: CDN（コンテンツ配信ネットワーク）
+  en: Content Delivery Network
+aliases:
+- CDN
+summary:
+  ja: 世界各地に置いたサーバーにWebサイトや動画のデータを分散して配置し、利用者の近くから高速に届ける仕組み。
+domain: D10
+level:
+  primary: L0
+scope: enterprise
+industry:
+- telecom
+- media
+business_function:
+- bf.it
+category: infrastructure
+layer: infrastructure
+users:
+  ja: Webサービス・動画配信事業者
+purpose:
+  ja: 大量のアクセスにも速く安定して応える
+functions:
+- コンテンツの分散配置
+- 近くのサーバーからの配信
+- アクセス集中の吸収
+events:
+- Webページ・動画の要求
+qualities:
+- 速さ
+- 可用性
+outage_impact:
+  ja: 多くのWebサイトや動画が表示されなくなる。
+industry_roles:
+- vendor
+- ops_provider
+axes:
+  technical: 4
+  organization: 4
+  criticality: 3
+  longevity: 3
+  regulation: 2
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 動画や画像が速く届く仕組みを説明できる
+  questions:
+  - 遠くの国のサイトでも速く表示されるのはなぜか
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XL
+    usage_class:
+      min: U4
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

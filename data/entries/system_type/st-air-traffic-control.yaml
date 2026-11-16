@@ -1,0 +1,67 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-air-traffic-control.yaml
+# 説明：システムの種類のカード「航空管制システム」（st-air-traffic-control）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-air-traffic-control
+type: system_type
+names:
+  ja: 航空管制システム
+  en: Air Traffic Control System
+aliases:
+- 航空交通管理
+summary:
+  ja: レーダーなどで航空機の位置を把握し、管制官が航空機同士の安全な間隔を保つように指示を出すためのシステム。
+domain: D06
+level:
+  primary: L5
+  related:
+  - L3
+scope: society
+industry:
+- transport.aviation
+- government
+business_function:
+- bf.service_delivery
+category: control_system
+layer: control
+users:
+  ja: 航空管制官、航空会社
+purpose:
+  ja: 空の交通の安全と効率を守る
+critical_infrastructure:
+  sectors:
+  - ci.aviation
+  - ci.airport
+axes:
+  technical: 5
+  organization: 4
+  criticality: 5
+  longevity: 5
+  regulation: 5
+  changeability: 5
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XL
+    usage_class:
+      min: U4
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

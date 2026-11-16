@@ -1,0 +1,19 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/taxonomy/relation_types.yaml
+# 説明：分類：カードどうしの関係の種類
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+version: 0.2.0
+# out_ja: このカードから見た関係先の呼び方 / in_ja: 関係元から見た呼び方
+items:
+  - { id: is_a, ja: 〜の一種, out_ja: 上位の種類, in_ja: 下位の種類 }
+  - { id: part_of, ja: 〜の一部, out_ja: 含まれる先, in_ja: 構成要素 }
+  - { id: integrates_with, ja: 〜と連携, out_ja: 連携するシステム, in_ja: 連携するシステム, symmetric: true }
+  - { id: depends_on, ja: 〜を基盤とする, out_ja: 基盤としているシステム, in_ja: これを基盤とするシステム }
+  - { id: successor_of, ja: 〜の後継, out_ja: 前身のシステム, in_ja: 後継のシステム }

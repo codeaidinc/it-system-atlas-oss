@@ -1,0 +1,92 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-fraud-detection.yaml
+# 説明：システムの種類のカード「不正検知システム」（st-fraud-detection）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-fraud-detection
+type: system_type
+names:
+  ja: 不正検知システム
+  en: Fraud Detection System
+aliases:
+- 不正利用検知
+summary:
+  ja: カード決済や送金の取引データを分析し、なりすましや不正利用の疑いがある取引を見つけて止めるシステム。統計やAIによる判定が使われる。
+domain: D05
+level:
+  primary: L3
+  related:
+  - L0
+scope: enterprise
+industry:
+- finance.payments
+- finance.banking
+business_function:
+- bf.risk_compliance
+category: security
+layer: application
+users:
+  ja: カード会社、銀行、決済事業者
+purpose:
+  ja: 不正な取引による被害を防ぐ
+functions:
+- 取引の監視
+- 不正の疑いの判定
+- 取引の保留・停止
+- 担当者への通知
+events:
+- カード利用・送金の発生
+- いつもと違う場所や金額での取引
+qualities:
+- 判定の速さ
+- 誤検知の少なさ
+- セキュリティ
+outage_impact:
+  ja: 不正な取引を見逃しやすくなり、被害が広がるおそれがある。
+industry_roles:
+- owner
+- operator
+- prime_sier
+- partner
+- vendor
+- ops_provider
+axes:
+  technical: 4
+  organization: 4
+  criticality: 3
+  longevity: 3
+  regulation: 4
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 利用者の取引の裏で、不正を見張る仕組みが動いていることを説明できる
+  questions:
+  - どんな取引が「いつもと違う」と判断されるか
+relations:
+- type: integrates_with
+  target: st-credit-card-processing
+scale:
+  typical:
+    project_class:
+      min: M
+      max: XL
+    usage_class:
+      min: U3
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

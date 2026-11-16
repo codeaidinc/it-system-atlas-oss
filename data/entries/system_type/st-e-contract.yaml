@@ -1,0 +1,64 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-e-contract.yaml
+# 説明：システムの種類のカード「電子契約サービス」（st-e-contract）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-e-contract
+type: system_type
+names:
+  ja: 電子契約サービス
+  en: Electronic Contract Service
+aliases:
+- 電子署名
+- クラウドサイン型
+summary:
+  ja: 契約書を紙ではなく電子データで作成し、電子署名によって締結・保管するサービス。企業間の取引や雇用契約などで利用が広がっている。
+domain: D03
+level:
+  primary: L2
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.risk_compliance
+category: business_app
+layer: application
+users:
+  ja: 企業の法務・営業部門、取引先
+purpose:
+  ja: 契約の締結を早くし、印紙や郵送の手間を減らす
+axes:
+  technical: 2
+  organization: 3
+  criticality: 2
+  longevity: 2
+  regulation: 2
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-document-management
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U2
+      max: U3
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

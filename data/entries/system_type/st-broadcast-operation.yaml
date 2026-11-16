@@ -1,0 +1,61 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-broadcast-operation.yaml
+# 説明：システムの種類のカード「放送運行システム」（st-broadcast-operation）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-broadcast-operation
+type: system_type
+names:
+  ja: 放送運行システム
+  en: Broadcast Automation System
+aliases:
+- 番組送出
+- マスター設備
+summary:
+  ja: テレビ・ラジオ局で、番組やCMを番組表どおりに正確な時刻で送り出すための運行・送出システム。
+domain: D10
+level:
+  primary: L3
+scope: enterprise
+industry:
+- media
+business_function:
+- bf.service_delivery
+category: control_system
+layer: control
+users:
+  ja: 放送局の運行担当
+purpose:
+  ja: 番組とCMを決められた時刻どおりに放送する
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 5
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: M
+      max: L
+    usage_class:
+      min: U3
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

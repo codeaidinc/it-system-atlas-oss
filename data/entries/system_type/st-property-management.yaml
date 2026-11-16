@@ -1,0 +1,61 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-property-management.yaml
+# 説明：システムの種類のカード「不動産管理システム」（st-property-management）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-property-management
+type: system_type
+names:
+  ja: 不動産管理システム
+  en: Real Estate Property Management System
+aliases:
+- 賃貸管理
+summary:
+  ja: 賃貸物件の契約、家賃の請求・入金、修繕、入居者からの問い合わせなどを管理するシステム。
+domain: D04
+level:
+  primary: L3
+scope: enterprise
+industry:
+- construction
+business_function:
+- bf.finance_accounting
+- bf.customer_service
+category: business_app
+layer: application
+users:
+  ja: 不動産管理会社、物件の所有者
+purpose:
+  ja: 多数の物件と契約を正確に管理する
+axes:
+  technical: 3
+  organization: 2
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: S
+      max: M
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

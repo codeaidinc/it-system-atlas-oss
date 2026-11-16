@@ -1,0 +1,93 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-disaster-response.yaml
+# 説明：システムの種類のカード「災害対応システム」（st-disaster-response）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-disaster-response
+type: system_type
+names:
+  ja: 災害対応システム
+  en: Disaster Response Management System
+aliases:
+- 災害対策本部システム
+- 被災者支援システム
+summary:
+  ja: 大規模な災害のときに、被害状況、避難所、物資、救助活動などの情報を集めて共有し、対策本部の判断を支えるシステム。
+domain: D12
+level:
+  primary: L5
+scope: society
+industry:
+- government
+business_function:
+- bf.risk_compliance
+category: public_system
+layer: application
+users:
+  ja: 国・自治体の災害対策本部、関係機関
+purpose:
+  ja: 被害を把握し、救助や支援を素早く行う
+functions:
+- 被害情報の集約
+- 避難所・物資の管理
+- 関係機関との情報共有
+events:
+- 災害の発生
+- 被害の報告
+- 支援の要請
+qualities:
+- 災害時にも動くこと
+- 情報の正確さと速さ
+outage_impact:
+  ja: 被害の全体像が分からず、救助や支援が遅れる。
+industry_roles:
+- owner
+- operator
+- prime_sier
+- partner
+- vendor
+- ops_provider
+- regulator
+critical_infrastructure:
+  sectors:
+  - ci.government
+axes:
+  technical: 4
+  organization: 3
+  criticality: 5
+  longevity: 5
+  regulation: 5
+  changeability: 5
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 災害対策本部が情報を集めて判断する仕組みを説明できる
+  questions:
+  - 災害対策本部は、どんな情報を集めて判断しているか
+relations:
+- type: integrates_with
+  target: st-disaster-alert
+scale:
+  typical:
+    project_class:
+      min: M
+      max: L
+    usage_class:
+      min: U2
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

@@ -1,0 +1,73 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-campaign-lp.yaml
+# 説明：システムの種類のカード「キャンペーンサイト・ランディングページ（LP）」（st-campaign-lp）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-campaign-lp
+type: system_type
+names:
+  ja: キャンペーンサイト・ランディングページ（LP）
+  en: Campaign Site / Landing Page
+aliases:
+- LP
+- ランディングページ
+- キャンペーンサイト
+summary:
+  ja: 新商品やキャンペーンに合わせて、期間を決めて公開するWebサイトやページ。広告から来た人に申し込みや購入を促す。宣伝・マーケティング部門が広告宣伝費・販売促進費で発注することが多い。
+domain: D02
+level:
+  primary: L1
+scope: department
+industry:
+- cross_industry
+business_function:
+- bf.sales_marketing
+category: business_app
+layer: channel
+users:
+  ja: 宣伝・マーケティング・販促部門、広告を見た人
+purpose:
+  ja: 広告から来た人に申し込みや購入をしてもらう
+axes:
+  technical: 1
+  organization: 1
+  criticality: 1
+  longevity: 1
+  regulation: 1
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-ad-serving
+- type: integrates_with
+  target: st-web-analytics
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: S
+    usage_class:
+      min: U1
+      max: U3
+    evidence_type: editorial_estimate
+industry_roles:
+- owner
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-15'
+  updated: '2026-11-15'
+  contributors:
+  - CODEAID編集部
+  unconfirmed:
+  - domain
+  - level
+  - scope
+  - axes

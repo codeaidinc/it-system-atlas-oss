@@ -1,0 +1,92 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-pacs.yaml
+# 説明：システムの種類のカード「医用画像管理システム（PACS）」（st-pacs）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-pacs
+type: system_type
+names:
+  ja: 医用画像管理システム（PACS）
+  en: Picture Archiving and Communication System
+aliases:
+- PACS
+- 画像管理
+summary:
+  ja: CTやMRI、レントゲンなどの医用画像を保存し、院内の端末から医師が参照できるようにするシステム。
+domain: D07
+level:
+  primary: L3
+scope: enterprise
+industry:
+- healthcare
+business_function:
+- bf.service_delivery
+category: business_app
+layer: application
+users:
+  ja: 医師・放射線技師
+purpose:
+  ja: 検査画像を確実に保存し、診断に使う
+functions:
+- 検査画像の受け取りと保存
+- 画像の検索・表示
+- 過去の画像との比較
+- 電子カルテとの連携
+events:
+- CT・MRI・レントゲンの撮影
+- 医師による画像の参照
+qualities:
+- 大容量の保存
+- 表示の速さ
+- 長期保存
+- 個人情報の保護
+outage_impact:
+  ja: 検査画像を見られず、診断や手術の判断が遅れる。
+industry_roles:
+- owner
+- vendor
+- prime_sier
+- ops_provider
+critical_infrastructure:
+  sectors:
+  - ci.healthcare
+axes:
+  technical: 3
+  organization: 3
+  criticality: 5
+  longevity: 4
+  regulation: 5
+  changeability: 4
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 検査の画像が電子カルテとは別のシステムで保存・共有されていることを説明できる
+  questions:
+  - CTやレントゲンの画像は、どこに保存され、医師はどうやって見るのか
+relations:
+- type: integrates_with
+  target: st-electronic-medical-record
+scale:
+  typical:
+    project_class:
+      min: M
+      max: L
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

@@ -1,0 +1,36 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/taxonomy/industries.yaml
+# 説明：産業・社会分野（アトラス独自ID）。isic_rev4 は国連ISIC Rev.4 の大分類（Section）への対応。
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+# 産業・社会分野（アトラス独自ID）。isic_rev4 は国連ISIC Rev.4 の大分類（Section）への対応。
+version: 0.1.0
+items:
+  - { id: finance, ja: 金融, en: Finance, isic_rev4: K }
+  - { id: finance.banking, parent: finance, ja: 銀行, en: Banking, isic_rev4: K }
+  - { id: finance.securities, parent: finance, ja: 証券, en: Securities, isic_rev4: K }
+  - { id: finance.insurance, parent: finance, ja: 保険, en: Insurance, isic_rev4: K }
+  - { id: finance.payments, parent: finance, ja: 決済・キャッシュレス, en: Payments, isic_rev4: K }
+  - { id: commerce, ja: 商業・小売, en: Commerce & Retail, isic_rev4: G }
+  - { id: manufacturing, ja: 製造, en: Manufacturing, isic_rev4: C }
+  - { id: logistics, ja: 物流, en: Logistics, isic_rev4: H }
+  - { id: transport, ja: 交通, en: Transportation, isic_rev4: H }
+  - { id: transport.rail, parent: transport, ja: 鉄道, en: Railways, isic_rev4: H }
+  - { id: transport.aviation, parent: transport, ja: 航空・空港, en: Aviation, isic_rev4: H }
+  - { id: energy, ja: エネルギー, en: Energy, isic_rev4: D }
+  - { id: utilities.water, ja: 水道, en: Water Supply, isic_rev4: E }
+  - { id: telecom, ja: 情報通信, en: Telecommunications, isic_rev4: J }
+  - { id: media, ja: メディア・エンタメ, en: Media & Entertainment, isic_rev4: J }
+  - { id: healthcare, ja: 医療・介護, en: Healthcare, isic_rev4: Q }
+  - { id: government, ja: 行政・公共, en: Government, isic_rev4: O }
+  - { id: education, ja: 教育, en: Education, isic_rev4: P }
+  - { id: hospitality, ja: 宿泊・飲食, en: Hospitality, isic_rev4: I }
+  - { id: construction, ja: 建設・不動産, en: Construction & Real Estate, isic_rev4: F }
+  - { id: agriculture, ja: 農林水産, en: Agriculture, isic_rev4: A }
+  - { id: cross_industry, ja: 業種共通, en: Cross-industry }

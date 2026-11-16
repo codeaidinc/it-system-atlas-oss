@@ -1,0 +1,71 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-web-analytics.yaml
+# 説明：システムの種類のカード「アクセス解析」（st-web-analytics）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-web-analytics
+type: system_type
+names:
+  ja: アクセス解析
+  en: Web Analytics
+aliases:
+- Web解析
+- アクセス解析ツール
+summary:
+  ja: Webサイトやアプリを訪れた人の数、見たページ、申し込みに至った割合などを記録し、集計するシステム。マーケティング部門やWeb担当者が、施策の効果を確かめ、改善を考えるために使う。
+domain: D03
+level:
+  primary: L2
+scope: department
+industry:
+- cross_industry
+business_function:
+- bf.sales_marketing
+category: data_analytics
+layer: integration
+users:
+  ja: マーケティング部門、Web担当者、広告運用の担当者
+purpose:
+  ja: Webでの施策の効果を数字で確かめ、改善する
+axes:
+  technical: 2
+  organization: 1
+  criticality: 1
+  longevity: 2
+  regulation: 2
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-marketing-automation
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: S
+    usage_class:
+      min: U1
+      max: U4
+    evidence_type: editorial_estimate
+industry_roles:
+- owner
+- saas_provider
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-15'
+  updated: '2026-11-15'
+  contributors:
+  - CODEAID編集部
+  unconfirmed:
+  - domain
+  - level
+  - scope
+  - axes

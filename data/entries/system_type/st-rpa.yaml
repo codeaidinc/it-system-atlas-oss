@@ -1,0 +1,65 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-rpa.yaml
+# 説明：システムの種類のカード「RPA（ソフトウェアロボット）」（st-rpa）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-rpa
+type: system_type
+names:
+  ja: RPA（ソフトウェアロボット）
+  en: Robotic Process Automation
+aliases:
+- RPA
+- 業務自動化ロボット
+summary:
+  ja: 人がパソコンで行う決まった操作（データの転記、画面の入力、ファイルの集計など）を、ソフトウェアのロボットに記録して自動で実行させる仕組み。
+domain: D03
+level:
+  primary: L2
+scope: department
+industry:
+- cross_industry
+business_function:
+- bf.it
+- bf.collaboration
+category: platform
+layer: application
+users:
+  ja: 業務部門の担当者、情報システム部門
+purpose:
+  ja: 繰り返しの事務作業を自動化する
+axes:
+  technical: 2
+  organization: 2
+  criticality: 2
+  longevity: 2
+  regulation: 2
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-workflow
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: M
+    usage_class:
+      min: U1
+      max: U1
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

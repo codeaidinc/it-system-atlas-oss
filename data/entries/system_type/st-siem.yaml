@@ -1,0 +1,84 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-siem.yaml
+# 説明：システムの種類のカード「セキュリティ監視（SOC・SIEM）」（st-siem）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-siem
+type: system_type
+names:
+  ja: セキュリティ監視（SOC・SIEM）
+  en: Security Monitoring (SOC/SIEM)
+aliases:
+- SOC
+- SIEM
+summary:
+  ja: 各システムのログを集めて分析し、サイバー攻撃や不正アクセスの兆候を監視・検知する仕組みと体制。
+domain: D00
+level:
+  primary: L0
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.risk_compliance
+- bf.it
+category: security
+layer: infrastructure
+users:
+  ja: セキュリティ担当者、セキュリティ監視事業者
+purpose:
+  ja: 攻撃を早く見つけ、被害を最小限にする
+functions:
+- ログの収集
+- 不審な動きの分析
+- 警報
+- 調査の記録
+events:
+- ログイン
+- 不審なアクセス
+qualities:
+- 検知の速さ
+- 誤報の少なさ
+outage_impact:
+  ja: 攻撃に気づくのが遅れ、被害が広がるおそれがある。
+industry_roles:
+- owner
+- vendor
+- ops_provider
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 3
+  regulation: 2
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: サイバー攻撃を見張る仕組みと体制を説明できる
+  questions:
+  - 不審なログインは、どんな特徴から見つけられるか
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

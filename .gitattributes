@@ -1,0 +1,13 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：Apache License 2.0（LICENSE を参照）
+# SPDX-License-Identifier: Apache-2.0
+# ファイル：.gitattributes
+# 説明：Git の改行コードの扱い（LF に統一）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+* text=auto eol=lf
+*.woff2 binary

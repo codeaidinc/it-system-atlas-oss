@@ -1,0 +1,50 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/taxonomy/scale_classes.yaml
+# 説明：規模区分（アトラス独自の教育用暫定区分。公的な統一基準ではない）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+# 規模区分（アトラス独自の教育用暫定区分。公的な統一基準ではない）
+version: 0.2.0
+project_classes:   # 開発規模（P区分）：一つの開発・刷新プロジェクトの大きさ
+  basis_note: 工数（人月）で判定。工数が非公表の場合は金額から推定判定し、判定根拠を表示する。金額換算は1人月=100万円の仮定。
+  items:
+    - { id: XS,  ja: 極小,   effort_pm: [0, 10],        cost_jpy: [0, 1.0e7],          team: 1〜3人 }
+    - { id: S,   ja: 小規模, effort_pm: [10, 100],      cost_jpy: [1.0e7, 1.0e8],      team: 2〜10人 }
+    - { id: M,   ja: 中規模, effort_pm: [100, 500],     cost_jpy: [1.0e8, 5.0e8],      team: 10〜30人 }
+    - { id: L,   ja: 大規模, effort_pm: [500, 5000],    cost_jpy: [5.0e8, 5.0e9],      team: 数十〜数百人 }
+    - { id: XL,  ja: 超大規模, effort_pm: [5000, 50000], cost_jpy: [5.0e9, 5.0e10],    team: 数百〜数千人 }
+    - { id: XXL, ja: 巨大規模, effort_pm: [50000, null], cost_jpy: [5.0e10, null],     team: 数千人規模もあり得る }
+  notes:
+    - Mのみ幅が5倍なのは、情報システム学会誌掲載論文の便宜的区分（100人月・500人月）に境界を合わせたため。
+    - IPAの開発実績データ（新規開発の中央値など）を用いて区分を検証・改訂する。
+usage_classes:     # 利用規模（U区分）：サービスを受ける人を含む利用者数の目安
+  items:
+    - { id: U1, ja: 限定利用, users: [0, 1.0e4],        example: 一店舗・一企業の社内システム }
+    - { id: U2, ja: 地域・業界規模, users: [1.0e4, 1.0e6], example: 中堅企業の顧客、地域サービス }
+    - { id: U3, ja: 全国規模, users: [1.0e6, 1.0e7],    example: 大手企業の顧客、大規模自治体 }
+    - { id: U4, ja: 国家・世界規模, users: [1.0e7, null], example: 全国民・数千万人以上が利用 }
+evidence_types:
+  - { id: editorial_estimate, ja: 編集部の目安, public_label: 目安 }
+  - { id: official_report, ja: 公式発表・開示資料, public_label: 公表値 }
+  - { id: public_document, ja: 公的機関の資料, public_label: 公表値 }
+  - { id: court_record, ja: 判決・裁判資料, public_label: 公表値 }
+  - { id: press_report, ja: 主要報道, public_label: 報道値 }
+  - { id: statistics, ja: 統計値, public_label: 統計値 }
+  - { id: education_model, ja: 教育用モデル（試算）, public_label: 試算 }
+  - { id: not_disclosed, ja: 未公表, public_label: 未公表 }
+measures:
+  - { id: development_cost, ja: 開発投資額, axis: project }
+  - { id: development_effort, ja: 開発工数, axis: project }
+  - { id: development_duration, ja: 開発期間, axis: project }
+  - { id: peak_team_size, ja: ピーク時の開発要員数, axis: project }
+  - { id: users, ja: 利用者数, axis: usage }
+  - { id: transactions, ja: 取引・処理件数, axis: usage }
+  - { id: sites, ja: 利用拠点数, axis: usage }
+  - { id: operating_years, ja: 稼働年数, axis: usage }
+  - { id: annual_operating_cost, ja: 年間運用費, axis: usage }

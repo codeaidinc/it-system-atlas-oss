@@ -1,0 +1,98 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-resident-registry.yaml
+# 説明：システムの種類のカード「住民記録システム」（st-resident-registry）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-resident-registry
+type: system_type
+names:
+  ja: 住民記録システム
+  en: Resident Registry System
+aliases:
+- 住民基本台帳システム
+- 住基
+summary:
+  ja: 住民の氏名・住所・世帯などを記録し、住民票の発行や転入・転出の手続きを行う市区町村の基幹システム。
+domain: D09
+level:
+  primary: L3
+  related:
+  - L5
+scope: enterprise
+industry:
+- government
+business_function:
+- bf.service_delivery
+category: public_system
+layer: core
+users:
+  ja: 市区町村の職員。間接的には全住民
+purpose:
+  ja: 住民の情報を正確に管理し、行政サービスの土台とする
+functions:
+- 住民の記録
+- 住民票の発行
+- 転入・転出の手続き
+events:
+- 出生
+- 転入・転出
+- 婚姻などの届出
+qualities:
+- 正確性
+- 個人情報の保護
+- 可用性
+outage_impact:
+  ja: 住民票の発行や、税・保険などの手続きができなくなる。
+industry_roles:
+- owner
+- operator
+- prime_sier
+- partner
+- vendor
+- ops_provider
+- regulator
+critical_infrastructure:
+  sectors:
+  - ci.government
+axes:
+  technical: 3
+  organization: 3
+  criticality: 5
+  longevity: 4
+  regulation: 5
+  changeability: 4
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 住民記録が多くの行政サービスの土台であることを説明できる
+  questions:
+  - 住民記録の情報は、ほかのどの行政サービスに使われるか
+relations:
+- type: integrates_with
+  target: st-local-tax
+- type: integrates_with
+  target: st-national-id-system
+scale:
+  typical:
+    project_class:
+      min: M
+      max: L
+    usage_class:
+      min: U2
+      max: U3
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

@@ -1,0 +1,65 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-marketing-automation.yaml
+# 説明：システムの種類のカード「マーケティングオートメーション」（st-marketing-automation）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-marketing-automation
+type: system_type
+names:
+  ja: マーケティングオートメーション
+  en: Marketing Automation
+aliases:
+- MA
+summary:
+  ja: 見込み客へのメール配信、Webでの行動の記録、関心度の点数づけなど、マーケティング活動を自動化するシステム。
+domain: D03
+level:
+  primary: L2
+  related:
+  - L3
+scope: department
+industry:
+- cross_industry
+business_function:
+- bf.sales_marketing
+category: business_app
+layer: application
+users:
+  ja: マーケティング部門
+purpose:
+  ja: 見込み客を効率よく育て、営業に引き渡す
+axes:
+  technical: 2
+  organization: 2
+  criticality: 2
+  longevity: 2
+  regulation: 2
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-crm
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: M
+    usage_class:
+      min: U2
+      max: U3
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

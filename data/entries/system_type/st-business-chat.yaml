@@ -1,0 +1,64 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-business-chat.yaml
+# 説明：システムの種類のカード「ビジネスチャット」（st-business-chat）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-business-chat
+type: system_type
+names:
+  ja: ビジネスチャット
+  en: Business Chat
+aliases:
+- 社内チャット
+- チャットツール
+summary:
+  ja: 社員同士がテーマごとの部屋（チャンネル）でメッセージやファイルをやり取りするサービス。メールより気軽で速い連絡に使われる。
+domain: D03
+level:
+  primary: L2
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.collaboration
+category: business_app
+layer: channel
+users:
+  ja: 組織の全メンバー、社外の関係者
+purpose:
+  ja: 社内外の連絡を素早く行う
+axes:
+  technical: 3
+  organization: 4
+  criticality: 2
+  longevity: 2
+  regulation: 2
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-groupware
+scale:
+  typical:
+    project_class:
+      min: M
+      max: XL
+    usage_class:
+      min: U3
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

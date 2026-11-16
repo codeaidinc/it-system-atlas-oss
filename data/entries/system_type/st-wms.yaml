@@ -1,0 +1,91 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-wms.yaml
+# 説明：システムの種類のカード「倉庫管理システム」（st-wms）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-wms
+type: system_type
+names:
+  ja: 倉庫管理システム
+  en: Warehouse Management System
+aliases:
+- WMS
+summary:
+  ja: 倉庫での入荷、保管場所の管理、ピッキング、出荷などの作業を管理するシステム。ハンディ端末や自動倉庫の設備と連携して動く。
+domain: D06
+level:
+  primary: L3
+scope: enterprise
+industry:
+- logistics
+- commerce
+business_function:
+- bf.logistics
+category: business_app
+layer: application
+users:
+  ja: 物流センター・倉庫の作業者と管理者
+purpose:
+  ja: 倉庫作業を正確かつ効率的に行う
+functions:
+- 入荷の検品
+- 保管場所の管理
+- ピッキング（取り出し）
+- 出荷の検品
+events:
+- 入荷
+- 出荷指示の受信
+- 棚卸し
+qualities:
+- 正確性
+- 作業の速さ
+outage_impact:
+  ja: 倉庫から商品を出せなくなり、出荷が止まる。
+industry_roles:
+- owner
+- prime_sier
+- partner
+- vendor
+- saas_provider
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: ネットで注文した商品が倉庫で見つけ出され、出荷される仕組みを説明できる
+  questions:
+  - 広い倉庫で、目的の商品をどうやって素早く見つけるのか
+relations:
+- type: integrates_with
+  target: st-tms
+- type: integrates_with
+  target: st-inventory-management
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U1
+      max: U1
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

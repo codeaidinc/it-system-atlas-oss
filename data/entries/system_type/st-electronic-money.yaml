@@ -1,0 +1,96 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-electronic-money.yaml
+# 説明：システムの種類のカード「電子マネーシステム」（st-electronic-money）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-electronic-money
+type: system_type
+names:
+  ja: 電子マネーシステム
+  en: Electronic Money System
+aliases:
+- 交通系電子マネー
+- プリペイド決済
+summary:
+  ja: ICカードやスマートフォンに入金した金額で支払いを行う仕組み。端末、カード、残高・精算を管理するセンターシステムで構成される。
+domain: D05
+level:
+  primary: L5
+  related:
+  - L3
+scope: society
+industry:
+- finance.payments
+- transport.rail
+business_function:
+- bf.service_delivery
+category: social_infrastructure
+layer: core
+users:
+  ja: 利用者、加盟店、交通事業者
+purpose:
+  ja: 小額の支払いを素早く行えるようにする
+functions:
+- 残高の管理
+- 支払いの処理
+- チャージ
+- 事業者間の精算
+events:
+- 支払い
+- チャージ
+- 日々の精算
+qualities:
+- 処理の速さ
+- 正確性
+- セキュリティ
+outage_impact:
+  ja: ICカードやスマートフォンでの支払いができなくなる。
+industry_roles:
+- owner
+- operator
+- prime_sier
+- partner
+- vendor
+- ops_provider
+axes:
+  technical: 5
+  organization: 4
+  criticality: 4
+  longevity: 5
+  regulation: 5
+  changeability: 5
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: カードに入っているお金と、センターの記録の関係を説明できる
+  questions:
+  - 電車の運賃は、どの会社にどのように分けられるか
+relations:
+- type: integrates_with
+  target: st-ic-ticketing
+- type: integrates_with
+  target: st-payment-terminal
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XL
+    usage_class:
+      min: U3
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

@@ -1,0 +1,62 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-document-management.yaml
+# 説明：システムの種類のカード「文書管理システム」（st-document-management）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-document-management
+type: system_type
+names:
+  ja: 文書管理システム
+  en: Document Management System
+aliases:
+- 電子文書管理
+- ECM
+summary:
+  ja: 契約書や規程、設計書などの文書を電子的に保管し、版の管理、検索、閲覧権限の制御を行うシステム。
+domain: D03
+level:
+  primary: L3
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.risk_compliance
+- bf.collaboration
+category: business_app
+layer: application
+users:
+  ja: 全社員、法務・総務部門
+purpose:
+  ja: 必要な文書を確実に保管し、すぐに探せるようにする
+axes:
+  technical: 3
+  organization: 2
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: M
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

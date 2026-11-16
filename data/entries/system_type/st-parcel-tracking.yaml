@@ -1,0 +1,94 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-parcel-tracking.yaml
+# 説明：システムの種類のカード「宅配荷物追跡システム」（st-parcel-tracking）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-parcel-tracking
+type: system_type
+names:
+  ja: 宅配荷物追跡システム
+  en: Parcel Tracking System
+aliases:
+- 荷物追跡
+- 配送状況照会
+summary:
+  ja: 宅配便の荷物が今どこにあるかを記録し、送り主や受取人がWebやアプリで確認できるようにするシステム。
+domain: D06
+level:
+  primary: L2
+scope: society
+industry:
+- logistics
+business_function:
+- bf.customer_service
+- bf.logistics
+category: consumer_app
+layer: channel
+users:
+  ja: 宅配事業者、荷物の送り主・受取人
+purpose:
+  ja: 荷物の現在地を知らせ、受け取りを確実にする
+functions:
+- 荷物の位置の記録
+- 配送状況の照会
+- 受け取り日時の変更
+- 不在通知
+events:
+- 集荷
+- 拠点の通過
+- 配達完了
+qualities:
+- わかりやすさ
+- 情報の新しさ
+- アクセス集中への耐性
+outage_impact:
+  ja: 荷物の場所が分からず、問い合わせが殺到する。
+industry_roles:
+- owner
+- operator
+- prime_sier
+- partner
+- ops_provider
+critical_infrastructure:
+  sectors:
+  - ci.logistics
+axes:
+  technical: 3
+  organization: 4
+  criticality: 4
+  longevity: 2
+  regulation: 4
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 1
+  goal: 追跡画面の裏で、拠点ごとに荷物の情報が記録されていることを説明できる
+  questions:
+  - 「配達中」と表示されるまでに、どこで情報が記録されたか
+relations:
+- type: integrates_with
+  target: st-tms
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XL
+    usage_class:
+      min: U3
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

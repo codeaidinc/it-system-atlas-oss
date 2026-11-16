@@ -1,0 +1,91 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-procurement.yaml
+# 説明：システムの種類のカード「購買管理システム」（st-procurement）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-procurement
+type: system_type
+names:
+  ja: 購買管理システム
+  en: Procurement System
+aliases:
+- 調達システム
+summary:
+  ja: 見積依頼、発注、検収、支払いといった物品やサービスの購入業務を管理するシステム。購入の承認ルールも組み込まれる。
+domain: D03
+level:
+  primary: L3
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.procurement
+category: business_app
+layer: application
+users:
+  ja: 購買部門、各部署の申請者
+purpose:
+  ja: 必要な物を適正な価格と手続きで購入する
+functions:
+- 購入の申請・承認
+- 見積依頼
+- 発注
+- 検収
+- 支払いの準備
+events:
+- 購入の申請
+- 発注
+- 納品
+qualities:
+- 適正な手続き
+- コストの管理
+outage_impact:
+  ja: 必要な部品や物品を発注できず、生産や業務に影響する。
+industry_roles:
+- owner
+- prime_sier
+- partner
+- vendor
+- saas_provider
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 会社が物を買うときの手続きと、そのシステムを説明できる
+  questions:
+  - なぜ会社では、購入に承認が必要なのか
+relations:
+- type: part_of
+  target: st-erp
+- type: integrates_with
+  target: st-edi
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

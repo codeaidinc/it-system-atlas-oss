@@ -1,0 +1,66 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-enterprise-search.yaml
+# 説明：システムの種類のカード「企業内検索（エンタープライズサーチ）」（st-enterprise-search）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-enterprise-search
+type: system_type
+names:
+  ja: 企業内検索（エンタープライズサーチ）
+  en: Enterprise Search
+aliases:
+- 社内検索
+- 横断検索
+summary:
+  ja: 社内の文書管理、ファイル共有、チャット、業務システムなどに散らばった情報を、権限に応じてまとめて検索できるようにするシステム。
+domain: D03
+level:
+  primary: L2
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.collaboration
+category: platform
+layer: integration
+users:
+  ja: 社員
+purpose:
+  ja: 必要な情報をすぐに見つけられるようにする
+axes:
+  technical: 2
+  organization: 2
+  criticality: 2
+  longevity: 2
+  regulation: 2
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-document-management
+- type: depends_on
+  target: st-identity-management
+scale:
+  typical:
+    project_class:
+      min: S
+      max: M
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

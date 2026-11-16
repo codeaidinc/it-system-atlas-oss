@@ -1,0 +1,61 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：Apache License 2.0（LICENSE を参照）
+# SPDX-License-Identifier: Apache-2.0
+# ファイル：.github/ISSUE_TEMPLATE/new-entry.yml
+# 説明：Issue のフォーム「新しいシステムの追加・訂正を提案」
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+name: 新しいシステムの追加・訂正を提案
+description: システムの種類の追加、または既存カードの訂正を提案します
+labels: [new-entry]
+body:
+  - type: dropdown
+    id: kind
+    attributes: { label: 種類, options: [システムの種類（一般的な概念）, 既存カードの訂正] }
+    validations: { required: true }
+  - type: input
+    id: target_id
+    attributes: { label: 訂正するカードのID（訂正の場合）, placeholder: st-core-banking }
+  - type: input
+    id: name_ja
+    attributes: { label: 名称（日本語）, placeholder: 例）倉庫管理システム }
+  - type: input
+    id: name_en
+    attributes: { label: 名称（英語）, placeholder: 例）Warehouse Management System }
+  - type: dropdown
+    id: domain
+    attributes: { label: 領域, options: [D01, D02, D03, D04, D05, D06, D07, D08, D09, D10, D11, D12, D00] }
+  - type: textarea
+    id: summary
+    attributes: { label: 概要（60〜300字）, description: 何のためのシステムか、誰が使うか。専門学校1年生が分かる言葉で。 }
+  - type: input
+    id: users
+    attributes: { label: 主な利用者 }
+  - type: input
+    id: purpose
+    attributes: { label: 目的 }
+  - type: textarea
+    id: correction
+    attributes: { label: 訂正の内容（訂正の場合） }
+  - type: textarea
+    id: scale
+    attributes: { label: 規模の情報（任意）, description: 開発費・工数・利用者数など。必ず出典URLと時点を書いてください。 }
+  - type: textarea
+    id: sources
+    attributes: { label: 出典URL（1行に1つ） }
+  - type: input
+    id: organization
+    attributes: { label: 投稿者の組織（任意） }
+  - type: checkboxes
+    id: agree
+    attributes:
+      label: 同意事項
+      options:
+        - label: 投稿内容を CC BY 4.0 で公開することに同意します
+          required: true
+        - label: 機密情報・個人情報・詳細な内部構造を含めていません
+          required: true

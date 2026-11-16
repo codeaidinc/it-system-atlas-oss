@@ -1,0 +1,67 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-bpm.yaml
+# 説明：システムの種類のカード「BPM（業務プロセス管理）」（st-bpm）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-bpm
+type: system_type
+names:
+  ja: BPM（業務プロセス管理）
+  en: Business Process Management
+aliases:
+- BPM
+- 業務プロセス管理
+summary:
+  ja: 業務の流れを図として設計し、その流れに沿って仕事を担当者やシステムへ自動で回し、進み具合や滞りを分析して改善するための仕組み。
+domain: D03
+level:
+  primary: L2
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.strategy
+- bf.it
+category: platform
+layer: application
+users:
+  ja: 業務改革の担当者、情報システム部門
+purpose:
+  ja: 業務の流れを見える化し、継続的に改善する
+axes:
+  technical: 2
+  organization: 3
+  criticality: 2
+  longevity: 2
+  regulation: 2
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-workflow
+- type: integrates_with
+  target: st-rpa
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

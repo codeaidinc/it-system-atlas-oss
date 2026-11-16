@@ -1,0 +1,105 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-erp.yaml
+# 説明：システムの種類のカード「ERP（統合基幹業務システム）」（st-erp）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-erp
+type: system_type
+names:
+  ja: ERP（統合基幹業務システム）
+  en: Enterprise Resource Planning
+aliases:
+- ERP
+- 統合基幹業務パッケージ
+summary:
+  ja: 会計・販売・購買・在庫・生産・人事などの基幹業務のデータを一つに統合して管理するシステム。大企業ではグループ全体で導入されることが多い。
+domain: D03
+level:
+  primary: L4
+  related:
+  - L3
+scope: group
+industry:
+- cross_industry
+business_function:
+- bf.finance_accounting
+- bf.sales_marketing
+- bf.procurement
+- bf.production
+- bf.hr
+category: enterprise_suite
+layer: core
+users:
+  ja: 企業の各部門、経営層
+purpose:
+  ja: 部門ごとに分かれていた業務データを統合し、経営状況を素早く把握する
+functions:
+- 会計
+- 販売
+- 購買
+- 在庫
+- 生産
+- 人事（共通のデータで統合）
+events:
+- 受注・出荷・請求・入金など、企業のあらゆる取引
+qualities:
+- データの一貫性
+- 業務の標準化
+- 拡張性
+outage_impact:
+  ja: 会計・販売・購買などの多くの業務が同時に止まる。
+industry_roles:
+- owner
+- consultant
+- prime_sier
+- partner
+- vendor
+- ops_provider
+structure:
+  entry: 各部門の業務画面
+  processing: 会計・販売・購買・生産などの業務処理
+  data: 取引先・品目・社員などの共通マスター、取引データ
+  external: 銀行、取引先（EDI）、分析基盤
+  foundation: クラウドまたはデータセンター
+axes:
+  technical: 5
+  organization: 4
+  criticality: 4
+  longevity: 4
+  regulation: 3
+  changeability: 4
+  evidence_type: editorial_estimate
+  basis: editor
+learning:
+  difficulty: 3
+  goal: 企業にどんな仕事があり、なぜERPという統合システムが必要になったかを説明できる
+  questions:
+  - 部門ごとに別々のシステムを使うと、どんな問題が起きるか
+relations:
+- type: integrates_with
+  target: st-bi
+- type: integrates_with
+  target: st-production-management
+scale:
+  typical:
+    project_class:
+      min: M
+      max: XL
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

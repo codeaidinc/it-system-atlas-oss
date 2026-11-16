@@ -1,0 +1,62 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-issue-tracker.yaml
+# 説明：システムの種類のカード「課題管理・プロジェクト管理ツール」（st-issue-tracker）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-issue-tracker
+type: system_type
+names:
+  ja: 課題管理・プロジェクト管理ツール
+  en: Issue Tracker
+aliases:
+- チケット管理
+- タスク管理
+summary:
+  ja: 開発の作業や不具合、要望を「チケット」として登録し、担当者・期限・進み具合を管理するツール。
+domain: D00
+level:
+  primary: L0
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.it
+- bf.collaboration
+category: dev_ops_tool
+layer: application
+users:
+  ja: 開発チーム、プロジェクトマネージャー
+purpose:
+  ja: 作業を見える化し、チームで進める
+axes:
+  technical: 3
+  organization: 2
+  criticality: 3
+  longevity: 3
+  regulation: 2
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: M
+    usage_class:
+      min: U1
+      max: U3
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

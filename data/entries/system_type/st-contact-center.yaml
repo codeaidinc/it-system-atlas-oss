@@ -1,0 +1,64 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-contact-center.yaml
+# 説明：システムの種類のカード「コンタクトセンターシステム」（st-contact-center）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-contact-center
+type: system_type
+names:
+  ja: コンタクトセンターシステム
+  en: Contact Center System
+aliases:
+- コールセンター
+- CTI
+summary:
+  ja: 顧客からの電話・メール・チャットの問い合わせを受け付け、担当者に振り分け、対応履歴を記録するシステム。
+domain: D03
+level:
+  primary: L3
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.customer_service
+category: business_app
+layer: channel
+users:
+  ja: 顧客サポート担当者
+purpose:
+  ja: 問い合わせに素早く正確に対応する
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-crm
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U2
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

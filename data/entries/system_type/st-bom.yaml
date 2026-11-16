@@ -1,0 +1,67 @@
+# ========================================================================
+# IT System Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-bom.yaml
+# 説明：システムの種類のカード「部品表（BOM）管理システム」（st-bom）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-bom
+type: system_type
+names:
+  ja: 部品表（BOM）管理システム
+  en: Bill of Materials System
+aliases:
+- BOM
+- 部品構成表
+summary:
+  ja: 製品がどの部品をいくつ使って作られているかという部品の構成（部品表）を管理するシステム。設計・生産・購買の共通の基準になる。
+domain: D04
+level:
+  primary: L3
+scope: enterprise
+industry:
+- manufacturing
+business_function:
+- bf.product_dev
+- bf.production
+category: business_app
+layer: core
+users:
+  ja: 設計・生産管理・購買部門
+purpose:
+  ja: 製品の部品構成を正確に共有する
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-plm
+- type: integrates_with
+  target: st-production-management
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U1
+      max: U1
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]
