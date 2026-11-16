@@ -1,0 +1,69 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-stock-exchange-trading.yaml
+# 説明：システムの種類のカード「証券取引所売買システム」（st-stock-exchange-trading）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-stock-exchange-trading
+type: system_type
+names:
+  ja: 証券取引所売買システム
+  en: Stock Exchange Trading System
+aliases:
+- 売買システム
+- 取引所システム
+summary:
+  ja: 株式などの売り注文と買い注文を突き合わせて売買を成立させる取引所の中核システム。高速で正確な処理と高い可用性が求められる。
+domain: D05
+level:
+  primary: L5
+  related:
+  - L3
+scope: society
+industry:
+- finance.securities
+business_function:
+- bf.service_delivery
+category: social_infrastructure
+layer: core
+users:
+  ja: 証券会社。間接的には投資家
+purpose:
+  ja: 公正な価格で大量の注文を高速に約定させる
+critical_infrastructure:
+  sectors:
+  - ci.finance
+axes:
+  technical: 5
+  organization: 4
+  criticality: 5
+  longevity: 5
+  regulation: 5
+  changeability: 5
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-online-brokerage
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XL
+    usage_class:
+      min: U3
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

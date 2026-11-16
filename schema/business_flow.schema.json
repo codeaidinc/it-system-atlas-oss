@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codeaid.org/it-system-atlas/schema/business_flow.schema.json",
+  "title": "企業業務の流れ（企業業務地図）",
+  "type": "object",
+  "required": ["id", "type", "title", "summary", "stages", "hub", "editorial"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^bf-[a-z0-9-]+$" },
+    "type": { "const": "business_flow" },
+    "title": { "$ref": "common.schema.json#/$defs/localized" },
+    "summary": { "$ref": "common.schema.json#/$defs/localized" },
+    "stages": {
+      "type": "array", "minItems": 3,
+      "items": {
+        "type": "object", "required": ["id", "ja", "work", "systems"],
+        "properties": {
+          "id": { "type": "string" },
+          "ja": { "type": "string" },
+          "work": { "type": "string" },
+          "department": { "type": "string" },
+          "function": { "type": "string", "pattern": "^bf\\." },
+          "systems": { "type": "array", "items": { "type": "string", "pattern": "^st-" } },
+          "next": { "type": "array", "items": { "type": "string" } },
+          "support": { "type": "boolean" },
+          "data_out": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "hub": {
+      "type": "object", "required": ["ja", "systems", "why"],
+      "properties": { "ja": { "type": "string" }, "systems": { "type": "array", "items": { "type": "string", "pattern": "^st-" } }, "why": { "type": "array", "items": { "type": "string" } } },
+      "additionalProperties": false
+    },
+    "questions": { "type": "array", "items": { "type": "string" } },
+    "note": { "$ref": "common.schema.json#/$defs/localized" },
+    "editorial": { "$ref": "common.schema.json#/$defs/editorial" }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,65 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-generative-ai-service.yaml
+# 説明：システムの種類のカード「生成AIサービス」（st-generative-ai-service）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-generative-ai-service
+type: system_type
+names:
+  ja: 生成AIサービス
+  en: Generative AI Service
+aliases:
+- AIチャット
+- 大規模言語モデル
+summary:
+  ja: 文章や画像、プログラムなどを、利用者の指示に応じてAIが生成するサービス。大規模な計算基盤の上で動いている。
+domain: D00
+level:
+  primary: L2
+scope: society
+industry:
+- cross_industry
+business_function:
+- bf.collaboration
+- bf.service_delivery
+category: consumer_app
+layer: channel
+users:
+  ja: 個人、企業、教育機関
+purpose:
+  ja: 文章作成や調べもの、プログラミングなどの作業を支援する
+axes:
+  technical: 3
+  organization: 5
+  criticality: 2
+  longevity: 2
+  regulation: 2
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: depends_on
+  target: st-public-cloud
+scale:
+  typical:
+    project_class:
+      min: XL
+      max: XXL
+    usage_class:
+      min: U3
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

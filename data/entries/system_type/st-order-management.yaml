@@ -1,0 +1,94 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-order-management.yaml
+# 説明：システムの種類のカード「受発注システム」（st-order-management）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-order-management
+type: system_type
+names:
+  ja: 受発注システム
+  en: Order Management System
+aliases:
+- 受注管理
+- 発注管理
+summary:
+  ja: 取引先からの注文の受付や、仕入先への発注、出荷指示などを管理するシステム。販売管理や在庫管理と密接に連携する。
+domain: D02
+level:
+  primary: L3
+scope: enterprise
+industry:
+- commerce
+- manufacturing
+- cross_industry
+business_function:
+- bf.sales_marketing
+- bf.procurement
+category: business_app
+layer: application
+users:
+  ja: 営業・受注担当、購買担当
+purpose:
+  ja: 注文を正確に受け付け、出荷や仕入れにつなげる
+functions:
+- 注文の受付
+- 在庫の引き当て
+- 出荷の指示
+- 注文状況の管理
+events:
+- 注文の受付
+- 出荷指示
+- キャンセル
+qualities:
+- 正確性
+- 処理の速さ
+outage_impact:
+  ja: 注文を出荷につなげられず、配送の遅れや問い合わせが増える。
+industry_roles:
+- owner
+- prime_sier
+- partner
+- vendor
+- saas_provider
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 受けた注文がどのように出荷や請求につながるかを説明できる
+  questions:
+  - 注文データは、次にどの部署のどのシステムへ渡るか
+relations:
+- type: integrates_with
+  target: st-sales-management
+- type: integrates_with
+  target: st-wms
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

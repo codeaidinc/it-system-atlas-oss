@@ -1,0 +1,89 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-factory-control.yaml
+# 説明：システムの種類のカード「工場制御システム」（st-factory-control）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-factory-control
+type: system_type
+names:
+  ja: 工場制御システム
+  en: Factory Control System
+aliases:
+- FA
+- PLC制御
+summary:
+  ja: 製造ラインの機械やロボットを、PLCなどの制御装置で動かすシステム。安全性と停止しにくさが特に重要になる。
+domain: D04
+level:
+  primary: L3
+scope: enterprise
+industry:
+- manufacturing
+business_function:
+- bf.production
+category: control_system
+layer: control
+users:
+  ja: 工場の設備技術者
+purpose:
+  ja: 製造設備を正確・安全に動かす
+functions:
+- 機械・ロボットの制御
+- 設備の監視
+- 異常時の停止
+events:
+- 製造の開始
+- 異常の検知
+qualities:
+- 安全性
+- リアルタイム性
+- 止まらないこと
+outage_impact:
+  ja: 製造ラインが止まり、場合によっては安全に関わる。
+industry_roles:
+- owner
+- vendor
+- partner
+critical_infrastructure:
+  sectors:
+  - ci.chemical
+axes:
+  technical: 3
+  organization: 3
+  criticality: 5
+  longevity: 5
+  regulation: 5
+  changeability: 4
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 工場の機械を直接動かすシステムが、事務のシステムとは別の厳しさで作られていることを説明できる
+  questions:
+  - 工場の制御システムを、会社の事務のネットワークと分けるのはなぜか
+relations:
+- type: integrates_with
+  target: st-mes
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U1
+      max: U1
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

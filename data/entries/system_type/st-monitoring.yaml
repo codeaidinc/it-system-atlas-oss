@@ -1,0 +1,61 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-monitoring.yaml
+# 説明：システムの種類のカード「システム監視」（st-monitoring）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-monitoring
+type: system_type
+names:
+  ja: システム監視
+  en: System Monitoring
+aliases:
+- 運用監視
+- オブザーバビリティ
+summary:
+  ja: サーバーやアプリケーションの稼働状況、性能、エラーを常に監視し、異常があれば担当者に知らせる仕組み。
+domain: D00
+level:
+  primary: L0
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.it
+category: dev_ops_tool
+layer: infrastructure
+users:
+  ja: 運用・保守エンジニア
+purpose:
+  ja: 障害を早く見つけ、システムの停止を防ぐ
+axes:
+  technical: 3
+  organization: 2
+  criticality: 3
+  longevity: 3
+  regulation: 2
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: M
+    usage_class:
+      min: U1
+      max: U1
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

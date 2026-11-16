@@ -1,0 +1,64 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-online-game.yaml
+# 説明：システムの種類のカード「オンラインゲーム」（st-online-game）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-online-game
+type: system_type
+names:
+  ja: オンラインゲーム
+  en: Online Game
+aliases:
+- スマホゲーム
+- ゲームサーバー
+summary:
+  ja: インターネットを通じて多数の利用者が同時に遊ぶゲーム。ゲーム本体のほか、サーバー、課金、運営のシステムが必要になる。
+domain: D10
+level:
+  primary: L2
+scope: society
+industry:
+- media
+business_function:
+- bf.service_delivery
+category: consumer_app
+layer: channel
+users:
+  ja: ゲームの利用者、ゲーム会社
+purpose:
+  ja: 多くの人が同時に楽しめるゲーム体験を提供する
+axes:
+  technical: 3
+  organization: 4
+  criticality: 2
+  longevity: 2
+  regulation: 2
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: depends_on
+  target: st-public-cloud
+scale:
+  typical:
+    project_class:
+      min: M
+      max: XL
+    usage_class:
+      min: U2
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

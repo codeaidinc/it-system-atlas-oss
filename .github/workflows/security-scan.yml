@@ -1,0 +1,58 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：Apache License 2.0（LICENSE を参照）
+# SPDX-License-Identifier: Apache-2.0
+# ファイル：.github/workflows/security-scan.yml
+# 説明：GitHub Actions：セキュリティ検査（秘密情報・依存パッケージの既知の脆弱性）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+# セキュリティ検査（秘密情報・依存パッケージの既知の脆弱性）
+# - 外部からの Pull Request でも安全に動くよう、Secrets・書き込み権限・公開の処理を使わない（permissions: contents: read のみ）
+# - Action はタグではなくコミットハッシュで固定する（タグの書き換えによる供給網攻撃への対策）
+# - 定期実行で見つかったら失敗にし、GitHub の通知で気づけるようにする。Pull Request・push のときの依存関係の検査は情報提供のみ
+name: security-scan
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  schedule:
+    - cron: "17 21 * * 0"  # 毎週月曜 06:17（日本時間）
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: security-scan-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  secrets:
+    name: Secrets（全Git履歴）
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: TruffleHog（検証済み・未検証の鍵を検出したら失敗）
+        uses: trufflesecurity/trufflehog@ea68ca03c865c5f324e86e849ced20ed3cf9dbbb # v3.99.8
+        with:
+          version: 3.99.8
+          extra_args: --results=verified,unknown
+  dependencies:
+    name: 依存関係（OSVデータベース照合）
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    continue-on-error: ${{ github.event_name != 'schedule' }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: OSV-Scanner（ロックファイルのみを読む。パッケージのインストールやスクリプト実行はしない）
+        uses: google/osv-scanner-action/osv-scanner-action@b1d267aea5211fa648d9d442fa64b90dbdcbdd36 # v2.7.0
+        with:
+          scan-args: |-
+            --recursive
+            ./

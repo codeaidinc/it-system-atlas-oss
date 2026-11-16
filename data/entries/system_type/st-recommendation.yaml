@@ -1,0 +1,89 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-recommendation.yaml
+# 説明：システムの種類のカード「レコメンドエンジン」（st-recommendation）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-recommendation
+type: system_type
+names:
+  ja: レコメンドエンジン
+  en: Recommendation Engine
+aliases:
+- おすすめ表示
+- 推薦システム
+summary:
+  ja: 利用者の閲覧・購入の履歴などを分析し、興味を持ちそうな商品やコンテンツを表示するシステム。ECや動画配信で広く使われる。
+domain: D02
+level:
+  primary: L3
+  related:
+  - L2
+scope: enterprise
+industry:
+- commerce
+- media
+business_function:
+- bf.sales_marketing
+category: data_analytics
+layer: application
+users:
+  ja: EC・メディア事業者。間接的には利用者
+purpose:
+  ja: 利用者に合った商品や情報を見つけやすくする
+functions:
+- 行動履歴の分析
+- おすすめの候補の作成
+- 表示順の決定
+events:
+- 閲覧
+- 購入・視聴
+qualities:
+- 精度
+- 速さ
+- 公平性
+outage_impact:
+  ja: おすすめが表示されなくなり、売上や利用時間に影響する。
+industry_roles:
+- owner
+- saas_provider
+- vendor
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: おすすめ表示が、利用者の行動データから作られていることを説明できる
+  questions:
+  - おすすめは、どんなデータから選ばれているか
+relations:
+- type: integrates_with
+  target: st-ec-site
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U2
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

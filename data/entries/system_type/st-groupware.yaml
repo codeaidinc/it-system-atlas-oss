@@ -1,0 +1,89 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-groupware.yaml
+# 説明：システムの種類のカード「グループウェア」（st-groupware）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-groupware
+type: system_type
+names:
+  ja: グループウェア
+  en: Groupware
+aliases:
+- 社内ポータル
+- スケジュール共有
+summary:
+  ja: スケジュール、掲示板、ファイル共有、メールなど、組織内の情報共有と共同作業を支えるソフトウェア。
+domain: D03
+level:
+  primary: L2
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.collaboration
+category: business_app
+layer: application
+users:
+  ja: 組織の全メンバー
+purpose:
+  ja: 社内の情報共有と連絡を効率化する
+functions:
+- スケジュール
+- 掲示板
+- ファイル共有
+- チャット
+events:
+- 予定の登録
+- 連絡
+qualities:
+- 使いやすさ
+- 可用性
+outage_impact:
+  ja: 社内の連絡や情報共有が滞る。
+industry_roles:
+- saas_provider
+- vendor
+- ops_provider
+- owner
+axes:
+  technical: 2
+  organization: 2
+  criticality: 2
+  longevity: 2
+  regulation: 2
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 社内の情報共有を支えるサービスを説明できる
+  questions:
+  - グループウェアがない会社では、どのように連絡をとるか
+relations:
+- type: integrates_with
+  target: st-email
+- type: integrates_with
+  target: st-web-meeting
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: M
+    usage_class:
+      min: U1
+      max: U3
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

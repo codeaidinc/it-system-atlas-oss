@@ -1,0 +1,83 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-map-service.yaml
+# 説明：システムの種類のカード「地図・ナビゲーションサービス」（st-map-service）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-map-service
+type: system_type
+names:
+  ja: 地図・ナビゲーションサービス
+  en: Map & Navigation Service
+aliases:
+- 地図アプリ
+- カーナビ
+summary:
+  ja: 地図の表示、場所の検索、経路案内、交通情報などを提供するサービス。多くのアプリが地図機能として組み込んでいる。
+domain: D01
+level:
+  primary: L2
+scope: society
+industry:
+- transport
+- cross_industry
+business_function:
+- bf.service_delivery
+category: consumer_app
+layer: channel
+users:
+  ja: 個人、物流・交通事業者、アプリ開発者
+purpose:
+  ja: 目的地への行き方や周辺情報を知らせる
+functions:
+- 地図の表示
+- 場所の検索
+- 経路案内
+- 現在地の表示
+events:
+- 検索
+- 経路の検索
+qualities:
+- 地図の正確さ
+- 表示の速さ
+outage_impact:
+  ja: 地図や経路案内が使えなくなり、地図を組み込んだ多くのアプリにも影響する。
+industry_roles:
+- saas_provider
+- vendor
+axes:
+  technical: 3
+  organization: 5
+  criticality: 2
+  longevity: 2
+  regulation: 2
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 地図の機能が多くのアプリに組み込まれて使われていることを説明できる
+  questions:
+  - 地図の機能を使っているアプリを3つ挙げよう
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XXL
+    usage_class:
+      min: U4
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

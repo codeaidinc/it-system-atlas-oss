@@ -1,0 +1,19 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/views/04-architecture.yaml
+# 説明：地図04「統合階層地図」の定義
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: architecture
+order: 4
+title: { ja: 統合階層地図, en: System Levels Map }
+question: { ja: アプリから社会基盤まで、システムはどう積み重なり、つながっているのか }
+layout: layered
+group_by: level
+node_types: [system_type]
+edge_types: [depends_on, integrates_with, part_of, is_a]

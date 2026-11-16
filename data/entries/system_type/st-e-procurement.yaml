@@ -1,0 +1,62 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-e-procurement.yaml
+# 説明：システムの種類のカード「電子入札システム」（st-e-procurement）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-e-procurement
+type: system_type
+names:
+  ja: 電子入札システム
+  en: Electronic Procurement System
+aliases:
+- 電子調達
+- 電子入札
+summary:
+  ja: 国や自治体が行う工事や物品購入の入札を、インターネット上で行うシステム。入札情報の公開から開札・結果の公表までを扱う。
+domain: D09
+level:
+  primary: L3
+scope: enterprise
+industry:
+- government
+- construction
+business_function:
+- bf.procurement
+category: public_system
+layer: application
+users:
+  ja: 行政の発注担当、入札に参加する企業
+purpose:
+  ja: 公平で透明な入札を効率よく行う
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 5
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: M
+      max: L
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

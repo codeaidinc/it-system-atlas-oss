@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codeaid.org/it-system-atlas/schema/common.schema.json",
+  "title": "IT Systems Atlas — 共通定義",
+  "$defs": {
+    "localized": {
+      "type": "object",
+      "required": ["ja"],
+      "properties": { "ja": { "type": "string", "minLength": 1 }, "en": { "type": "string", "minLength": 1 } },
+      "additionalProperties": false
+    },
+    "names": {
+      "type": "object",
+      "required": ["ja", "en"],
+      "properties": { "ja": { "type": "string", "minLength": 1, "maxLength": 80 }, "en": { "type": "string", "minLength": 1, "maxLength": 120 } },
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "required": ["title", "url", "accessed"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri", "pattern": "^https?://" },
+        "publisher": { "type": "string" },
+        "published": { "type": ["string", "integer"] },
+        "accessed": { "type": "string", "format": "date" }
+      },
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["claim", "basis"],
+      "properties": {
+        "claim": { "type": "string", "minLength": 1 },
+        "basis": { "enum": ["fact", "reported", "illustrative", "pending"], "description": "根拠の区分：fact＝公表値・一次資料／reported＝報道値／illustrative＝説明用モデル／pending＝確認中（確認済みだけの版に出さない）。分析仮説（hypothesis）は公開データに持てない" },
+        "source": { "$ref": "#/$defs/source" },
+        "notes": { "type": "string" }
+      },
+      "allOf": [{ "if": { "properties": { "basis": { "enum": ["fact", "reported"] } } }, "then": { "required": ["source"] } }],
+      "additionalProperties": false
+    },
+    "editorial": {
+      "type": "object",
+      "required": ["status", "license", "created", "updated"],
+      "properties": {
+        "status": { "enum": ["draft", "reviewed", "withdrawn"], "description": "draft＝下書き／reviewed＝編集部（利用する学校・団体の担当者を含む）が確認済み／withdrawn＝取り下げ（サイトに出さない）" },
+        "license": { "enum": ["CC-BY-4.0", "CC0-1.0"] },
+        "created": { "type": "string", "format": "date" },
+        "updated": { "type": "string", "format": "date" },
+        "contributors": { "type": "array", "items": { "type": "string" } },
+        "review_note": { "type": "string" }, "unconfirmed": { "type": "array", "uniqueItems": true, "items": { "enum": ["domain", "level", "scope", "axes"] }, "description": "規則・暫定で付けた分類のうち、編集部がまだ確認していない項目。確認した項目から外す" }
+      },
+      "additionalProperties": false
+    },
+    "relation": {
+      "type": "object",
+      "required": ["type", "target"],
+      "properties": {
+        "type": { "enum": ["is_a", "part_of", "integrates_with", "depends_on", "successor_of"] },
+        "target": { "type": "string", "pattern": "^st-[a-z0-9-]+$" },
+        "note": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,66 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-quotation.yaml
+# 説明：システムの種類のカード「見積管理システム」（st-quotation）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-quotation
+type: system_type
+names:
+  ja: 見積管理システム
+  en: Quotation Management System
+aliases:
+- 見積管理
+- 見積作成
+summary:
+  ja: 商品やサービスの見積書を作成し、値引きの承認、見積の履歴、受注につながったかどうかを管理するシステム。
+domain: D03
+level:
+  primary: L3
+scope: department
+industry:
+- cross_industry
+business_function:
+- bf.sales_marketing
+category: business_app
+layer: application
+users:
+  ja: 営業担当者、営業管理職
+purpose:
+  ja: 早く正確な見積を出し、受注につなげる
+axes:
+  technical: 3
+  organization: 2
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: part_of
+  target: st-sales-management
+- type: integrates_with
+  target: st-sfa
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: M
+    usage_class:
+      min: U1
+      max: U1
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

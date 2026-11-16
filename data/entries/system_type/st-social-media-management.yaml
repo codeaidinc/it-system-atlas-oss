@@ -1,0 +1,71 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-social-media-management.yaml
+# 説明：システムの種類のカード「SNS運用管理」（st-social-media-management）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-social-media-management
+type: system_type
+names:
+  ja: SNS運用管理
+  en: Social Media Management
+aliases:
+- SNS管理ツール
+summary:
+  ja: 企業のSNSアカウントへの投稿の予約、反応の確認、問い合わせへの返信、効果の集計をまとめて行うシステム。広報・マーケティング部門が自部門の予算で利用契約することが多い。
+domain: D03
+level:
+  primary: L1
+scope: department
+industry:
+- cross_industry
+business_function:
+- bf.external_relations
+- bf.sales_marketing
+category: business_app
+layer: channel
+users:
+  ja: 広報・マーケティング部門
+purpose:
+  ja: SNSでの発信と顧客との対話を計画的に行う
+axes:
+  technical: 1
+  organization: 1
+  criticality: 1
+  longevity: 1
+  regulation: 2
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-sns
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: S
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+industry_roles:
+- owner
+- saas_provider
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-15'
+  updated: '2026-11-15'
+  contributors:
+  - CODEAID編集部
+  unconfirmed:
+  - domain
+  - level
+  - scope
+  - axes

@@ -1,0 +1,63 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-consolidated-accounting.yaml
+# 説明：システムの種類のカード「連結会計システム」（st-consolidated-accounting）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-consolidated-accounting
+type: system_type
+names:
+  ja: 連結会計システム
+  en: Consolidated Accounting System
+aliases:
+- 連結決算
+summary:
+  ja: 親会社と子会社などグループ各社の決算データを集めて合算し、企業グループ全体の決算書を作るシステム。
+domain: D03
+level:
+  primary: L4
+scope: group
+industry:
+- cross_industry
+business_function:
+- bf.finance_accounting
+category: business_app
+layer: core
+users:
+  ja: 親会社の経理・財務部門
+purpose:
+  ja: 企業グループ全体の業績を正しく報告する
+axes:
+  technical: 4
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 4
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-accounting
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U1
+      max: U1
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

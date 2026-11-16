@@ -1,0 +1,68 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-pos.yaml
+# 説明：システムの種類のカード「POSシステム」（st-pos）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-pos
+type: system_type
+names:
+  ja: POSシステム
+  en: Point of Sale System
+aliases:
+- POSレジ
+- 販売時点情報管理
+summary:
+  ja: 店舗のレジで商品の販売を記録し、売上や在庫、顧客の購買データを集めるシステム。本部のシステムと連携して商品の発注にも使われる。
+domain: D02
+level:
+  primary: L3
+scope: enterprise
+industry:
+- commerce
+- hospitality
+business_function:
+- bf.sales_marketing
+- bf.logistics
+category: business_app
+layer: channel
+users:
+  ja: 小売店・飲食店の店員、本部
+purpose:
+  ja: 会計を正確に行い、売上と在庫を把握する
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-payment-terminal
+- type: integrates_with
+  target: st-inventory-management
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U1
+      max: U3
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

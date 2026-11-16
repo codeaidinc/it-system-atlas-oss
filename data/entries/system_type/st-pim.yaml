@@ -1,0 +1,65 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-pim.yaml
+# 説明：システムの種類のカード「商品情報管理（PIM）」（st-pim）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-pim
+type: system_type
+names:
+  ja: 商品情報管理（PIM）
+  en: Product Information Management
+aliases:
+- PIM
+- 商品マスター
+summary:
+  ja: 商品の名前・仕様・画像・説明文などの情報を一か所で管理し、ECサイトやカタログ、店舗など複数の販売チャネルへ配るシステム。
+domain: D02
+level:
+  primary: L3
+scope: enterprise
+industry:
+- commerce
+- manufacturing
+business_function:
+- bf.sales_marketing
+category: business_app
+layer: integration
+users:
+  ja: 商品企画・マーケティング・EC担当者
+purpose:
+  ja: 正しい商品情報を、すべての売り場にそろえて届ける
+axes:
+  technical: 3
+  organization: 2
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-ec-site
+scale:
+  typical:
+    project_class:
+      min: S
+      max: M
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

@@ -1,0 +1,78 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-messaging-app.yaml
+# 説明：システムの種類のカード「メッセージングアプリ」（st-messaging-app）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-messaging-app
+type: system_type
+names:
+  ja: メッセージングアプリ
+  en: Messaging App
+aliases:
+- チャットアプリ
+summary:
+  ja: 個人やグループの間で文字・スタンプ・通話などをやり取りするアプリ。決済やニュースなどの機能を持つものもある。
+domain: D01
+level:
+  primary: L2
+scope: society
+industry:
+- media
+- telecom
+business_function:
+- bf.service_delivery
+category: consumer_app
+layer: channel
+users:
+  ja: 個人、企業の公式アカウント
+purpose:
+  ja: いつでも手軽に連絡を取り合えるようにする
+axes:
+  technical: 3
+  organization: 5
+  criticality: 2
+  longevity: 2
+  regulation: 2
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: XL
+      max: XXL
+    usage_class:
+      min: U4
+      max: U4
+    evidence_type: editorial_estimate
+  references:
+  - measure: users
+    value: 100000000
+    approximate: true
+    unit: accounts
+    scope:
+      ja: 国内の月間ユーザー数（スマートフォンで月1回以上起動したアカウント数、1億超）
+    as_of: 2025-12
+    evidence_type: press_report
+    subject:
+      ja: LINE（LINEヤフーの発表による）
+    source:
+      title: LINE、国内月間ユーザー1億突破
+      publisher: Impress Watch
+      published: '2026-01-29'
+      url: https://www.watch.impress.co.jp/docs/news/2081911.html
+      accessed: '2026-11-03'
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

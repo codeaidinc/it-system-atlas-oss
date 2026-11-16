@@ -1,0 +1,93 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-payroll.yaml
+# 説明：システムの種類のカード「人事給与システム」（st-payroll）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-payroll
+type: system_type
+names:
+  ja: 人事給与システム
+  en: HR & Payroll System
+aliases:
+- 給与計算
+- 人事システム
+summary:
+  ja: 社員の人事情報、給与・賞与の計算、社会保険や税金の手続きなどを管理するシステム。法改正への対応が毎年のように発生する。
+domain: D03
+level:
+  primary: L3
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.hr
+category: business_app
+layer: core
+users:
+  ja: 人事・総務部門
+purpose:
+  ja: 正確に給与を計算し、人事情報を管理する
+functions:
+- 給与・賞与の計算
+- 税金・社会保険料の計算
+- 給与明細の作成
+- 振込データの作成
+events:
+- 月末の勤怠の締め
+- 給与支給日
+- 年末調整
+- 法改正
+qualities:
+- 正確性
+- 法令への対応
+- 個人情報の保護
+outage_impact:
+  ja: 給与を期日どおりに支払えなくなり、社員の生活に直接影響する。
+industry_roles:
+- owner
+- prime_sier
+- partner
+- vendor
+- saas_provider
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 給料が振り込まれるまでに、勤怠・給与・会計・銀行のシステムがつながっていることを説明できる
+  questions:
+  - 給与の計算結果は、どこへ送られるか
+relations:
+- type: integrates_with
+  target: st-attendance
+- type: part_of
+  target: st-erp
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

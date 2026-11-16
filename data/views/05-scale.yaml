@@ -1,0 +1,20 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/views/05-scale.yaml
+# 説明：地図05「規模・リスク地図」の定義
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: scale
+order: 5
+title: { ja: 規模・リスク地図, en: Scale & Risk Map }
+question: { ja: ITシステムはどれくらい大きく、止まると何が起きるのか }
+layout: scatter
+x: scale.typical.project_class
+y: scale.typical.usage_class
+color_by: axes.criticality
+node_types: [system_type]

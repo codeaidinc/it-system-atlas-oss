@@ -1,0 +1,89 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-industrial-iot.yaml
+# 説明：システムの種類のカード「産業IoTプラットフォーム」（st-industrial-iot）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-industrial-iot
+type: system_type
+names:
+  ja: 産業IoTプラットフォーム
+  en: Industrial IoT Platform
+aliases:
+- IoT基盤
+- 設備監視
+summary:
+  ja: 工場の設備や機器に付けたセンサーのデータを集めて分析し、故障の予兆検知や稼働の改善に使う仕組み。
+domain: D04
+level:
+  primary: L0
+scope: enterprise
+industry:
+- manufacturing
+- energy
+business_function:
+- bf.assets
+- bf.production
+category: platform
+layer: integration
+users:
+  ja: 製造業、設備管理者
+purpose:
+  ja: 設備の状態を常に把握し、止まる前に手を打つ
+functions:
+- センサーデータの収集
+- データの蓄積と分析
+- 故障の予兆の検知
+events:
+- 設備のデータの送信
+- 異常値の発生
+qualities:
+- データの正確さ
+- セキュリティ
+outage_impact:
+  ja: 設備の状態が見えなくなり、故障を事前に防げなくなる。
+industry_roles:
+- vendor
+- saas_provider
+- prime_sier
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 3
+  regulation: 2
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 設備のデータを集めて活用する仕組みを説明できる
+  questions:
+  - 機械が壊れる前に分かると、どんな得があるか
+relations:
+- type: integrates_with
+  target: st-factory-control
+- type: depends_on
+  target: st-public-cloud
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

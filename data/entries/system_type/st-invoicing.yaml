@@ -1,0 +1,91 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-invoicing.yaml
+# 説明：システムの種類のカード「請求書発行・電子帳票システム」（st-invoicing）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-invoicing
+type: system_type
+names:
+  ja: 請求書発行・電子帳票システム
+  en: Invoicing & e-Document System
+aliases:
+- 請求書発行
+- 電子帳票
+- Web請求書
+summary:
+  ja: 売上データから請求書などの帳票を作成し、郵送や電子データで取引先に届けるシステム。入金の確認と連携することが多い。
+domain: D03
+level:
+  primary: L3
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.finance_accounting
+- bf.sales_marketing
+category: business_app
+layer: application
+users:
+  ja: 経理・営業事務の担当者、取引先
+purpose:
+  ja: 請求書を正確に早く届け、代金を回収する
+functions:
+- 請求書の作成
+- 電子データ・郵送での送付
+- 入金予定の管理
+events:
+- 月末の請求締め
+- 請求書の送付
+- 入金
+qualities:
+- 正確性
+- 法令（電子帳簿・インボイス）への対応
+outage_impact:
+  ja: 請求書を出せず、代金の回収が遅れる。
+industry_roles:
+- saas_provider
+- vendor
+- ops_provider
+- owner
+axes:
+  technical: 3
+  organization: 2
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 1
+  goal: 売上が請求書になり、入金されて帳簿に載るまでを説明できる
+  questions:
+  - 請求書を出した後、経理は何を確認するか
+relations:
+- type: integrates_with
+  target: st-sales-management
+- type: integrates_with
+  target: st-accounting
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: M
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

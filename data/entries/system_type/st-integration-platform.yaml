@@ -1,0 +1,64 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-integration-platform.yaml
+# 説明：システムの種類のカード「システム連携基盤」（st-integration-platform）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-integration-platform
+type: system_type
+names:
+  ja: システム連携基盤
+  en: Integration Platform
+aliases:
+- EAI
+- ESB
+- APIゲートウェイ
+summary:
+  ja: 社内外の複数のシステムの間でデータを受け渡し、形式を変換して連携させるための基盤。
+domain: D00
+level:
+  primary: L0
+  related:
+  - L4
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.it
+category: platform
+layer: integration
+users:
+  ja: 情報システム部門、開発者
+purpose:
+  ja: 異なるシステム同士をつなぎ、データを流す
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 3
+  regulation: 2
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

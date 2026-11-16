@@ -1,0 +1,68 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-subscription-billing.yaml
+# 説明：システムの種類のカード「サブスクリプション管理システム」（st-subscription-billing）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-subscription-billing
+type: system_type
+names:
+  ja: サブスクリプション管理システム
+  en: Subscription Billing System
+aliases:
+- サブスク管理
+- 定期課金
+summary:
+  ja: 月額や年額で利用する契約（サブスクリプション）の申し込み、プランの変更、毎回の請求と回収を管理するシステム。
+domain: D03
+level:
+  primary: L3
+scope: enterprise
+industry:
+- cross_industry
+- commerce
+business_function:
+- bf.sales_marketing
+- bf.finance_accounting
+category: business_app
+layer: application
+users:
+  ja: サービス提供企業の営業・経理部門
+purpose:
+  ja: 継続する契約と請求を正確に管理する
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-payment-gateway
+- type: integrates_with
+  target: st-accounting
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U2
+      max: U3
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

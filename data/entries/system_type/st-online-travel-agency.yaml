@@ -1,0 +1,67 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-online-travel-agency.yaml
+# 説明：システムの種類のカード「旅行予約サイト」（st-online-travel-agency）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-online-travel-agency
+type: system_type
+names:
+  ja: 旅行予約サイト
+  en: Online Travel Agency
+aliases:
+- OTA
+- 宿泊予約サイト
+summary:
+  ja: 宿泊施設や航空券、ツアーなどをインターネットで比較・予約できるサービス。多数の宿泊施設や航空会社のシステムとつながっている。
+domain: D06
+level:
+  primary: L2
+scope: society
+industry:
+- hospitality
+- transport
+business_function:
+- bf.sales_marketing
+category: consumer_app
+layer: channel
+users:
+  ja: 旅行者、宿泊施設、交通事業者
+purpose:
+  ja: 旅行の予約を一か所で手軽に行えるようにする
+axes:
+  technical: 3
+  organization: 4
+  criticality: 2
+  longevity: 2
+  regulation: 2
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-hotel-pms
+- type: integrates_with
+  target: st-airline-reservation
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XL
+    usage_class:
+      min: U3
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

@@ -1,0 +1,64 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-plm.yaml
+# 説明：システムの種類のカード「PLM（製品ライフサイクル管理）」（st-plm）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-plm
+type: system_type
+names:
+  ja: PLM（製品ライフサイクル管理）
+  en: Product Lifecycle Management
+aliases:
+- PLM
+- 設計データ管理
+summary:
+  ja: 製品の設計図面、部品構成、変更履歴などを、企画から生産終了まで一元管理するシステム。CADと連携して使われる。
+domain: D04
+level:
+  primary: L3
+scope: enterprise
+industry:
+- manufacturing
+business_function:
+- bf.product_dev
+category: business_app
+layer: application
+users:
+  ja: 設計・開発部門
+purpose:
+  ja: 製品の設計情報を正確に管理し、関係部門で共有する
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-production-management
+scale:
+  typical:
+    project_class:
+      min: M
+      max: L
+    usage_class:
+      min: U1
+      max: U1
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

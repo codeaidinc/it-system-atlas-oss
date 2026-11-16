@@ -1,0 +1,33 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/taxonomy/categories.yaml
+# 説明：システムの種類。layer はシステム構成地図での層（上ほど利用者に近い）。
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+# システムの種類。layer はシステム構成地図での層（上ほど利用者に近い）。
+version: 0.1.0
+layers:
+  - { id: channel, order: 1, ja: 利用者接点, en: Channel, desc: アプリ・Webサイト・端末など、人が直接触れる層 }
+  - { id: application, order: 2, ja: 業務アプリケーション, en: Application, desc: 個別の業務を処理するシステム }
+  - { id: core, order: 3, ja: 基幹システム, en: Core System, desc: 組織の中心的なデータと取引を管理するシステム }
+  - { id: integration, order: 4, ja: 連携・データ, en: Integration & Data, desc: システム間をつなぎ、データを集める層 }
+  - { id: infrastructure, order: 5, ja: IT基盤, en: Infrastructure, desc: サーバー・ネットワーク・クラウドなどの土台 }
+  - { id: control, order: 6, ja: 制御・現場, en: Operational Technology, desc: 機械・設備を直接動かすシステム }
+items:
+  - { id: consumer_app, ja: 個人向けアプリ・サービス, en: Consumer App & Service }
+  - { id: business_app, ja: 業務システム, en: Business Application }
+  - { id: enterprise_core, ja: 基幹システム, en: Enterprise Core System }
+  - { id: enterprise_suite, ja: 統合業務パッケージ, en: Enterprise Suite }
+  - { id: public_system, ja: 行政・公共システム, en: Public Sector System }
+  - { id: social_infrastructure, ja: 社会基盤システム, en: Social Infrastructure System }
+  - { id: platform, ja: プラットフォーム・ミドルウェア, en: Platform & Middleware }
+  - { id: infrastructure, ja: IT基盤, en: IT Infrastructure }
+  - { id: data_analytics, ja: データ・分析, en: Data & Analytics }
+  - { id: security, ja: セキュリティ, en: Security }
+  - { id: control_system, ja: 制御システム, en: Control System }
+  - { id: dev_ops_tool, ja: 開発・運用ツール, en: Development & Operations Tool }

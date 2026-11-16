@@ -1,0 +1,29 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/taxonomy/business_functions.yaml
+# 説明：企業の業務機能。apqc は APQC PCF Cross-Industry の大分類番号への対応（本文は収録しない）。
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+# 企業の業務機能。apqc は APQC PCF Cross-Industry の大分類番号への対応（本文は収録しない）。
+version: 0.1.0
+items:
+  - { id: bf.strategy, ja: 経営企画, en: Strategy & Planning, apqc: "1.0" }
+  - { id: bf.product_dev, ja: 商品・サービス開発, en: Product Development, apqc: "2.0" }
+  - { id: bf.sales_marketing, ja: 営業・マーケティング, en: Sales & Marketing, apqc: "3.0" }
+  - { id: bf.production, ja: 生産・製造, en: Production, apqc: "4.0" }
+  - { id: bf.logistics, ja: 物流・在庫, en: Logistics & Inventory, apqc: "4.0" }
+  - { id: bf.procurement, ja: 調達・購買, en: Procurement, apqc: "4.0" }
+  - { id: bf.service_delivery, ja: サービス提供, en: Service Delivery, apqc: "5.0" }
+  - { id: bf.customer_service, ja: 顧客サービス, en: Customer Service, apqc: "6.0" }
+  - { id: bf.hr, ja: 人事・給与, en: Human Resources, apqc: "7.0" }
+  - { id: bf.it, ja: IT管理, en: IT Management, apqc: "8.0" }
+  - { id: bf.finance_accounting, ja: 会計・財務, en: Finance & Accounting, apqc: "9.0" }
+  - { id: bf.assets, ja: 設備・資産管理, en: Asset Management, apqc: "10.0" }
+  - { id: bf.risk_compliance, ja: リスク・コンプライアンス, en: Risk & Compliance, apqc: "11.0" }
+  - { id: bf.external_relations, ja: 対外関係・広報, en: External Relations, apqc: "12.0" }
+  - { id: bf.collaboration, ja: 社内コミュニケーション, en: Collaboration, apqc: "13.0" }

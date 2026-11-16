@@ -1,0 +1,90 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-identity-management.yaml
+# 説明：システムの種類のカード「ID・認証基盤」（st-identity-management）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-identity-management
+type: system_type
+names:
+  ja: ID・認証基盤
+  en: Identity & Access Management
+aliases:
+- IAM
+- シングルサインオン
+summary:
+  ja: 利用者のIDとパスワードなどを一元管理し、誰がどのシステムを使えるかを制御する仕組み。一度のログインで複数のシステムを使えるようにする。
+domain: D00
+level:
+  primary: L0
+  related:
+  - L4
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.it
+- bf.risk_compliance
+category: security
+layer: infrastructure
+users:
+  ja: 情報システム部門、全利用者
+purpose:
+  ja: 正しい人だけが必要なシステムを使えるようにする
+functions:
+- 利用者の登録
+- ログイン（認証）
+- 利用できる機能の制御（認可）
+- ログイン記録
+events:
+- ログイン
+- パスワード変更
+- 追加の本人確認
+qualities:
+- セキュリティ
+- 可用性
+- 使いやすさ
+outage_impact:
+  ja: 正しい利用者でもログインできなくなり、その上で動くすべてのサービスが使えなくなる。
+industry_roles:
+- owner
+- vendor
+- saas_provider
+- prime_sier
+- ops_provider
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 3
+  regulation: 2
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 多くのサービスが共通の認証の仕組みに頼っていることを説明できる
+  questions:
+  - 認証が止まると、なぜ多くのサービスが同時に使えなくなるのか
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U1
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

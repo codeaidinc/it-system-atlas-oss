@@ -1,0 +1,94 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-train-operation.yaml
+# 説明：システムの種類のカード「鉄道運行管理システム」（st-train-operation）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-train-operation
+type: system_type
+names:
+  ja: 鉄道運行管理システム
+  en: Railway Traffic Management System
+aliases:
+- 運行管理
+- 列車制御
+summary:
+  ja: 列車の位置を把握し、ダイヤどおりの運行、信号やポイントの制御、遅延時の運転整理を支えるシステム。
+domain: D06
+level:
+  primary: L5
+  related:
+  - L3
+scope: society
+industry:
+- transport.rail
+business_function:
+- bf.service_delivery
+category: control_system
+layer: control
+users:
+  ja: 鉄道会社の指令員・運転関係者
+purpose:
+  ja: 多数の列車を安全かつ時間どおりに走らせる
+functions:
+- 列車の位置の把握
+- 信号・進路の制御
+- ダイヤの管理
+- 遅延時の運転整理
+events:
+- 列車の出発・到着
+- 遅延・事故
+- ダイヤ改正
+qualities:
+- 安全性
+- 可用性
+- リアルタイム性
+outage_impact:
+  ja: 列車を安全に走らせられなくなり、運転見合わせになる。
+industry_roles:
+- owner
+- operator
+- prime_sier
+- partner
+- vendor
+- ops_provider
+- regulator
+critical_infrastructure:
+  sectors:
+  - ci.rail
+axes:
+  technical: 5
+  organization: 5
+  criticality: 5
+  longevity: 5
+  regulation: 5
+  changeability: 5
+  evidence_type: editorial_estimate
+  basis: editor
+learning:
+  difficulty: 3
+  goal: 多くの列車が時間どおりに安全に走る裏に、運行管理のシステムがあることを説明できる
+  questions:
+  - 遅延が起きたとき、ダイヤはどのように調整されるか
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XL
+    usage_class:
+      min: U3
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

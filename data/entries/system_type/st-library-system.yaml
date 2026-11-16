@@ -1,0 +1,62 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-library-system.yaml
+# 説明：システムの種類のカード「図書館システム」（st-library-system）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-library-system
+type: system_type
+names:
+  ja: 図書館システム
+  en: Library Management System
+aliases:
+- 蔵書管理
+- OPAC
+summary:
+  ja: 図書館の蔵書の管理、貸出・返却、予約、利用者の管理、蔵書検索（OPAC）を行うシステム。
+domain: D08
+level:
+  primary: L3
+scope: enterprise
+industry:
+- government
+- education
+business_function:
+- bf.service_delivery
+category: business_app
+layer: application
+users:
+  ja: 図書館職員、図書館の利用者
+purpose:
+  ja: 本を探しやすくし、貸出を管理する
+axes:
+  technical: 3
+  organization: 2
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: S
+      max: M
+    usage_class:
+      min: U1
+      max: U3
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

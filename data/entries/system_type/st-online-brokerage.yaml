@@ -1,0 +1,68 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-online-brokerage.yaml
+# 説明：システムの種類のカード「オンライン証券取引システム」（st-online-brokerage）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-online-brokerage
+type: system_type
+names:
+  ja: オンライン証券取引システム
+  en: Online Brokerage System
+aliases:
+- ネット証券
+- 株取引アプリ
+summary:
+  ja: 個人投資家がWebやアプリで株式・投資信託などを売買できる証券会社のシステム。注文を受け付け、取引所へ取り次ぐ。
+domain: D05
+level:
+  primary: L2
+scope: society
+industry:
+- finance.securities
+business_function:
+- bf.service_delivery
+- bf.customer_service
+category: consumer_app
+layer: channel
+users:
+  ja: 個人投資家、証券会社
+purpose:
+  ja: 投資家の注文を受け付け、口座と資産を管理する
+critical_infrastructure:
+  sectors:
+  - ci.finance
+axes:
+  technical: 3
+  organization: 4
+  criticality: 4
+  longevity: 2
+  regulation: 4
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-stock-exchange-trading
+scale:
+  typical:
+    project_class:
+      min: M
+      max: XL
+    usage_class:
+      min: U2
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

@@ -1,0 +1,78 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-member-site.yaml
+# 説明：システムの種類のカード「会員サイト」（st-member-site）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-member-site
+type: system_type
+names:
+  ja: 会員サイト
+  en: Member Site
+aliases:
+- 会員サービス
+- マイページ
+summary:
+  ja: 会員登録した人がログインして、ポイント・購入履歴・予約・お知らせなどを確認できるWebサイト。事業部門が発注することが多いが、規模が大きくなると顧客管理や基幹システムとつながる業務システムになる。
+domain: D02
+level:
+  primary: L2
+  related:
+  - L3
+scope: enterprise
+industry:
+- cross_industry
+- commerce
+business_function:
+- bf.customer_service
+- bf.sales_marketing
+category: business_app
+layer: channel
+users:
+  ja: 事業部門・マーケティング部門、会員
+purpose:
+  ja: 会員との関係を続け、利用や購入を増やす
+axes:
+  technical: 2
+  organization: 2
+  criticality: 2
+  longevity: 3
+  regulation: 3
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-crm
+- type: integrates_with
+  target: st-identity-management
+scale:
+  typical:
+    project_class:
+      min: S
+      max: L
+    usage_class:
+      min: U2
+      max: U4
+    evidence_type: editorial_estimate
+industry_roles:
+- owner
+- prime_sier
+- partner
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-15'
+  updated: '2026-11-15'
+  contributors:
+  - CODEAID編集部
+  unconfirmed:
+  - domain
+  - level
+  - scope
+  - axes

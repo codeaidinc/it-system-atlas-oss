@@ -1,0 +1,63 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-email.yaml
+# 説明：システムの種類のカード「メールシステム」（st-email）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-email
+type: system_type
+names:
+  ja: メールシステム
+  en: Email System
+aliases:
+- 電子メール
+- メールサーバー
+summary:
+  ja: 電子メールの送受信と保管を行うシステム。企業ではクラウド型サービスの利用が広がっている。
+domain: D00
+level:
+  primary: L0
+  related:
+  - L2
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.collaboration
+category: infrastructure
+layer: infrastructure
+users:
+  ja: 組織の全メンバー、個人
+purpose:
+  ja: 文書や連絡を電子的にやり取りする
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 3
+  regulation: 2
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: L
+    usage_class:
+      min: U1
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

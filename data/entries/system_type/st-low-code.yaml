@@ -1,0 +1,67 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-low-code.yaml
+# 説明：システムの種類のカード「ローコード開発基盤」（st-low-code）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-low-code
+type: system_type
+names:
+  ja: ローコード開発基盤
+  en: Low-code Platform
+aliases:
+- ノーコード
+- 業務アプリ作成ツール
+summary:
+  ja: 画面上の操作を中心に、少ないプログラミングで業務アプリを作れる開発基盤。現場の担当者が自分でアプリを作る場面でも使われる。
+domain: D00
+level:
+  primary: L0
+  related:
+  - L2
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.it
+- bf.collaboration
+category: platform
+layer: application
+users:
+  ja: 業務部門の担当者、情報システム部門
+purpose:
+  ja: 業務に合わせたアプリを短期間で作る
+axes:
+  technical: 3
+  organization: 1
+  criticality: 3
+  longevity: 3
+  regulation: 2
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-workflow
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: S
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

@@ -1,0 +1,64 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-smart-agriculture.yaml
+# 説明：システムの種類のカード「スマート農業システム」（st-smart-agriculture）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-smart-agriculture
+type: system_type
+names:
+  ja: スマート農業システム
+  en: Smart Agriculture System
+aliases:
+- 農業IoT
+- 営農支援
+summary:
+  ja: センサーやドローン、自動運転の農機などから得たデータを使い、農作業の記録や栽培の管理を支えるシステム。
+domain: D04
+level:
+  primary: L3
+scope: enterprise
+industry:
+- agriculture
+business_function:
+- bf.production
+category: business_app
+layer: application
+users:
+  ja: 農業者、農業法人、自治体
+purpose:
+  ja: 少ない人手で品質のよい農作物を育てる
+axes:
+  technical: 3
+  organization: 2
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: depends_on
+  target: st-industrial-iot
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: M
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

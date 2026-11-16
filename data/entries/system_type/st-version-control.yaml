@@ -1,0 +1,61 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-version-control.yaml
+# 説明：システムの種類のカード「バージョン管理システム」（st-version-control）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-version-control
+type: system_type
+names:
+  ja: バージョン管理システム
+  en: Version Control System
+aliases:
+- Git
+- ソースコード管理
+summary:
+  ja: プログラムのソースコードの変更履歴を記録し、複数の開発者が同時に作業できるようにする仕組み。
+domain: D00
+level:
+  primary: L0
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.it
+category: dev_ops_tool
+layer: infrastructure
+users:
+  ja: ソフトウェア開発者
+purpose:
+  ja: 変更の履歴を残し、共同開発を可能にする
+axes:
+  technical: 4
+  organization: 4
+  criticality: 3
+  longevity: 3
+  regulation: 2
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: XL
+    usage_class:
+      min: U1
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

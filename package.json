@@ -1,0 +1,34 @@
+{
+  "name": "it-system-atlas-oss",
+  "version": "1.0.0",
+  "private": true,
+  "description": "IT Systems Atlas（OSS版）— 授業で使える、ITシステムを俯瞰する教材アトラス",
+  "license": "Apache-2.0",
+  "type": "module",
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "build:data": "node scripts/build-data.mjs",
+    "test": "node --test --test-reporter=spec tests/*.test.mjs",
+    "verify": "node scripts/verify.mjs",
+    "verify:quick": "node scripts/verify.mjs --quick",
+    "headers": "node scripts/headers.mjs",
+    "dev": "npm run build:data && npm --workspace apps/web run dev",
+    "build": "npm run check && npm run build:data && npm --workspace apps/web run build",
+    "start": "node scripts/serve.mjs",
+    "print:pdf": "node scripts/print-pdf.mjs"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "js-yaml": "4.3.2"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "overrides": {
+    "postcss": "8.5.30"
+  }
+}

@@ -1,0 +1,93 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-mobile-network.yaml
+# 説明：システムの種類のカード「携帯電話網」（st-mobile-network）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-mobile-network
+type: system_type
+names:
+  ja: 携帯電話網
+  en: Mobile Network
+aliases:
+- モバイルネットワーク
+- 5Gコア
+summary:
+  ja: 基地局と、通話・データ通信を制御するコアネットワークで構成される携帯電話の通信システム。
+domain: D10
+level:
+  primary: L5
+  related:
+  - L0
+scope: society
+industry:
+- telecom
+business_function:
+- bf.service_delivery
+category: social_infrastructure
+layer: infrastructure
+users:
+  ja: 通信事業者。間接的には携帯電話の利用者
+purpose:
+  ja: どこでも通話やデータ通信ができるようにする
+functions:
+- 通話・データ通信
+- 基地局の管理
+- 緊急速報の一斉配信
+events:
+- 通話・通信の開始
+- 端末の移動
+- 緊急速報
+qualities:
+- 可用性
+- 通信品質
+- 災害への強さ
+outage_impact:
+  ja: 通話やデータ通信ができなくなり、緊急通報や多くのサービスに影響する。
+industry_roles:
+- owner
+- operator
+- prime_sier
+- partner
+- vendor
+- ops_provider
+- regulator
+critical_infrastructure:
+  sectors:
+  - ci.telecom
+axes:
+  technical: 5
+  organization: 5
+  criticality: 5
+  longevity: 5
+  regulation: 5
+  changeability: 5
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 携帯電話の通信網が、多くのサービスや緊急時の連絡を支えていることを説明できる
+  questions:
+  - 通信網が止まると、影響を受けるサービスを挙げよう
+scale:
+  typical:
+    project_class:
+      min: XL
+      max: XXL
+    usage_class:
+      min: U4
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

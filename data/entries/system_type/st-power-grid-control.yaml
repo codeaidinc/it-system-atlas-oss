@@ -1,0 +1,97 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-power-grid-control.yaml
+# 説明：システムの種類のカード「電力系統運用システム」（st-power-grid-control）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-power-grid-control
+type: system_type
+names:
+  ja: 電力系統運用システム
+  en: Power Grid Control System
+aliases:
+- 給電指令システム
+- EMS
+summary:
+  ja: 発電所から家庭までの電力の流れを監視し、需要と供給のバランスを保つように発電や送電を制御するシステム。
+domain: D11
+level:
+  primary: L5
+  related:
+  - L3
+scope: society
+industry:
+- energy
+business_function:
+- bf.service_delivery
+category: control_system
+layer: control
+users:
+  ja: 電力会社・送配電事業者の運用者
+purpose:
+  ja: 停電を起こさず、電気を安定して届ける
+functions:
+- 発電と需要の監視
+- 発電量の調整
+- 送電の制御
+- 事故時の切り替え
+events:
+- 需要の変化
+- 設備の事故
+- 天候の変化
+qualities:
+- 安全性
+- リアルタイム性
+- 止まらないこと
+outage_impact:
+  ja: 広い地域で停電が起きるおそれがある。
+industry_roles:
+- owner
+- operator
+- prime_sier
+- partner
+- vendor
+- ops_provider
+- regulator
+critical_infrastructure:
+  sectors:
+  - ci.electricity
+axes:
+  technical: 5
+  organization: 4
+  criticality: 5
+  longevity: 5
+  regulation: 5
+  changeability: 5
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 電気を止めずに届けるために、常に需要と供給を合わせる仕組みを説明できる
+  questions:
+  - 電気を「ためておく」のが難しいと、何が大変か
+relations:
+- type: integrates_with
+  target: st-smart-meter
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XL
+    usage_class:
+      min: U4
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

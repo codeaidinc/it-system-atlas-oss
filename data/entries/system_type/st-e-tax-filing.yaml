@@ -1,0 +1,66 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-e-tax-filing.yaml
+# 説明：システムの種類のカード「国税電子申告システム」（st-e-tax-filing）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-e-tax-filing
+type: system_type
+names:
+  ja: 国税電子申告システム
+  en: National e-Tax Filing System
+aliases:
+- e-Tax
+- 電子申告
+summary:
+  ja: 確定申告や法人税の申告、納税をインターネットで行えるようにする国のシステム。申告の時期には膨大なアクセスが集中する。
+domain: D09
+level:
+  primary: L5
+  related:
+  - L2
+scope: society
+industry:
+- government
+business_function:
+- bf.finance_accounting
+category: public_system
+layer: channel
+users:
+  ja: 個人、法人、税理士、税務当局
+purpose:
+  ja: 税の申告と納付を窓口に行かずに行えるようにする
+critical_infrastructure:
+  sectors:
+  - ci.government
+axes:
+  technical: 5
+  organization: 4
+  criticality: 5
+  longevity: 5
+  regulation: 5
+  changeability: 5
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XL
+    usage_class:
+      min: U4
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

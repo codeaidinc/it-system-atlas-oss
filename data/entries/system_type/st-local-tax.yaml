@@ -1,0 +1,95 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-local-tax.yaml
+# 説明：システムの種類のカード「地方税システム」（st-local-tax）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-local-tax
+type: system_type
+names:
+  ja: 地方税システム
+  en: Local Tax System
+aliases:
+- 住民税
+- 固定資産税システム
+summary:
+  ja: 住民税や固定資産税などの地方税の課税・収納・滞納の管理を行う自治体のシステム。住民記録などのシステムと連携して動く。
+domain: D09
+level:
+  primary: L3
+scope: enterprise
+industry:
+- government
+business_function:
+- bf.finance_accounting
+category: public_system
+layer: core
+users:
+  ja: 自治体の税務担当職員
+purpose:
+  ja: 税を公平・正確に課税し、徴収する
+functions:
+- 課税額の計算
+- 納付書の発行
+- 納付の記録
+- 滞納の管理
+events:
+- 毎年の課税
+- 納付
+- 転居
+qualities:
+- 正確性
+- 公平性
+- 法令への対応
+outage_impact:
+  ja: 税の計算や納付の確認ができず、自治体の収入と住民の手続きに影響する。
+industry_roles:
+- owner
+- operator
+- prime_sier
+- partner
+- vendor
+- ops_provider
+- regulator
+critical_infrastructure:
+  sectors:
+  - ci.government
+axes:
+  technical: 3
+  organization: 3
+  criticality: 5
+  longevity: 4
+  regulation: 5
+  changeability: 4
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 自治体の税の仕組みが住民記録とつながっていることを説明できる
+  questions:
+  - 引っ越すと、住民税の手続きはどうなるか
+relations:
+- type: integrates_with
+  target: st-resident-registry
+scale:
+  typical:
+    project_class:
+      min: M
+      max: L
+    usage_class:
+      min: U2
+      max: U3
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

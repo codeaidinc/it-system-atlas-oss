@@ -1,0 +1,18 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/views/02-business.yaml
+# 説明：地図02「企業業務地図」の定義
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: business
+order: 2
+title: { ja: 企業業務地図, en: Business Process Map }
+question: { ja: 企業にはどんな仕事があり、なぜERPが必要になったのか }
+layout: flow
+source: bf-order-to-cash
+node_types: [business_flow, system_type]

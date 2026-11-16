@@ -1,0 +1,63 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-telemedicine.yaml
+# 説明：システムの種類のカード「オンライン診療システム」（st-telemedicine）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-telemedicine
+type: system_type
+names:
+  ja: オンライン診療システム
+  en: Telemedicine System
+aliases:
+- 遠隔診療
+summary:
+  ja: スマートフォンやパソコンのビデオ通話で医師の診察を受け、予約や支払いまで行えるシステム。
+domain: D07
+level:
+  primary: L2
+scope: society
+industry:
+- healthcare
+business_function:
+- bf.service_delivery
+category: consumer_app
+layer: channel
+users:
+  ja: 患者、医療機関
+purpose:
+  ja: 通院が難しい人でも診察を受けられるようにする
+axes:
+  technical: 2
+  organization: 2
+  criticality: 2
+  longevity: 2
+  regulation: 4
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-electronic-medical-record
+scale:
+  typical:
+    project_class:
+      min: S
+      max: M
+    usage_class:
+      min: U2
+      max: U3
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

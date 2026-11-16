@@ -1,0 +1,92 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-payment-gateway.yaml
+# 説明：システムの種類のカード「オンライン決済代行サービス」（st-payment-gateway）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-payment-gateway
+type: system_type
+names:
+  ja: オンライン決済代行サービス
+  en: Payment Gateway
+aliases:
+- 決済代行
+- ペイメントゲートウェイ
+summary:
+  ja: ネットショップなどでのカード決済や各種支払い方法を、カード会社や決済事業者へ中継するサービス。事業者はAPIで組み込んで使う。
+domain: D05
+level:
+  primary: L2
+  related:
+  - L0
+scope: enterprise
+industry:
+- finance.payments
+- commerce
+business_function:
+- bf.sales_marketing
+category: platform
+layer: integration
+users:
+  ja: EC事業者、Webサービス事業者
+purpose:
+  ja: 多様な支払い方法をまとめて安全に受け付ける
+functions:
+- カード・電子マネー・コード決済の受付
+- カード会社への承認依頼
+- 売上の精算
+events:
+- 購入者の支払い
+- 返金
+qualities:
+- セキュリティ
+- 可用性
+- 多様な支払い方法への対応
+outage_impact:
+  ja: 多数のネットショップで同時に支払いができなくなる。
+industry_roles:
+- saas_provider
+- vendor
+- ops_provider
+- regulator
+axes:
+  technical: 3
+  organization: 4
+  criticality: 2
+  longevity: 2
+  regulation: 4
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: ネットショップが決済の仕組みを自分で作らず、専門のサービスを使う理由を説明できる
+  questions:
+  - なぜネットショップはカード会社と直接つながらないことが多いのか
+relations:
+- type: integrates_with
+  target: st-ec-site
+- type: integrates_with
+  target: st-credit-card-processing
+scale:
+  typical:
+    project_class:
+      min: M
+      max: XL
+    usage_class:
+      min: U3
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

@@ -1,0 +1,19 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/views/01-world.yaml
+# 説明：地図01「ITシステム世界地図」の定義
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: world
+order: 1
+title: { ja: ITシステム世界地図, en: World Map of IT Systems }
+question: { ja: 社会のどこに、どんなITシステムがあるのか }
+layout: tiles
+group_by: domain
+color_by: level
+node_types: [system_type]

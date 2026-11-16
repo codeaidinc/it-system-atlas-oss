@@ -1,0 +1,112 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-national-id-system.yaml
+# 説明：システムの種類のカード「個人番号関連システム」（st-national-id-system）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-national-id-system
+type: system_type
+names:
+  ja: 個人番号関連システム
+  en: National ID System
+aliases:
+- マイナンバーシステム
+- マイナンバーカード
+summary:
+  ja: 個人番号（マイナンバー）とマイナンバーカードを使い、行政機関の間の情報連携やオンラインでの本人確認を行う仕組み。
+domain: D09
+level:
+  primary: L5
+scope: society
+industry:
+- government
+business_function:
+- bf.service_delivery
+category: public_system
+layer: integration
+users:
+  ja: 国・自治体・医療保険者などの行政機関、全国民
+purpose:
+  ja: 行政手続きを簡単にし、本人確認を確実にする
+functions:
+- 個人番号の管理
+- マイナンバーカードによる本人確認
+- 行政機関の間の情報連携
+events:
+- カードの発行
+- オンラインの本人確認
+- 情報の照会
+qualities:
+- セキュリティ
+- 可用性
+- 個人情報の保護
+outage_impact:
+  ja: 多くの行政手続きや本人確認ができなくなる。
+industry_roles:
+- owner
+- operator
+- prime_sier
+- partner
+- vendor
+- ops_provider
+- regulator
+critical_infrastructure:
+  sectors:
+  - ci.government
+axes:
+  technical: 5
+  organization: 5
+  criticality: 5
+  longevity: 5
+  regulation: 5
+  changeability: 5
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 行政機関の間で情報をつなぐ仕組みと、そのための厳しい守りを説明できる
+  questions:
+  - 行政機関の間で情報を連携すると、住民にとって何が便利になるか
+relations:
+- type: integrates_with
+  target: st-resident-registry
+- type: integrates_with
+  target: st-e-application
+scale:
+  typical:
+    project_class:
+      min: XL
+      max: XXL
+    usage_class:
+      min: U4
+      max: U4
+    evidence_type: editorial_estimate
+  references:
+  - measure: users
+    value: 100000000
+    approximate: true
+    unit: persons
+    scope:
+      ja: マイナンバーカードの保有枚数（1億枚超、人口の8割超）
+    as_of: '2025-12-03'
+    evidence_type: public_document
+    subject:
+      ja: マイナンバーカード
+    source:
+      title: 林総務大臣閣議後記者会見の概要（令和7年12月5日）
+      publisher: 総務省
+      url: https://www.soumu.go.jp/menu_news/kaiken/01koho01_02001499.html
+      accessed: '2026-11-03'
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

@@ -1,0 +1,62 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-environment-monitoring.yaml
+# 説明：システムの種類のカード「環境監視システム」（st-environment-monitoring）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-environment-monitoring
+type: system_type
+names:
+  ja: 環境監視システム
+  en: Environmental Monitoring System
+aliases:
+- 大気監視
+- 水質監視
+summary:
+  ja: 大気や水質、騒音、放射線などを測定局で常に観測し、基準を超えたときに警報や情報公開を行うシステム。
+domain: D11
+level:
+  primary: L3
+scope: enterprise
+industry:
+- government
+- energy
+business_function:
+- bf.risk_compliance
+category: public_system
+layer: integration
+users:
+  ja: 自治体・国の環境部門、住民
+purpose:
+  ja: 環境の変化を見逃さず、健康被害を防ぐ
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: M
+      max: L
+    usage_class:
+      min: U3
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

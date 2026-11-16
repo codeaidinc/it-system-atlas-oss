@@ -1,0 +1,83 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-lms.yaml
+# 説明：システムの種類のカード「LMS（学習管理システム）」（st-lms）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-lms
+type: system_type
+names:
+  ja: LMS（学習管理システム）
+  en: Learning Management System
+aliases:
+- LMS
+- eラーニング
+summary:
+  ja: 授業の教材配布、課題の提出、小テスト、成績、学習の進み具合などをオンラインで管理するシステム。
+domain: D08
+level:
+  primary: L3
+scope: enterprise
+industry:
+- education
+business_function:
+- bf.service_delivery
+category: business_app
+layer: application
+users:
+  ja: 学生・生徒、教員、企業の研修担当
+purpose:
+  ja: 学習の機会を広げ、学びの状況を把握する
+functions:
+- 教材の配布
+- 課題の提出
+- 小テスト
+- 成績の記録
+events:
+- 課題の提出
+- 採点
+qualities:
+- 使いやすさ
+- 締め切り時のアクセス集中への耐性
+outage_impact:
+  ja: 課題の提出や教材の閲覧ができなくなり、授業に影響する。
+industry_roles:
+- owner
+- saas_provider
+- vendor
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 学校の授業が、学習管理システムで支えられていることを説明できる
+  questions:
+  - 課題の締め切り直前にLMSが止まったら、どうなるか
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: L
+    usage_class:
+      min: U1
+      max: U3
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

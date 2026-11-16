@@ -1,0 +1,18 @@
+IT Systems Atlas — データ・文章のライセンス
+
+1. 対象
+   data/ 配下の事例カード・分類体系・ビュー定義、およびサイトに表示される解説文。
+
+2. ライセンス
+   Creative Commons Attribution 4.0 International (CC BY 4.0)
+   https://creativecommons.org/licenses/by/4.0/legalcode.ja
+
+   表示例：「出典：IT Systems Atlas（CODEAID編集部ほか）CC BY 4.0」
+
+3. 対象外
+   - 各カードの sources に記載された第三者の資料・Webページ（各権利者に帰属）。
+   - 企業名・製品名・ロゴ等の商標（各権利者に帰属。アトラスはロゴ画像を収録しません）。
+   - 外部分類体系の本文（アトラスは対応コードのみを保持します）。
+
+4. ソースコード
+   ソースコードは LICENSE（Apache License 2.0）に従います。

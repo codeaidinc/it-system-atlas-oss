@@ -1,0 +1,65 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-hotel-pms.yaml
+# 説明：システムの種類のカード「ホテル管理システム（PMS）」（st-hotel-pms）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-hotel-pms
+type: system_type
+names:
+  ja: ホテル管理システム（PMS）
+  en: Hotel Property Management System
+aliases:
+- PMS
+- 宿泊管理
+summary:
+  ja: ホテルの客室の予約、チェックイン・アウト、客室の状況、会計などを管理するシステム。予約サイトと連携して空室を販売する。
+domain: D06
+level:
+  primary: L3
+scope: enterprise
+industry:
+- hospitality
+business_function:
+- bf.service_delivery
+- bf.sales_marketing
+category: business_app
+layer: core
+users:
+  ja: ホテルのフロント・管理者
+purpose:
+  ja: 客室を効率よく販売し、宿泊客の受け入れを管理する
+axes:
+  technical: 3
+  organization: 2
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-online-travel-agency
+scale:
+  typical:
+    project_class:
+      min: S
+      max: M
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

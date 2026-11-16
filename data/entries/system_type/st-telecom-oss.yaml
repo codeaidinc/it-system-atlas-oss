@@ -1,0 +1,70 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-telecom-oss.yaml
+# 説明：システムの種類のカード「通信運用支援システム（OSS）」（st-telecom-oss）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-telecom-oss
+type: system_type
+names:
+  ja: 通信運用支援システム（OSS）
+  en: Telecom Operations Support System
+aliases:
+- OSS/BSS
+- ネットワーク運用管理
+summary:
+  ja: 通信設備の構成管理、故障の検知、工事の手配、回線の開通作業などを管理する通信事業者のシステム。
+domain: D10
+level:
+  primary: L3
+scope: enterprise
+industry:
+- telecom
+business_function:
+- bf.service_delivery
+- bf.assets
+category: enterprise_core
+layer: core
+users:
+  ja: 通信事業者の運用部門
+purpose:
+  ja: 通信網を止めずに運用し、回線を開通させる
+critical_infrastructure:
+  sectors:
+  - ci.telecom
+axes:
+  technical: 4
+  organization: 4
+  criticality: 5
+  longevity: 4
+  regulation: 5
+  changeability: 4
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-mobile-network
+- type: integrates_with
+  target: st-telecom-billing
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XL
+    usage_class:
+      min: U3
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

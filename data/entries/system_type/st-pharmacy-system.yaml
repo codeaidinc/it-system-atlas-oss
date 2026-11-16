@@ -1,0 +1,89 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-pharmacy-system.yaml
+# 説明：システムの種類のカード「調剤薬局システム」（st-pharmacy-system）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-pharmacy-system
+type: system_type
+names:
+  ja: 調剤薬局システム
+  en: Pharmacy System
+aliases:
+- 調剤システム
+- 電子処方箋
+summary:
+  ja: 処方箋の受付、調剤、薬歴の管理、保険請求などを行う薬局のシステム。電子処方箋への対応も進んでいる。
+domain: D07
+level:
+  primary: L3
+scope: enterprise
+industry:
+- healthcare
+business_function:
+- bf.service_delivery
+- bf.finance_accounting
+category: business_app
+layer: application
+users:
+  ja: 薬剤師、薬局
+purpose:
+  ja: 正しく調剤し、患者の服薬を安全に管理する
+functions:
+- 処方箋の受付
+- 調剤
+- 薬歴の管理
+- 保険請求
+events:
+- 処方箋の受付
+- 薬の受け渡し
+qualities:
+- 安全性（飲み合わせの確認）
+- 正確性
+outage_impact:
+  ja: 薬歴や飲み合わせを確認できず、調剤が遅れる。
+industry_roles:
+- owner
+- prime_sier
+- partner
+- vendor
+- saas_provider
+critical_infrastructure:
+  sectors:
+  - ci.healthcare
+axes:
+  technical: 3
+  organization: 2
+  criticality: 5
+  longevity: 4
+  regulation: 5
+  changeability: 4
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 1
+  goal: 病院と薬局の間で処方の情報がどう伝わるかを説明できる
+  questions:
+  - 薬局で飲み合わせを確認できるのはなぜか
+scale:
+  typical:
+    project_class:
+      min: S
+      max: M
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

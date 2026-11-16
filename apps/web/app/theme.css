@@ -1,0 +1,81 @@
+/*
+ * ========================================================================
+ * IT Systems Atlas OSS版
+ * 製作：合同会社CODEAID
+ * Copyright (c) 2026 合同会社CODEAID
+ * ライセンス：Apache License 2.0（LICENSE を参照）
+ * SPDX-License-Identifier: Apache-2.0
+ * ファイル：apps/web/app/theme.css
+ * 説明：テーマの変数（色・文字・余白）。色を変えるときは :root を書き換える
+ * 履歴：
+ *   2026-11-16  v1.0.0  初版
+ * ========================================================================
+ */
+/* 色・文字・余白の変数（テーマ）。色を変えるときはこのファイルの :root を書き換える。 */
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../public/fonts/ibm-plex-mono-latin-500-normal.woff2") format("woff2");
+}
+
+:root {
+  --board: #e8e6e1;
+  --paper: #f5f4f0;
+  --white: #ffffff;
+  --ink: #0f1b2d;
+  --cobalt: #2340c8;
+  --line: #c4c0b6;
+  --muted: #4a5260;
+  --inverse-link: #bbc7ff;
+  /* 色の役割（部品はこちらを使う。ブランドが差し替える） */
+  --role-accent: var(--cobalt);
+  --role-cta: var(--cobalt);
+  --role-cta-text: var(--white);
+  --role-cta-hover: var(--ink);
+  --role-inverse: var(--ink);
+  --role-inverse-text: var(--white);
+  --role-inverse-link: var(--inverse-link);
+  --role-highlight: var(--paper);
+  --role-focus: var(--cobalt);
+  --atlas-font-body: system-ui, "Hiragino Sans", "Yu Gothic", sans-serif;
+  --atlas-font-index: "IBM Plex Mono", ui-monospace, monospace;
+  --atlas-line-height-body: 1.85;
+  --atlas-max-width: 1280px;
+  --atlas-content-width: 1216px;
+  --atlas-reading-width: 736px;
+  --atlas-header-height: 64px;
+  --atlas-gutter-sm: 16px;
+  --atlas-gutter-md: 24px;
+  --atlas-gutter-lg: 32px;
+  --atlas-section-space-sm: 48px;
+  --atlas-section-space-md: 72px;
+  --atlas-section-space-lg: 88px;
+  --atlas-border: 1px;
+  --atlas-border-emphasis: 3px;
+  --atlas-radius: 0px;
+  --atlas-hover-ms: 150ms;
+}
+
+/* Tailwind v4 のユーティリティ（bg-board / text-ink / border-line など） */
+@theme inline {
+  --color-board: var(--board);
+  --color-paper: var(--paper);
+  --color-white: var(--white);
+  --color-ink: var(--ink);
+  --color-cobalt: var(--cobalt);
+  --color-line: var(--line);
+  --color-muted: var(--muted);
+  --color-inverse-link: var(--inverse-link);
+  --color-role-accent: var(--role-accent);
+  --color-role-cta: var(--role-cta);
+  --color-role-cta-text: var(--role-cta-text);
+  --color-role-cta-hover: var(--role-cta-hover);
+  --color-role-inverse: var(--role-inverse);
+  --color-role-inverse-text: var(--role-inverse-text);
+  --color-role-inverse-link: var(--role-inverse-link);
+  --color-role-highlight: var(--role-highlight);
+  --color-role-focus: var(--role-focus);
+}

@@ -1,0 +1,68 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-airline-reservation.yaml
+# 説明：システムの種類のカード「航空予約システム」（st-airline-reservation）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-airline-reservation
+type: system_type
+names:
+  ja: 航空予約システム
+  en: Airline Reservation System
+aliases:
+- PSS
+- 航空券予約
+summary:
+  ja: 航空便の空席管理、予約、発券、搭乗手続きなどを行う航空会社のシステム。世界中の旅行会社や予約サイトと連携する。
+domain: D06
+level:
+  primary: L3
+  related:
+  - L4
+  - L5
+scope: enterprise
+industry:
+- transport.aviation
+business_function:
+- bf.sales_marketing
+- bf.service_delivery
+category: enterprise_core
+layer: core
+users:
+  ja: 航空会社、旅行会社、乗客
+purpose:
+  ja: 座席を販売し、搭乗までの手続きを管理する
+critical_infrastructure:
+  sectors:
+  - ci.aviation
+axes:
+  technical: 4
+  organization: 4
+  criticality: 5
+  longevity: 4
+  regulation: 5
+  changeability: 4
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XL
+    usage_class:
+      min: U3
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

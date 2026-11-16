@@ -1,0 +1,84 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-smartphone-os.yaml
+# 説明：システムの種類のカード「スマートフォンOS・アプリストア」（st-smartphone-os）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-smartphone-os
+type: system_type
+names:
+  ja: スマートフォンOS・アプリストア
+  en: Mobile OS & App Store
+aliases:
+- iOS
+- Android
+- アプリストア
+summary:
+  ja: スマートフォンを動かす基本ソフト（OS）と、アプリを配布・販売するストア。多くのアプリがこの上で動いている。
+domain: D00
+level:
+  primary: L0
+scope: enterprise
+industry:
+- telecom
+- cross_industry
+business_function:
+- bf.service_delivery
+category: platform
+layer: infrastructure
+users:
+  ja: スマートフォンの利用者、アプリ開発者
+purpose:
+  ja: 多様なアプリを安全に配布し、動かす
+functions:
+- アプリの実行
+- 通知
+- アプリの配布・審査
+- 端末のセキュリティ
+events:
+- アプリのインストール
+- 通知の受信
+qualities:
+- 安全性
+- 使いやすさ
+outage_impact:
+  ja: アプリの配布や通知が止まり、多数のサービスに影響する。
+industry_roles:
+- vendor
+- saas_provider
+axes:
+  technical: 4
+  organization: 5
+  criticality: 3
+  longevity: 3
+  regulation: 2
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: アプリはOSとアプリストアという基盤の上で動いていることを説明できる
+  questions:
+  - アプリの通知は、どこを通って届くか
+scale:
+  typical:
+    project_class:
+      min: XXL
+      max: XXL
+    usage_class:
+      min: U4
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

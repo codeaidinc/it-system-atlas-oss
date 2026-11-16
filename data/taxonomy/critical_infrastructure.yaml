@@ -1,0 +1,32 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/taxonomy/critical_infrastructure.yaml
+# 説明：重要インフラ分野（政府「重要インフラのサイバーセキュリティに係る行動計画」）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+# 重要インフラ分野（政府「重要インフラのサイバーセキュリティに係る行動計画」）
+# 2026-10-01 改訂時点の16分野。改訂時は本ファイルを更新する。
+version: 2026-10-01
+source: { title: 重要インフラのサイバーセキュリティに係る行動計画（2026年10月1日改訂）, publisher: 国家サイバー統括室 }
+sectors:
+  - { id: ci.telecom, ja: 情報通信 }
+  - { id: ci.finance, ja: 金融 }
+  - { id: ci.aviation, ja: 航空 }
+  - { id: ci.airport, ja: 空港 }
+  - { id: ci.rail, ja: 鉄道 }
+  - { id: ci.electricity, ja: 電力 }
+  - { id: ci.gas, ja: ガス }
+  - { id: ci.government, ja: 行政サービス }
+  - { id: ci.healthcare, ja: 医療 }
+  - { id: ci.water, ja: 水道 }
+  - { id: ci.logistics, ja: 物流 }
+  - { id: ci.chemical, ja: 化学 }
+  - { id: ci.credit, ja: クレジット }
+  - { id: ci.petroleum, ja: 石油 }
+  - { id: ci.port, ja: 港湾 }
+  - { id: ci.postal, ja: 郵便 }

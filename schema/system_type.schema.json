@@ -1,0 +1,476 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codeaid.org/it-system-atlas/schema/system_type.schema.json",
+  "title": "システム種別カード（system_type）",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "names",
+    "summary",
+    "domain",
+    "level",
+    "scope",
+    "industry",
+    "category",
+    "layer",
+    "users",
+    "purpose",
+    "axes",
+    "scale",
+    "editorial"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^st-[a-z0-9-]+$"
+    },
+    "type": {
+      "const": "system_type"
+    },
+    "names": {
+      "$ref": "common.schema.json#/$defs/names"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "ja"
+      ],
+      "properties": {
+        "ja": {
+          "type": "string",
+          "minLength": 40,
+          "maxLength": 300
+        },
+        "en": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "domain": {
+      "type": "string",
+      "pattern": "^D(0[0-9]|1[0-2])$",
+      "description": "教育用12領域（主分類）"
+    },
+    "level": {
+      "type": "object",
+      "required": [
+        "primary"
+      ],
+      "properties": {
+        "primary": {
+          "$ref": "#/$defs/lv"
+        },
+        "related": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/lv"
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "scope": {
+      "enum": [
+        "personal",
+        "team",
+        "department",
+        "enterprise",
+        "group",
+        "industry",
+        "society"
+      ]
+    },
+    "industry": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "business_function": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "category": {
+      "type": "string"
+    },
+    "layer": {
+      "enum": [
+        "channel",
+        "application",
+        "core",
+        "integration",
+        "infrastructure",
+        "control"
+      ]
+    },
+    "users": {
+      "$ref": "common.schema.json#/$defs/localized"
+    },
+    "purpose": {
+      "$ref": "common.schema.json#/$defs/localized"
+    },
+    "functions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 40
+      },
+      "maxItems": 8
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 60
+      },
+      "maxItems": 8
+    },
+    "qualities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 8
+    },
+    "outage_impact": {
+      "$ref": "common.schema.json#/$defs/localized"
+    },
+    "industry_roles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "structure": {
+      "type": "object",
+      "properties": {
+        "entry": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "processing": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "data": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "external": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "foundation": {
+          "type": "string",
+          "maxLength": 120
+        }
+      },
+      "additionalProperties": false
+    },
+    "critical_infrastructure": {
+      "type": "object",
+      "required": [
+        "sectors"
+      ],
+      "properties": {
+        "sectors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^ci\\."
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "lifecycle_note": {
+      "$ref": "common.schema.json#/$defs/localized"
+    },
+    "axes": {
+      "type": "object",
+      "required": [
+        "technical",
+        "organization",
+        "criticality",
+        "longevity",
+        "regulation",
+        "changeability",
+        "evidence_type"
+      ],
+      "properties": {
+        "technical": {
+          "$ref": "#/$defs/lvl5"
+        },
+        "organization": {
+          "$ref": "#/$defs/lvl5"
+        },
+        "criticality": {
+          "$ref": "#/$defs/lvl5"
+        },
+        "longevity": {
+          "$ref": "#/$defs/lvl5"
+        },
+        "regulation": {
+          "$ref": "#/$defs/lvl5"
+        },
+        "changeability": {
+          "$ref": "#/$defs/lvl5"
+        },
+        "evidence_type": {
+          "const": "editorial_estimate"
+        },
+        "basis": {
+          "enum": [
+            "rule",
+            "editor"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "learning": {
+      "type": "object",
+      "properties": {
+        "difficulty": {
+          "enum": [
+            1,
+            2,
+            3
+          ]
+        },
+        "goal": {
+          "type": "string"
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/relation"
+      }
+    },
+    "scale": {
+      "type": "object",
+      "required": [
+        "typical"
+      ],
+      "properties": {
+        "typical": {
+          "type": "object",
+          "required": [
+            "project_class",
+            "usage_class",
+            "evidence_type"
+          ],
+          "properties": {
+            "project_class": {
+              "$ref": "#/$defs/classRange"
+            },
+            "usage_class": {
+              "$ref": "#/$defs/usageRange"
+            },
+            "evidence_type": {
+              "const": "editorial_estimate"
+            },
+            "note": {
+              "$ref": "common.schema.json#/$defs/localized"
+            }
+          },
+          "additionalProperties": false
+        },
+        "references": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/scaleReference"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/source"
+      }
+    },
+    "editorial": {
+      "$ref": "common.schema.json#/$defs/editorial"
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "pclass": {
+      "enum": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    "uclass": {
+      "enum": [
+        "U1",
+        "U2",
+        "U3",
+        "U4"
+      ]
+    },
+    "classRange": {
+      "type": "object",
+      "required": [
+        "min",
+        "max"
+      ],
+      "properties": {
+        "min": {
+          "$ref": "#/$defs/pclass"
+        },
+        "max": {
+          "$ref": "#/$defs/pclass"
+        }
+      },
+      "additionalProperties": false
+    },
+    "usageRange": {
+      "type": "object",
+      "required": [
+        "min",
+        "max"
+      ],
+      "properties": {
+        "min": {
+          "$ref": "#/$defs/uclass"
+        },
+        "max": {
+          "$ref": "#/$defs/uclass"
+        }
+      },
+      "additionalProperties": false
+    },
+    "scaleReference": {
+      "type": "object",
+      "required": [
+        "measure",
+        "value",
+        "unit",
+        "scope",
+        "as_of",
+        "evidence_type",
+        "subject",
+        "source"
+      ],
+      "properties": {
+        "measure": {
+          "enum": [
+            "development_cost",
+            "development_effort",
+            "development_duration",
+            "peak_team_size",
+            "users",
+            "transactions",
+            "sites",
+            "operating_years",
+            "annual_operating_cost"
+          ]
+        },
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "value_max": {
+          "type": "number"
+        },
+        "approximate": {
+          "type": "boolean"
+        },
+        "unit": {
+          "enum": [
+            "JPY",
+            "USD",
+            "person_months",
+            "months",
+            "years",
+            "persons",
+            "transactions_per_day",
+            "sites",
+            "accounts"
+          ]
+        },
+        "scope": {
+          "$ref": "common.schema.json#/$defs/localized"
+        },
+        "as_of": {
+          "type": [
+            "integer",
+            "string"
+          ]
+        },
+        "evidence_type": {
+          "enum": [
+            "official_report",
+            "public_document",
+            "court_record",
+            "press_report",
+            "statistics",
+            "education_model",
+            "not_disclosed"
+          ]
+        },
+        "subject": {
+          "$ref": "common.schema.json#/$defs/localized"
+        },
+        "source": {
+          "$ref": "common.schema.json#/$defs/source"
+        },
+        "formula": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "lv": {
+      "enum": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5"
+      ]
+    },
+    "lvl5": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    }
+  }
+}

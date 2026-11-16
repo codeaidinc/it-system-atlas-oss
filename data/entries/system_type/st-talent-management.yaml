@@ -1,0 +1,63 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-talent-management.yaml
+# 説明：システムの種類のカード「タレントマネジメントシステム」（st-talent-management）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-talent-management
+type: system_type
+names:
+  ja: タレントマネジメントシステム
+  en: Talent Management System
+aliases:
+- 人材管理
+summary:
+  ja: 社員のスキル、評価、経歴、研修などの情報を管理し、人材配置や育成に活用するシステム。
+domain: D03
+level:
+  primary: L3
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.hr
+category: business_app
+layer: application
+users:
+  ja: 人事部門、管理職
+purpose:
+  ja: 社員の能力を把握し、育成や配置に生かす
+axes:
+  technical: 3
+  organization: 2
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-payroll
+scale:
+  typical:
+    project_class:
+      min: S
+      max: M
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

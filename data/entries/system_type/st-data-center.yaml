@@ -1,0 +1,62 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-data-center.yaml
+# 説明：システムの種類のカード「データセンター」（st-data-center）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-data-center
+type: system_type
+names:
+  ja: データセンター
+  en: Data Center
+aliases:
+- DC
+summary:
+  ja: 多数のサーバーや通信機器を、電源・空調・セキュリティの整った建物で安全に運用する施設。
+domain: D10
+level:
+  primary: L0
+scope: enterprise
+industry:
+- telecom
+- cross_industry
+business_function:
+- bf.it
+- bf.assets
+category: infrastructure
+layer: infrastructure
+users:
+  ja: クラウド事業者、企業、SIer
+purpose:
+  ja: システムを止めずに動かせる物理的な環境を提供する
+axes:
+  technical: 4
+  organization: 5
+  criticality: 3
+  longevity: 3
+  regulation: 2
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XXL
+    usage_class:
+      min: U2
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

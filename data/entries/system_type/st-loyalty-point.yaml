@@ -1,0 +1,67 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-loyalty-point.yaml
+# 説明：システムの種類のカード「ポイント・会員管理システム」（st-loyalty-point）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-loyalty-point
+type: system_type
+names:
+  ja: ポイント・会員管理システム
+  en: Loyalty Program System
+aliases:
+- ポイントシステム
+- 会員管理
+summary:
+  ja: 買い物に応じたポイントの付与・利用や、会員情報、キャンペーンを管理するシステム。複数の企業で共通のポイントを扱うものもある。
+domain: D02
+level:
+  primary: L3
+scope: enterprise
+industry:
+- commerce
+- cross_industry
+business_function:
+- bf.sales_marketing
+category: business_app
+layer: application
+users:
+  ja: 消費者、小売・サービス事業者
+purpose:
+  ja: 顧客の継続利用を促し、購買データを活用する
+axes:
+  technical: 4
+  organization: 4
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-pos
+- type: integrates_with
+  target: st-crm
+scale:
+  typical:
+    project_class:
+      min: M
+      max: XL
+    usage_class:
+      min: U2
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

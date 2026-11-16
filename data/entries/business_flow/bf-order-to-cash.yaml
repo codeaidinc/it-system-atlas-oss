@@ -1,0 +1,38 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/business_flow/bf-order-to-cash.yaml
+# 説明：企業業務の流れ「企業の仕事の流れ：注文を受けてから決算まで」（bf-order-to-cash）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: bf-order-to-cash
+type: business_flow
+title: { ja: 企業の仕事の流れ：注文を受けてから決算まで }
+summary: { ja: 製造・販売を行う企業が、顧客から注文を受け、物を調達・生産・出荷し、代金を回収して帳簿に載せ、経営に生かすまでの流れ。各段階を支えるシステムと、それらを統合するERPの役割を示す。 }
+stages:
+  - { id: sales, ja: 営業・顧客, department: 営業部, function: bf.sales_marketing, work: 顧客と商談し、見積を出す, systems: [st-crm, st-sfa], next: [order], data_out: 見積・商談情報 }
+  - { id: order, ja: 受注, department: 営業部・業務部, function: bf.sales_marketing, work: 注文を受け、納期を約束する, systems: [st-sales-management, st-order-management], next: [procure, produce], data_out: 受注データ }
+  - { id: procure, ja: 調達・購買, department: 購買部, function: bf.procurement, work: 部品や材料を仕入先に発注する, systems: [st-procurement, st-scm, st-edi], next: [produce], data_out: 発注・入荷データ }
+  - { id: produce, ja: 生産, department: 製造部・工場, function: bf.production, work: 計画を立てて製品を作る, systems: [st-production-management, st-mes], next: [ship], data_out: 製造実績 }
+  - { id: ship, ja: 在庫・出荷, department: 物流部, function: bf.logistics, work: 在庫を管理し、顧客へ出荷する, systems: [st-inventory-management, st-wms, st-tms], next: [bill], data_out: 出荷実績 }
+  - { id: bill, ja: 請求・入金, department: 経理部・営業事務, function: bf.finance_accounting, work: 請求書を出し、入金を確認する, systems: [st-invoicing, st-sales-management], next: [account], data_out: 売上・入金データ }
+  - { id: account, ja: 会計・決算, department: 経理部, function: bf.finance_accounting, work: 取引を帳簿に記録し、決算書を作る, systems: [st-accounting, st-consolidated-accounting], next: [manage], data_out: 決算書 }
+  - { id: manage, ja: 経営管理, department: 経営企画部・経営層, function: bf.strategy, work: 計画と実績を比べ、次の手を決める, systems: [st-budget-management, st-bi], next: [], data_out: 経営判断 }
+  - { id: hr, ja: 人事・給与, department: 人事部, function: bf.hr, work: 人を採用し、勤怠を管理し、給与を払う, systems: [st-recruiting, st-attendance, st-payroll], next: [account], support: true, data_out: 人件費 }
+hub:
+  ja: ERP・共通マスター・データ連携基盤
+  systems: [st-erp, st-integration-platform, st-data-warehouse]
+  why:
+    - 部門ごとに別のシステムを使うと、同じ取引を何度も入力することになり、入力ミスや食い違いが起きる。
+    - 受注・出荷・請求・会計のデータが分かれていると、「今、いくら売れて、いくら回収できたか」がすぐに分からない。
+    - 取引先・品目・社員などの共通データ（マスター）を一つにまとめ、取引を一度の入力で全部門に流すために、ERPが生まれた。
+questions:
+  - 受注データは、この後どの部署・どのシステムへ渡っていくか
+  - 「部門ごとに別のシステム」の会社と「ERPで統合」の会社で、月末の決算作業はどう違うか
+  - あなたが知っているアプリ（例：経費精算アプリ）は、この地図のどこに入るか
+note: { ja: 教育用の一般化モデルです。業種や企業の規模によって、実際の流れやシステム構成は異なります。サービス業では「生産」が「サービス提供」に置き換わります。 }
+editorial: { status: draft, license: CC-BY-4.0, created: 2026-11-03, updated: 2026-11-03, contributors: [CODEAID編集部] }

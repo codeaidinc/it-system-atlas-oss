@@ -1,0 +1,88 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-public-cloud.yaml
+# 説明：システムの種類のカード「パブリッククラウド」（st-public-cloud）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-public-cloud
+type: system_type
+names:
+  ja: パブリッククラウド
+  en: Public Cloud
+aliases:
+- クラウド
+- IaaS
+- PaaS
+summary:
+  ja: サーバー、ストレージ、データベースなどのIT基盤を、インターネット経由で必要な分だけ借りて使えるサービス。
+domain: D00
+level:
+  primary: L0
+  related:
+  - L5
+scope: enterprise
+industry:
+- cross_industry
+- telecom
+business_function:
+- bf.it
+category: infrastructure
+layer: infrastructure
+users:
+  ja: あらゆる企業・団体、開発者
+purpose:
+  ja: IT基盤を自前で持たずに素早く使えるようにする
+functions:
+- サーバー・ストレージの貸し出し
+- データベース
+- 自動での拡張
+- AIなどのサービス
+events:
+- 利用者の申し込み
+- アクセスの増加
+qualities:
+- 可用性
+- 拡張性
+- セキュリティ
+outage_impact:
+  ja: そのクラウドを使う多数の企業のサービスが同時に止まることがある。
+industry_roles:
+- vendor
+- saas_provider
+- ops_provider
+axes:
+  technical: 4
+  organization: 5
+  criticality: 3
+  longevity: 3
+  regulation: 2
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 多くのサービスが共通のクラウドを借りて動いていることを説明できる
+  questions:
+  - 多くの会社が、自分でサーバーを持たずにクラウドを使うのはなぜか
+scale:
+  typical:
+    project_class:
+      min: XXL
+      max: XXL
+    usage_class:
+      min: U4
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

@@ -1,0 +1,79 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/taxonomy/lifecycle.yaml
+# 説明：ITシステムのライフサイクル（教育用の基本モデル・8段階）。
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+# ITシステムのライフサイクル（教育用の基本モデル・8段階）。
+# 用語は共通フレーム、ISO/IEC/IEEE 12207・15288 を参考。実際には運用しながら改善・企画が繰り返され、一方向には進まない。
+version: 0.4.0
+phases:
+  - id: lc.planning
+    order: 1
+    ja: 企画
+    desc: 何のために作るのか。事業の目的と投資の効果を定める
+    activities: [経営課題の整理, 投資額と効果の見積もり, 実現方法の比較（作る・買う・借りる）]
+    outputs: [企画書, 投資の承認]
+    industry_roles: [owner, consultant]
+    question: なぜ「作らない（パッケージやSaaSを使う）」という選択肢も検討するのか
+  - id: lc.requirements
+    order: 2
+    ja: 要求定義
+    desc: 業務・機能・性能・安全性・運用の条件を明確にする
+    activities: [業務の流れの整理, 必要な機能の洗い出し, 品質（性能・安全性）の条件の決定]
+    outputs: [要件定義書]
+    industry_roles: [owner, consultant, prime_sier]
+    question: 要件があいまいなまま開発を始めると、何が起きるか
+  - id: lc.procurement
+    order: 3
+    ja: 調達・契約
+    desc: 開発・導入を担う会社を選び、費用・責任の範囲・契約を決める
+    activities: [提案依頼（RFP）, 提案の比較と選定, 契約（請負・準委任など）の締結]
+    outputs: [契約書, 体制図]
+    industry_roles: [owner, prime_sier, vendor, saas_provider]
+    question: 請負契約と準委任契約では、何に対して責任を負うのか
+  - id: lc.development
+    order: 4
+    ja: 構築（設計・開発・テスト）
+    desc: システムを設計・実装し、品質と安全性を検証する
+    activities: [設計, プログラミング, テスト（単体・結合・総合）]
+    outputs: [設計書, プログラム, テスト結果]
+    industry_roles: [prime_sier, partner, vendor]
+    question: 大規模な開発で、多くの会社と技術者が関わるのはなぜか
+  - id: lc.transition
+    order: 5
+    ja: 導入・移行
+    desc: データを移し、業務を切り替え、利用者を教育して稼働を始める
+    activities: [データ移行, 利用者の教育, 本番への切り替え, 障害時の戻し方の準備]
+    outputs: [移行計画, 運用手順書]
+    industry_roles: [owner, prime_sier, ops_provider]
+    question: 古いシステムから新しいシステムへの切り替えが難しいのはなぜか
+  - id: lc.operation
+    order: 6
+    ja: 運用・保守
+    desc: 毎日動かし続け、監視・障害対応・修正を行う
+    activities: [監視, 障害対応, 問い合わせ対応, 不具合の修正, セキュリティ対策]
+    outputs: [運用記録, 障害報告]
+    industry_roles: [operator, ops_provider, partner]
+    question: システムの一生で、最も長い期間を占めるのはどの段階か
+  - id: lc.improvement
+    order: 7
+    ja: 改善
+    desc: 法改正への対応や機能の追加など、使いながら改善を続ける
+    activities: [法改正・制度変更への対応, 機能の追加, 性能の改善]
+    outputs: [改修計画, 追加開発]
+    industry_roles: [owner, prime_sier, partner, saas_provider]
+    question: 税制や法律が変わると、なぜシステムの改修が必要になるのか
+  - id: lc.renewal
+    order: 8
+    ja: 刷新・廃棄
+    desc: 古くなったシステムを新しいシステムへ移し、旧システムを止め、データを保全・処分する
+    activities: [刷新の計画, データ移行, 旧システムの停止, データの保存・消去]
+    outputs: [刷新計画, 廃棄の記録]
+    industry_roles: [owner, consultant, prime_sier, vendor]
+    question: 何十年も使われたシステムを刷新するのが難しいのはなぜか

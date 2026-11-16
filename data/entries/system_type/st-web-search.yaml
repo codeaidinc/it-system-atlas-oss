@@ -1,0 +1,61 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-web-search.yaml
+# 説明：システムの種類のカード「Web検索エンジン」（st-web-search）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-web-search
+type: system_type
+names:
+  ja: Web検索エンジン
+  en: Web Search Engine
+aliases:
+- 検索エンジン
+summary:
+  ja: インターネット上の膨大なWebページを収集・分析し、利用者の検索語に合った情報を探して表示するサービス。
+domain: D10
+level:
+  primary: L2
+scope: society
+industry:
+- media
+- cross_industry
+business_function:
+- bf.service_delivery
+category: consumer_app
+layer: channel
+users:
+  ja: インターネットの利用者全般
+purpose:
+  ja: 必要な情報をすぐに見つけられるようにする
+axes:
+  technical: 3
+  organization: 5
+  criticality: 2
+  longevity: 2
+  regulation: 2
+  changeability: 2
+  evidence_type: editorial_estimate
+  basis: rule
+scale:
+  typical:
+    project_class:
+      min: XXL
+      max: XXL
+    usage_class:
+      min: U4
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

@@ -1,0 +1,64 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-health-management.yaml
+# 説明：システムの種類のカード「従業員健康管理システム」（st-health-management）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-health-management
+type: system_type
+names:
+  ja: 従業員健康管理システム
+  en: Employee Health Management System
+aliases:
+- 健康管理
+- 産業保健
+summary:
+  ja: 従業員の健康診断の受診状況や面談の記録などを管理し、会社が働く人の健康を守る取り組みを支えるシステム。とくに慎重な情報管理が求められる。
+domain: D03
+level:
+  primary: L3
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.hr
+category: business_app
+layer: application
+users:
+  ja: 人事部門、産業医・保健師
+purpose:
+  ja: 従業員の健康を守り、法令に沿った対応を行う
+axes:
+  technical: 3
+  organization: 2
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+relations:
+- type: integrates_with
+  target: st-labor-management
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: M
+    usage_class:
+      min: U1
+      max: U2
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

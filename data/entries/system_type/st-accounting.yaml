@@ -1,0 +1,91 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-accounting.yaml
+# 説明：システムの種類のカード「会計システム」（st-accounting）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-accounting
+type: system_type
+names:
+  ja: 会計システム
+  en: Accounting System
+aliases:
+- 財務会計
+- 経理システム
+summary:
+  ja: 取引を仕訳として記録し、帳簿や決算書を作成するシステム。企業の規模を問わず必ず必要になる基幹業務の一つ。
+domain: D03
+level:
+  primary: L3
+scope: enterprise
+industry:
+- cross_industry
+business_function:
+- bf.finance_accounting
+category: business_app
+layer: core
+users:
+  ja: 経理・財務部門
+purpose:
+  ja: お金の動きを正確に記録し、決算や納税に使う
+functions:
+- 仕訳の記録
+- 帳簿の作成
+- 決算書の作成
+- 税務申告の資料作成
+events:
+- 売上・仕入・給与などの取引
+- 月次・年度の決算
+qualities:
+- 正確性
+- 監査に耐える記録
+- 法令への対応
+outage_impact:
+  ja: 決算や納税の準備が遅れ、経営の状況が分からなくなる。
+industry_roles:
+- owner
+- prime_sier
+- partner
+- vendor
+- saas_provider
+axes:
+  technical: 3
+  organization: 3
+  criticality: 3
+  longevity: 4
+  regulation: 3
+  changeability: 3
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 2
+  goal: 販売・購買・給与などの業務の結果が、最後に会計に集まることを説明できる
+  questions:
+  - 会計システムには、どの業務からデータが集まるか
+relations:
+- type: part_of
+  target: st-erp
+- type: integrates_with
+  target: st-expense-management
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: L
+    usage_class:
+      min: U1
+      max: U1
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

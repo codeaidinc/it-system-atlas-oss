@@ -1,0 +1,82 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-household-budget.yaml
+# 説明：システムの種類のカード「家計管理アプリ」（st-household-budget）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-household-budget
+type: system_type
+names:
+  ja: 家計管理アプリ
+  en: Personal Finance App
+aliases:
+- 家計簿アプリ
+summary:
+  ja: 日々の支出や収入を記録し、家計の状況を確認するアプリ。銀行口座やカードと連携して、明細を自動で取り込むものもある。
+domain: D01
+level:
+  primary: L1
+scope: personal
+industry:
+- finance.payments
+business_function: []
+category: consumer_app
+layer: channel
+users:
+  ja: 個人・家族
+purpose:
+  ja: お金の出入りを把握し、計画的に使う
+functions:
+- 支出・収入の記録
+- 口座・カード明細の自動取り込み
+- グラフでの分析
+events:
+- 買い物
+- 給料日
+qualities:
+- 使いやすさ
+- 個人情報の保護
+outage_impact:
+  ja: 記録ができなくなるが、利用者が手作業で代わりに記録できる。
+industry_roles:
+- saas_provider
+- vendor
+axes:
+  technical: 1
+  organization: 2
+  criticality: 1
+  longevity: 2
+  regulation: 1
+  changeability: 1
+  evidence_type: editorial_estimate
+  basis: rule
+learning:
+  difficulty: 1
+  goal: 個人向けアプリと企業・社会のシステムの違いを、比較の起点として説明できる
+  questions:
+  - 家計簿アプリが止まった場合と、銀行の勘定系が止まった場合は何が違うか
+relations:
+- type: integrates_with
+  target: st-internet-banking
+scale:
+  typical:
+    project_class:
+      min: XS
+      max: M
+    usage_class:
+      min: U1
+      max: U3
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

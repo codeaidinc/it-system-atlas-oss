@@ -1,0 +1,97 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/entries/system_type/st-ic-ticketing.yaml
+# 説明：システムの種類のカード「交通系ICカード乗車券システム」（st-ic-ticketing）
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+id: st-ic-ticketing
+type: system_type
+names:
+  ja: 交通系ICカード乗車券システム
+  en: Transit IC Card Ticketing System
+aliases:
+- 自動改札
+- ICカード乗車券
+summary:
+  ja: ICカードやスマートフォンをかざして改札を通過し、運賃を自動で精算する仕組み。改札機、カード、運賃計算のセンターで構成される。
+domain: D06
+level:
+  primary: L5
+  related:
+  - L2
+scope: society
+industry:
+- transport.rail
+- transport
+business_function:
+- bf.service_delivery
+category: social_infrastructure
+layer: channel
+users:
+  ja: 鉄道・バスの利用者、交通事業者
+purpose:
+  ja: 乗車と運賃の支払いを素早く行う
+functions:
+- 改札での入出場の判定
+- 運賃の計算
+- 残高の減算
+- 利用履歴の記録
+events:
+- 入場
+- 出場
+- チャージ
+qualities:
+- 処理の速さ（一瞬で判定）
+- 正確性
+- 可用性
+outage_impact:
+  ja: 改札が通れなくなり、駅が混乱する。
+industry_roles:
+- owner
+- operator
+- prime_sier
+- partner
+- vendor
+- ops_provider
+critical_infrastructure:
+  sectors:
+  - ci.rail
+axes:
+  technical: 4
+  organization: 5
+  criticality: 5
+  longevity: 5
+  regulation: 4
+  changeability: 5
+  evidence_type: editorial_estimate
+  basis: editor
+learning:
+  difficulty: 2
+  goal: 改札をタッチした一瞬に、どんな処理が行われているかを説明できる
+  questions:
+  - 別の鉄道会社の路線に乗り継いでも、1枚のカードで払えるのはなぜか
+relations:
+- type: integrates_with
+  target: st-electronic-money
+scale:
+  typical:
+    project_class:
+      min: L
+      max: XL
+    usage_class:
+      min: U3
+      max: U4
+    evidence_type: editorial_estimate
+editorial:
+  status: draft
+  license: CC-BY-4.0
+  created: '2026-11-03'
+  updated: '2026-11-03'
+  contributors:
+  - CODEAID編集部
+  unconfirmed: [domain, level, scope, axes]

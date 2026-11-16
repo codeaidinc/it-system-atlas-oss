@@ -1,0 +1,28 @@
+# ========================================================================
+# IT Systems Atlas OSS版
+# 製作：合同会社CODEAID
+# Copyright (c) 2026 合同会社CODEAID
+# ライセンス：CC BY 4.0（LICENSE-DATA を参照）
+# SPDX-License-Identifier: CC-BY-4.0
+# ファイル：data/taxonomy/domains.yaml
+# 説明：教育用12領域（主分類）＋共通技術基盤（D00）。
+# 履歴：
+#   2026-11-16  v1.0.0  初版
+# ========================================================================
+# 教育用12領域（主分類）＋共通技術基盤（D00）。
+# 排他的な分類ではなく「学習の入口」。isic_rev4 は国連ISIC Rev.4 大分類への対応（参考）。
+version: 0.2.0
+items:
+  - { id: D01, ja: 個人・家庭・コミュニティ, en: Personal & Community, examples: SNS、家計管理、スマートホーム, isic_rev4: [] }
+  - { id: D02, ja: 小売・商業・流通, en: Retail & Commerce, examples: EC、POS、受発注、店舗運営, isic_rev4: [G, I] }
+  - { id: D03, ja: 企業経営・管理, en: Enterprise Management, examples: ERP、会計、人事、CRM, isic_rev4: [M, N] }
+  - { id: D04, ja: 製造・建設・農業, en: Manufacturing, Construction & Agriculture, examples: 生産管理、MES、PLM、施工管理, isic_rev4: [A, C, F] }
+  - { id: D05, ja: 金融・保険・決済, en: Finance, Insurance & Payments, examples: 勘定系、決済、証券、保険, isic_rev4: [K] }
+  - { id: D06, ja: 交通・物流・観光, en: Transport, Logistics & Tourism, examples: 運行管理、予約、倉庫、配送, isic_rev4: [H, I] }
+  - { id: D07, ja: 医療・介護・福祉, en: Healthcare & Welfare, examples: 電子カルテ、介護請求、医療連携, isic_rev4: [Q] }
+  - { id: D08, ja: 教育・研究・文化, en: Education, Research & Culture, examples: LMS、校務、研究基盤、図書館, isic_rev4: [P, R] }
+  - { id: D09, ja: 行政・司法・公共サービス, en: Government & Public Services, examples: 住民記録、税、社会保障, isic_rev4: [O] }
+  - { id: D10, ja: 通信・放送・メディア, en: Telecom, Broadcasting & Media, examples: 通信網、料金、放送、配信, isic_rev4: [J] }
+  - { id: D11, ja: エネルギー・環境・生活基盤, en: Energy, Environment & Utilities, examples: 電力、水道、ガス、環境監視, isic_rev4: [D, E] }
+  - { id: D12, ja: 防災・防犯・危機管理, en: Disaster & Crisis Management, examples: 防災情報、緊急通報、災害対応, isic_rev4: [O] }
+  - { id: D00, ja: 共通技術基盤, en: Common IT Foundation, examples: クラウド、DC、ネットワーク、認証、セキュリティ、AI, isic_rev4: [J] }
